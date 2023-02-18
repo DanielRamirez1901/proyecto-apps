@@ -14,11 +14,11 @@ _Acá va un párrafo que describa lo que es el proyecto_
 
 
 * **Steban Amilcar** 
-[Steban Amilcar](https://github.com/DanielRamirez1901)
+[Steban Amilcar](https://github.com/Amilcar-Steban)
 * **Sebastian Navia** 
-[Sebastian Navia](https://github.com/DanielRamirez1901)
+[Sebastian Navia](https://github.com/Sebastianavia)
 * **Daniel Ramirez** 
 [Daniel Ramirez](https://github.com/DanielRamirez1901)
 * **Luis Murcia** 
-[Luis Murcia](https://github.com/DanielRamirez1901)
+[Luis Murcia](https://github.com/luis486)
 
