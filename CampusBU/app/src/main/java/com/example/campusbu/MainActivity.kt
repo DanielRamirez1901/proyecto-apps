@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             .replace(id.fragment_container, HomeFragment())
             .commit()
         button_home.setColorFilter(ContextCompat.getColor(this,R.color.azulito), PorterDuff.Mode.SRC_IN)
+        button_Cultura.setBackgroundResource(R.drawable.borde_navegation_of_home)
 
 
         button_home.setOnClickListener {
@@ -90,23 +91,24 @@ class MainActivity : AppCompatActivity() {
     }
     fun onClickButtonCultura(view: View) {
         // Código que se ejecuta cuando el botón es presionado
-        replaceFragmentHome(PubliFragment())
-        button_Cultura.setBackgroundResource(R.color.azulito)
+        button_Cultura.setBackgroundResource(R.drawable.borde_navegation_of_home)
         button_Deportes.setBackgroundResource(R.color.white)
         button_Desarrollo.setBackgroundResource(R.color.white)
+        replaceFragmentHome(PubliFragment())
     }
     fun onClickButtonDeportes(view: View) {
         // Código que se ejecuta cuando el botón es presionado
-        replaceFragmentHome(NotiFragment())
         button_Cultura.setBackgroundResource(R.color.white)
-        button_Deportes.setBackgroundResource(R.color.azulito)
+        button_Deportes.setBackgroundResource(R.drawable.borde_navegation_of_home)
         button_Desarrollo.setBackgroundResource(R.color.white)
+        replaceFragmentHome(NotiFragment())
     }
     fun onClickButtonDesarrollo(view: View) {
         // Código que se ejecuta cuando el botón es presionado
-        replaceFragmentHome(PerfilFragment())
         button_Cultura.setBackgroundResource(R.color.white)
         button_Deportes.setBackgroundResource(R.color.white)
-        button_Desarrollo.setBackgroundResource(R.color.azulito)
+        button_Desarrollo.setBackgroundResource(R.drawable.borde_navegation_of_home)
+        replaceFragmentHome(PerfilFragment())
+
     }
 }
