@@ -1,13 +1,17 @@
 package com.example.campusbu
 
+import android.content.Context
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.campusbu.Fragments.*
+import com.example.campusbu.R.id
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,23 +19,30 @@ class MainActivity : AppCompatActivity() {
     private lateinit var button_publi: ImageButton
     private lateinit var button_noti: ImageButton
     private lateinit var button_perfil: ImageButton
+    private lateinit var button_Cultura: Button
+    private lateinit var button_Deportes: Button
+    private lateinit var button_Desarrollo: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val homeFragment = inflater.inflate(R.layout.homefragment, null)
 
-        button_home = findViewById(R.id.button_home)
-        button_publi = findViewById(R.id.button_publi)
-        button_noti = findViewById(R.id.button_noti)
-        button_perfil = findViewById(R.id.button_perfil)
+        button_home = findViewById(id.button_home)
+        button_publi = findViewById(id.button_publi)
+        button_noti = findViewById(id.button_noti)
+        button_perfil = findViewById(id.button_perfil)
+        button_Cultura = homeFragment.findViewById(id.button_Cultura)
+        button_Deportes = homeFragment.findViewById(id.button_deportes)
+        button_Desarrollo = homeFragment.findViewById(id.button_desarrollo)
 
-        // Establecer el fragmento inicial
-        val homeFragment = HomeFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, homeFragment)
+            .replace(id.fragment_container, HomeFragment())
             .commit()
+        button_home.setColorFilter(ContextCompat.getColor(this,R.color.azulito), PorterDuff.Mode.SRC_IN)
 
-        // Manejar el evento de clic en los botones de navegación
+
         button_home.setOnClickListener {
             replaceFragment(HomeFragment())
             button_home.setColorFilter(ContextCompat.getColor(this,R.color.azulito), PorterDuff.Mode.SRC_IN)
@@ -69,7 +80,33 @@ class MainActivity : AppCompatActivity() {
     // Reemplazar el fragmento actual con uno nuevo
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+            .replace(id.fragment_container, fragment)
             .commit()
+    }
+    private fun replaceFragmentHome(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(id.fragment_container_home, fragment)
+            .commit()
+    }
+    fun onClickButtonCultura(view: View) {
+        // Código que se ejecuta cuando el botón es presionado
+        replaceFragmentHome(PubliFragment())
+        button_Cultura.setBackgroundResource(R.color.azulito)
+        button_Deportes.setBackgroundResource(R.color.white)
+        button_Desarrollo.setBackgroundResource(R.color.white)
+    }
+    fun onClickButtonDeportes(view: View) {
+        // Código que se ejecuta cuando el botón es presionado
+        replaceFragmentHome(NotiFragment())
+        button_Cultura.setBackgroundResource(R.color.white)
+        button_Deportes.setBackgroundResource(R.color.azulito)
+        button_Desarrollo.setBackgroundResource(R.color.white)
+    }
+    fun onClickButtonDesarrollo(view: View) {
+        // Código que se ejecuta cuando el botón es presionado
+        replaceFragmentHome(PerfilFragment())
+        button_Cultura.setBackgroundResource(R.color.white)
+        button_Deportes.setBackgroundResource(R.color.white)
+        button_Desarrollo.setBackgroundResource(R.color.azulito)
     }
 }

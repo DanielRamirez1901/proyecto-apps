@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_homeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -14,7 +14,7 @@
         android:layout_weight="1">
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/search_plainTxt"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_marginStart="20dp"
@@ -40,46 +40,60 @@
 
 
         <Button
-            android:id="@+id/cultura_btn"
+            android:id="@+id/button_Cultura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             android:stateListAnimator="@null"
             android:text="Cultura"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#2C91D7" />
+            android:textColor="#2C91D7"
+            android:onClick="onClickButtonCultura"
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/deportes_btn"
+            android:id="@+id/button_deportes"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
+            android:clickable="true"
             android:foregroundTint="#FFFFFF"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             android:stateListAnimator="@null"
             android:text="Deportes"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#2C91D7" />
+            android:textColor="#2C91D7"
+            android:onClick="onClickButtonDeportes"
+            android:textSize="24sp" />
 
         <Button
-            android:id="@+id/desarrollo_btn"
+            android:id="@+id/button_desarrollo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
             android:stateListAnimator="@null"
             android:text="Desarrollo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#2C91D7" />
+            android:textColor="#2C91D7"
+            android:onClick="onClickButtonDesarrollo"
+            android:textSize="24sp" />
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/fragment_container_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:backgroundTint="#FFFFFF">
+        android:layout_weight="1">
 
     </FrameLayout>
 
