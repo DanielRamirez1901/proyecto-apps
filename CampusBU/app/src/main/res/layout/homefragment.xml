@@ -37,11 +37,11 @@
             android:id="@+id/imageView"
             android:layout_width="38dp"
             android:layout_height="38dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="21.5dp"
             android:background="@drawable/recuadro_lupa"
             android:scaleX="1"
             android:scaleY="1"
-            android:translationX="21dp"
-            android:translationY="20.2dp"
             app:srcCompat="@drawable/lupa"
             tools:srcCompat="@drawable/lupa" />
     </FrameLayout>
