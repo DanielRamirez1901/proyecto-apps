@@ -15,6 +15,6 @@ class NotiFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflar el layout para este fragmento
-        return inflater.inflate(R.layout.notifragment, container, false)
+        return inflater.inflate(R.layout.notifications, container, false)
     }
 }
