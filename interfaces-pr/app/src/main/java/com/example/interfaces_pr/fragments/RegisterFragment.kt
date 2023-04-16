@@ -1,4 +1,4 @@
-package com.example.interfaces_pr
+package com.example.interfaces_pr.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,7 +21,7 @@ class RegisterFragment : Fragment() {
 
 
     companion object{
-        fun newInstance():RegisterFragment{
+        fun newInstance(): RegisterFragment {
             return RegisterFragment()
         }
     }

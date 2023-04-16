@@ -4,7 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.interfaces_pr.adapter.CourseScheduleAdapter
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
+import com.example.interfaces_pr.model.Course
+import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
 
 class CourseActivity : AppCompatActivity() {
 
@@ -14,17 +18,26 @@ class CourseActivity : AppCompatActivity() {
         ActivityCourseBinding.inflate(layoutInflater)
     }
 
+    private lateinit var adapter:CourseScheduleAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
-        val courseType : String = "Basketball"
+        val courseType : String = "Soccer"
         val courseDescr : String = getCourseDescription(courseType)
         val courseimg : Int = getCourseImage(courseType)
         val course = Course(binding,courseimg,courseType,courseDescr)
         course.setCourse()
+
+
+        adapter = CourseScheduleAdapter(courseType)
+        binding.courseScheduleList.adapter = adapter
+        binding.courseScheduleList.setHasFixedSize(true)
+
+        val itemDecoration = ItemOffsetDecoration(16)
+        binding.courseScheduleList.addItemDecoration(itemDecoration)
     }
 
     fun irAPrimeraActivity(view: View) {

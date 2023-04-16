@@ -1,4 +1,4 @@
-package com.example.interfaces_pr
+package com.example.interfaces_pr.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,20 +9,23 @@ import com.example.interfaces_pr.databinding.LoginFragmentBinding
 
 class LoginFragment : Fragment() {
 
+    private lateinit var binding : LoginFragmentBinding
     override fun onCreateView(
-        inflater: LayoutInflater,
+        inflater:LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding:LoginFragmentBinding = LoginFragmentBinding.inflate(inflater,container,false)
-
-
+        binding = LoginFragmentBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     companion object{
-        fun newInstance():LoginFragment{
+        fun newInstance(): LoginFragment {
             return LoginFragment()
         }
+    }
+
+    fun getBinding(): LoginFragmentBinding {
+        return binding
     }
 }

@@ -1,4 +1,4 @@
-package com.example.interfaces_pr
+package com.example.interfaces_pr.model
 
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 
