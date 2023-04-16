@@ -1,5 +1,6 @@
 package com.example.interfaces_pr
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,10 +23,14 @@ class MainActivity2 : AppCompatActivity() {
         showFragment(login)
 
         binding.iniciarSesiontxt.setOnClickListener{
+            binding.registrarsetxt.setTextColor(Color.rgb(129,129,129))
+            binding.iniciarSesiontxt.setTextColor(Color.rgb(0,0,0))
             showFragment(login)
         }
 
         binding.registrarsetxt.setOnClickListener{
+            binding.iniciarSesiontxt.setTextColor(Color.rgb(129,129,129))
+            binding.registrarsetxt.setTextColor(Color.rgb(0,0,0))
             showFragment(register)
         }
 
