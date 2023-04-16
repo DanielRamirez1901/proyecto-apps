@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CourseScheduleAdapter
+import com.example.interfaces_pr.adapter.TeacherAdapter
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.model.Course
 import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
@@ -18,26 +19,34 @@ class CourseActivity : AppCompatActivity() {
         ActivityCourseBinding.inflate(layoutInflater)
     }
 
-    private lateinit var adapter:CourseScheduleAdapter
+    private lateinit var scheduleAdapter:CourseScheduleAdapter
+    private lateinit var teacherAdapter:TeacherAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
-        val courseType : String = "Soccer"
+        val courseType : String = "Basketball"
         val courseDescr : String = getCourseDescription(courseType)
         val courseimg : Int = getCourseImage(courseType)
         val course = Course(binding,courseimg,courseType,courseDescr)
         course.setCourse()
 
 
-        adapter = CourseScheduleAdapter(courseType)
-        binding.courseScheduleList.adapter = adapter
+        scheduleAdapter = CourseScheduleAdapter(courseType)
+        binding.courseScheduleList.adapter = scheduleAdapter
         binding.courseScheduleList.setHasFixedSize(true)
 
         val itemDecoration = ItemOffsetDecoration(16)
         binding.courseScheduleList.addItemDecoration(itemDecoration)
+
+        teacherAdapter = TeacherAdapter(courseType)
+        binding.teachersList.adapter = teacherAdapter
+        binding.teachersList.setHasFixedSize(true)
+        binding.teachersList.layoutManager = LinearLayoutManager(this)
+        binding.teachersList.addItemDecoration(itemDecoration)
+
     }
 
     fun irAPrimeraActivity(view: View) {
