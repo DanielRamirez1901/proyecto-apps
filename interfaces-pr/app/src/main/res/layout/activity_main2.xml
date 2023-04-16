@@ -90,7 +90,7 @@
     </FrameLayout>
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/loginBtn"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:background="@drawable/banner_circle_blue"
@@ -102,7 +102,8 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/frameLayout2"
         android:src="@drawable/abajo"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:onClick="irASegundaActivity"/>
 
     <TextView
         android:id="@+id/iniciarSesiontxt"
