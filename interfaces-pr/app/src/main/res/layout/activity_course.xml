@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CursoActivity">
+    tools:context=".CourseActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CursoActivity">
+    tools:context=".CourseActivity">
 
     <View
         android:id="@+id/view"
@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.52" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/course_image"
         android:layout_width="410dp"
         android:layout_height="220dp"
         app:layout_constraintBottom_toTopOf="@+id/view4"
@@ -71,7 +71,7 @@
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/course_nametxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -80,10 +80,10 @@
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toBottomOf="@+id/course_image" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/course_description_txt"
         android:layout_width="386dp"
         android:layout_height="61dp"
         android:layout_marginStart="16dp"
@@ -94,7 +94,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/course_nametxt" />
 
     <View
         android:id="@+id/view3"

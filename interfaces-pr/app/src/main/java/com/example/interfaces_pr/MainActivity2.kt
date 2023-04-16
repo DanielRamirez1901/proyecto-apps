@@ -4,12 +4,10 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.interfaces_pr.databinding.ActivityMain2Binding
 
 class MainActivity2 : AppCompatActivity() {
@@ -52,7 +50,7 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     fun irASegundaActivity(view: View) {
-        val intent = Intent(this, CursoActivity::class.java)
+        val intent = Intent(this, CourseActivity::class.java)
         startActivity(intent)
     }
 
