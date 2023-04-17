@@ -5,13 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
+import com.example.interfaces_pr.model.CoursePublicationGeneral
 import com.example.interfaces_pr.model.CoursePublications
-import com.example.interfaces_pr.model.Teacher
 import com.example.interfaces_pr.viewholders.CoursePublicationViewHolder
 import java.util.Calendar
 
 interface OnItemClickListener {
     fun onItemClick(coursePublications: CoursePublications)
+    fun onItemClick(courseGeneralPublications: CoursePublicationGeneral)
 }
 class CoursePublicationAdapter():Adapter<CoursePublicationViewHolder>() {
 

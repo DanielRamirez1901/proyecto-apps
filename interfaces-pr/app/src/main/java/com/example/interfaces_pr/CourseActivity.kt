@@ -6,14 +6,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.interfaces_pr.adapter.CoursePublicationAdapter
-import com.example.interfaces_pr.adapter.CourseScheduleAdapter
-import com.example.interfaces_pr.adapter.MemberTeamAdapter
-import com.example.interfaces_pr.adapter.TeacherAdapter
+import com.example.interfaces_pr.adapter.*
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.model.Course
+import com.example.interfaces_pr.model.CoursePublicationGeneral
 import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
-import com.example.interfaces_pr.adapter.OnItemClickListener
 import com.example.interfaces_pr.model.CoursePublications
 import com.example.interfaces_pr.model.Teacher
 import com.example.interfaces_pr.recyclerview.PublicationInterface
@@ -31,6 +28,7 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     private lateinit var teacherAdapter:TeacherAdapter
     private lateinit var memberTeamAdapter:MemberTeamAdapter
     private lateinit var coursePublicationsAdapter:CoursePublicationAdapter
+    private lateinit var coursePublicationsGeneralAdapter:CoursePublicationGeneralAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,15 +36,17 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         setContentView(binding.root)
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
-        val courseType : String = "Soccer"
-        val courseDescr : String = getCourseDescription(courseType)
-        val courseimg : Int = getCourseImage(courseType)
-        val course = Course(binding,courseimg,courseType,courseDescr)
+        val courseType: String = "Basketball"
+        val courseDescr: String = getCourseDescription(courseType)
+        val courseimg: Int = getCourseImage(courseType)
+        val course = Course(binding, courseimg, courseType, courseDescr)
         course.setCourse()
 
         val itemDecoration = ItemOffsetDecoration(16)
-        val layoutManagerMemberTeamAdapter = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        val layoutManagerCoursePublicationAdapter = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        val layoutManagerMemberTeamAdapter =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val layoutManagerCoursePublicationAdapter =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         scheduleAdapter = CourseScheduleAdapter(courseType)
         binding.courseScheduleList.adapter = scheduleAdapter
@@ -73,8 +73,12 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.importantPbList.addItemDecoration(itemDecoration)
         binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
 
-
-
+        coursePublicationsGeneralAdapter = CoursePublicationGeneralAdapter()
+        coursePublicationsGeneralAdapter.listener=this
+        binding.publicationsGeneralList.adapter = coursePublicationsGeneralAdapter
+        binding.publicationsGeneralList.setHasFixedSize(true)
+        binding.publicationsGeneralList.layoutManager = LinearLayoutManager(this)
+        binding.publicationsGeneralList.addItemDecoration(itemDecoration)
 
     }
 
@@ -116,6 +120,22 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         intent.putExtra("publicationImg",publicationImg)
 
         startActivity(intent)
+    }
+
+    override fun onItemClick(courseGeneralPublications: CoursePublicationGeneral) {
+        val publicationTitle = courseGeneralPublications.pubGeneral_username
+        val publicationCont = courseGeneralPublications.pubGeneral_description
+        val userImg = courseGeneralPublications.pubGeneral_userImg
+        val publicationImg = courseGeneralPublications.pubGeneral_Img
+
+        val intent = Intent(this,PublicationsActivity::class.java)
+
+        intent.putExtra("publicationTitle",publicationTitle)
+        intent.putExtra("publicationCont",publicationCont)
+        intent.putExtra("userImg",userImg)
+        intent.putExtra("publicationImg",publicationImg)
+        startActivity(intent)
+
     }
 
 

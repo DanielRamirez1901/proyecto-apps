@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CourseCommentAdapter
+import com.example.interfaces_pr.adapter.CoursePublicationGeneralAdapter
 import com.example.interfaces_pr.databinding.ActivityPublicationsBinding
 import com.example.interfaces_pr.model.CourseComment
 
@@ -18,6 +19,7 @@ class PublicationsActivity : AppCompatActivity() {
     }
 
     private lateinit var courseCommentAdapter:CourseCommentAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +63,10 @@ class PublicationsActivity : AppCompatActivity() {
         binding.usersCommentsList.adapter = courseCommentAdapter
         binding.usersCommentsList.setHasFixedSize(true)
         binding.usersCommentsList.layoutManager = LinearLayoutManager(this)
+
+
+
+
 
         binding.sendCommentBtn.setOnClickListener{
             val textInComment = binding.userCommentToSendTxt.text?.toString().orEmpty().trim()

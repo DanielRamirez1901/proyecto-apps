@@ -58,11 +58,11 @@
         android:id="@+id/numerLikes_incommentTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="1"
         android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView20"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintHorizontal_bias="0.72"
         app:layout_constraintStart_toEndOf="@+id/imageView18"
         app:layout_constraintTop_toBottomOf="@+id/like_incommentImg" />
 
