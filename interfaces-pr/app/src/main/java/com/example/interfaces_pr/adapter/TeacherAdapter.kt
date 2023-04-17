@@ -19,7 +19,6 @@ class TeacherAdapter(courseType:String): Adapter<TeacherViewHolder>() {
         }else if(courseType == "Soccer"){
             teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile1,"Stephen Curry","Descripcion del profesor aqui"))
             teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile2,"Stephen Curry2","Descripcion del profesor aqui2"))
-
         }
     }
 

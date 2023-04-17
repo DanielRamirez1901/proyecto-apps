@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CourseScheduleAdapter
+import com.example.interfaces_pr.adapter.MemberTeamAdapter
 import com.example.interfaces_pr.adapter.TeacherAdapter
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.model.Course
@@ -21,6 +22,8 @@ class CourseActivity : AppCompatActivity() {
 
     private lateinit var scheduleAdapter:CourseScheduleAdapter
     private lateinit var teacherAdapter:TeacherAdapter
+    private lateinit var memberTeamAdapter:MemberTeamAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,19 +36,27 @@ class CourseActivity : AppCompatActivity() {
         val course = Course(binding,courseimg,courseType,courseDescr)
         course.setCourse()
 
+        val itemDecoration = ItemOffsetDecoration(16)
+        val itemDecorationTeams = ItemOffsetDecoration(2)
+        val layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
 
         scheduleAdapter = CourseScheduleAdapter(courseType)
         binding.courseScheduleList.adapter = scheduleAdapter
         binding.courseScheduleList.setHasFixedSize(true)
-
-        val itemDecoration = ItemOffsetDecoration(16)
         binding.courseScheduleList.addItemDecoration(itemDecoration)
 
         teacherAdapter = TeacherAdapter(courseType)
         binding.teachersList.adapter = teacherAdapter
-        binding.teachersList.setHasFixedSize(true)
+        binding.teachersList.setHasFixedSize(false)
         binding.teachersList.layoutManager = LinearLayoutManager(this)
         binding.teachersList.addItemDecoration(itemDecoration)
+
+        memberTeamAdapter = MemberTeamAdapter(courseType)
+        binding.teamIcesiList.adapter = memberTeamAdapter
+        binding.teamIcesiList.setHasFixedSize(true)
+        binding.teamIcesiList.layoutManager = layoutManager
+        binding.teamBannerIMG.setImageResource(courseimg)
+
 
     }
 
@@ -73,4 +84,5 @@ class CourseActivity : AppCompatActivity() {
         }
         return image
     }
+
 }
