@@ -3,14 +3,19 @@ package com.example.interfaces_pr.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.Teacher
 import com.example.interfaces_pr.viewholders.TeacherViewHolder
 
+
+
 class TeacherAdapter(courseType:String): Adapter<TeacherViewHolder>() {
 
     private var teachers : ArrayList<Teacher> = arrayListOf()
+
+
 
     init{
         if(courseType == "Basketball") {
@@ -34,10 +39,15 @@ class TeacherAdapter(courseType:String): Adapter<TeacherViewHolder>() {
         holder.profileImg.setImageResource(teachers[position].profileImage)
         holder.teacherName.text = teachers[position].teacherName
         holder.teacherDesc.text = teachers[position].teacherInfo
+
     }
 
     override fun getItemCount(): Int {
         return teachers.size
     }
 
+
+
 }
+
+

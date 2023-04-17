@@ -3,6 +3,7 @@ package com.example.interfaces_pr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CoursePublicationAdapter
@@ -12,8 +13,13 @@ import com.example.interfaces_pr.adapter.TeacherAdapter
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.model.Course
 import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
+import com.example.interfaces_pr.adapter.OnItemClickListener
+import com.example.interfaces_pr.model.CoursePublications
+import com.example.interfaces_pr.model.Teacher
+import com.example.interfaces_pr.recyclerview.PublicationInterface
 
-class CourseActivity : AppCompatActivity() {
+
+class CourseActivity : AppCompatActivity(),OnItemClickListener{
 
 
 
@@ -32,7 +38,7 @@ class CourseActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
-        val courseType : String = "Basketball"
+        val courseType : String = "Soccer"
         val courseDescr : String = getCourseDescription(courseType)
         val courseimg : Int = getCourseImage(courseType)
         val course = Course(binding,courseimg,courseType,courseDescr)
@@ -61,10 +67,13 @@ class CourseActivity : AppCompatActivity() {
         binding.teamBannerIMG.setImageResource(courseimg)
 
         coursePublicationsAdapter = CoursePublicationAdapter()
+        coursePublicationsAdapter.listener = this
         binding.importantPbList.adapter = coursePublicationsAdapter
         binding.importantPbList.setHasFixedSize(true)
         binding.importantPbList.addItemDecoration(itemDecoration)
         binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
+
+
 
 
     }
@@ -94,6 +103,20 @@ class CourseActivity : AppCompatActivity() {
         return image
     }
 
+    override fun onItemClick(coursePublications: CoursePublications) {
+        val publicationTitle = coursePublications.userName
+        val publicationCont = coursePublications.pbContent
+        val userImg = coursePublications.pbUser
+        val publicationImg = coursePublications.imagePublic
+        val intent = Intent(this, PublicationsActivity::class.java)
+
+        intent.putExtra("publicationTitle",publicationTitle)
+        intent.putExtra("publicationCont",publicationCont)
+        intent.putExtra("userImg",userImg)
+        intent.putExtra("publicationImg",publicationImg)
+
+        startActivity(intent)
+    }
 
 
 }

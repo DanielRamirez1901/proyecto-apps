@@ -22,6 +22,7 @@ class CourseScheduleAdapter(courseType : String) : Adapter<CourseScheduleViewHol
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
+            courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
         }
     }
 

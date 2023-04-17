@@ -6,12 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.CoursePublications
+import com.example.interfaces_pr.model.Teacher
 import com.example.interfaces_pr.viewholders.CoursePublicationViewHolder
 import java.util.Calendar
 
+interface OnItemClickListener {
+    fun onItemClick(coursePublications: CoursePublications)
+}
 class CoursePublicationAdapter():Adapter<CoursePublicationViewHolder>() {
 
     private var publications:ArrayList<CoursePublications> = arrayListOf()
+    var listener: OnItemClickListener? = null
 
     init{
         val calendar = Calendar.getInstance()
@@ -38,6 +43,9 @@ class CoursePublicationAdapter():Adapter<CoursePublicationViewHolder>() {
         holder.month.text = publications[position].month
         holder.year.text = publications[position].year
         holder.pbContent.text = publications[position].pbContent
+        holder.itemView.setOnClickListener{
+            listener?.onItemClick(publications[position])
+        }
     }
 
     override fun getItemCount(): Int {
