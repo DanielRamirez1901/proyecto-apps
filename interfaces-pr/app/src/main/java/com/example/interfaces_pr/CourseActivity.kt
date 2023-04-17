@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.interfaces_pr.adapter.CoursePublicationAdapter
 import com.example.interfaces_pr.adapter.CourseScheduleAdapter
 import com.example.interfaces_pr.adapter.MemberTeamAdapter
 import com.example.interfaces_pr.adapter.TeacherAdapter
@@ -23,6 +24,7 @@ class CourseActivity : AppCompatActivity() {
     private lateinit var scheduleAdapter:CourseScheduleAdapter
     private lateinit var teacherAdapter:TeacherAdapter
     private lateinit var memberTeamAdapter:MemberTeamAdapter
+    private lateinit var coursePublicationsAdapter:CoursePublicationAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,13 +39,14 @@ class CourseActivity : AppCompatActivity() {
         course.setCourse()
 
         val itemDecoration = ItemOffsetDecoration(16)
-        val itemDecorationTeams = ItemOffsetDecoration(2)
-        val layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        val layoutManagerMemberTeamAdapter = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        val layoutManagerCoursePublicationAdapter = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
 
         scheduleAdapter = CourseScheduleAdapter(courseType)
         binding.courseScheduleList.adapter = scheduleAdapter
         binding.courseScheduleList.setHasFixedSize(true)
         binding.courseScheduleList.addItemDecoration(itemDecoration)
+
 
         teacherAdapter = TeacherAdapter(courseType)
         binding.teachersList.adapter = teacherAdapter
@@ -54,8 +57,14 @@ class CourseActivity : AppCompatActivity() {
         memberTeamAdapter = MemberTeamAdapter(courseType)
         binding.teamIcesiList.adapter = memberTeamAdapter
         binding.teamIcesiList.setHasFixedSize(true)
-        binding.teamIcesiList.layoutManager = layoutManager
+        binding.teamIcesiList.layoutManager = layoutManagerMemberTeamAdapter
         binding.teamBannerIMG.setImageResource(courseimg)
+
+        coursePublicationsAdapter = CoursePublicationAdapter()
+        binding.importantPbList.adapter = coursePublicationsAdapter
+        binding.importantPbList.setHasFixedSize(true)
+        binding.importantPbList.addItemDecoration(itemDecoration)
+        binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
 
 
     }
@@ -84,5 +93,7 @@ class CourseActivity : AppCompatActivity() {
         }
         return image
     }
+
+
 
 }
