@@ -5,11 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.campusbu.databinding.HomefragmentBinding
+import com.example.campusbu.databinding.DeportesCursosBinding
 
-class HomeFragment : Fragment() {
-
-    private lateinit var binding: HomefragmentBinding // declara la variable binding
+class cursosDeportesFragment  : Fragment() {
+    private lateinit var binding: DeportesCursosBinding // declara la variable binding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,7 +16,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = HomefragmentBinding.inflate(inflater, container, false) // inicializa la variable binding
+        binding = DeportesCursosBinding.inflate(inflater, container, false) // inicializa la variable binding
         return binding.root // retorna la vista inflada a través de la variable binding
     }
 
