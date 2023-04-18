@@ -80,10 +80,18 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.publicationsGeneralList.layoutManager = LinearLayoutManager(this)
         binding.publicationsGeneralList.addItemDecoration(itemDecoration)
 
+        binding.addPublishBtn.setOnClickListener{
+            goToPublishActivity()
+        }
     }
 
-    fun irAPrimeraActivity(view: View) {
+     fun irAPrimeraActivity() {
         val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
+    }
+
+    private fun goToPublishActivity(){
+        val intent = Intent(this,PostComment::class.java)
         startActivity(intent)
     }
 
