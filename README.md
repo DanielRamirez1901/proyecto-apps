@@ -1,4 +1,10 @@
 # Bienestar Universitario App
+<div align="center">
+  <img src="imagesReadme/LoginIdea3.png" alt="Imagen de login" width="400"/>
+</div>
+
+
+
 
 
 
