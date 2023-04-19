@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_homeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Aquí colocamos el contenedor para el fragmento -->
+    <FrameLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/search_plainTxt"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/recuadro_busqueda"
+            android:ems="10"
+            android:hint="Buscar"
+            android:inputType="textPersonName"
+            android:textColor="#999A9B"
+            android:textColorHint="#999a9b"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginLeft="21.5dp"
+            android:background="@drawable/recuadro_lupa"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/lupa"
+            tools:srcCompat="@drawable/lupa" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/button_Cultura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:onClick="onClickButtonCultura"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stateListAnimator="@null"
+            android:text="Cultura"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#2C91D7"
+            android:textSize="24sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_deportes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:foregroundTint="#00FFFFFF"
+            android:onClick="onClickButtonDeportes"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stateListAnimator="@null"
+            android:text="Deportes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#2C91D7"
+            android:textSize="24sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button_desarrollo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:clickable="true"
+            android:onClick="onClickButtonDesarrollo"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:stateListAnimator="@null"
+            android:text="Desarrollo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#2C91D7"
+            android:textSize="24sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+
+</LinearLayout>
