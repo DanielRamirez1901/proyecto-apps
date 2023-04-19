@@ -1,7 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:orientation="vertical"
+    tools:context=".MainActivity1">
+
+    <!-- Aquí colocamos el contenedor para el fragmento -->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="744dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+    <!-- Aquí colocamos la barra de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="TODO"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/home_icon"
+            android:visibility="visible"
+            app:iconTint="#BDB6B6"
+            tools:src="@drawable/home_icon" />
+
+        <ImageButton
+            android:id="@+id/button_publi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="TODO"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/publi_icon"
+            android:visibility="visible"
+            app:iconTint="#BDB6B6"
+            tools:src="@drawable/publi_icon" />
+
+        <ImageButton
+            android:id="@+id/button_noti"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="TODO"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/noti_icon"
+            android:visibility="visible"
+            app:iconTint="#BDB6B6"
+            tools:src="@drawable/noti_icon" />
+
+        <ImageButton
+            android:id="@+id/button_perfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="TODO"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/perfil_icon"
+            android:visibility="visible"
+            app:iconTint="#BDB6B6"
+            tools:src="@drawable/perfil_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>

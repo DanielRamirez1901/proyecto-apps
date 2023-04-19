@@ -197,7 +197,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view19"
         app:srcCompat="@drawable/gallery_icon"
         android:padding="4dp"
-        android:background="@drawable/publication_style"/>
+        android:background="@drawable/publi_style"/>
 
     <ImageView
         android:id="@+id/send_commentBtn"
@@ -209,7 +209,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view19"
         app:layout_constraintVertical_bias="0.50"
         app:srcCompat="@drawable/send_icon"
-        android:background="@drawable/publication_style"
+        android:background="@drawable/publi_style"
         android:padding="4dp"/>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -21,10 +21,13 @@
             android:name=".CourseActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".MainActivity1"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

@@ -3,8 +3,6 @@ package com.example.interfaces_pr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.*
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
@@ -12,8 +10,7 @@ import com.example.interfaces_pr.model.Course
 import com.example.interfaces_pr.model.CoursePublicationGeneral
 import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
 import com.example.interfaces_pr.model.CoursePublications
-import com.example.interfaces_pr.model.Teacher
-import com.example.interfaces_pr.recyclerview.PublicationInterface
+import com.example.interfaces_pr.model.cursoAtri
 
 
 class CourseActivity : AppCompatActivity(),OnItemClickListener{
@@ -83,10 +80,17 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.addPublishBtn.setOnClickListener{
             goToPublishActivity()
         }
+
+        binding.returnBtn.setOnClickListener{
+            val intent = Intent(this,MainActivity1::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
      fun irAPrimeraActivity() {
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
     }
 
@@ -128,6 +132,10 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         intent.putExtra("publicationImg",publicationImg)
 
         startActivity(intent)
+    }
+
+    override fun onItemClick(coursePublications: cursoAtri) {
+        TODO("Not yet implemented")
     }
 
     override fun onItemClick(courseGeneralPublications: CoursePublicationGeneral) {

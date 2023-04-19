@@ -4,8 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,7 +11,7 @@ import com.example.interfaces_pr.databinding.ActivityMain2Binding
 import com.example.interfaces_pr.fragments.LoginFragment
 import com.example.interfaces_pr.fragments.RegisterFragment
 
-class MainActivity2 : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private val binding:ActivityMain2Binding by lazy{
         ActivityMain2Binding.inflate(layoutInflater)
@@ -49,7 +47,9 @@ class MainActivity2 : AppCompatActivity() {
         Log.d("TAG", "Valor de EditText1: $codeLogin")
         Log.d("TAG", "Valor de EditText2: $passwordLogin")
          */
-
+        binding.loginBtn.setOnClickListener{
+            goToMainActivity()
+        }
     }
 
 
@@ -58,10 +58,11 @@ class MainActivity2 : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
     }
 
-    fun irASegundaActivity(view: View) {
+    private fun goToMainActivity() {
 
-        val intent = Intent(this, CourseActivity::class.java)
+        val intent = Intent(this, MainActivity1::class.java)
         startActivity(intent)
+
     }
 
 }

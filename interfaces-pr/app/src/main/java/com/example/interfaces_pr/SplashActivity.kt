@@ -6,17 +6,17 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 
-class MainActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
     private val mainHandler = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main1)
 
         mainHandler.postDelayed({
-            startActivity(Intent(this, MainActivity2::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, 4000)
 
