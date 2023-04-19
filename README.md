@@ -1,6 +1,9 @@
-# Título del Proyecto
+# Bienestar Universitario App
 
-_Acá va un párrafo que describa lo que es el proyecto_
+
+
+_Aplicación móvil de bienestar universitario que simplifica el proceso de encontrar cursos como deportes, artes u otras actividades al igual que permite
+una interacción directa con los miembros de cada curso_
 
 ## Construido con 🛠️
 
@@ -8,6 +11,8 @@ _Acá va un párrafo que describa lo que es el proyecto_
 * [Kotlin](https://kotlinlang.org) - El lenguaje utilizado
 * [Google Fonts](https://fonts.google.com/icons?icon.platform=android) - Usado para los iconos
 * [Android Studio](https://developer.android.com/studio) - Usado como IDE
+* [Flaticon](https://www.flaticon.es) - Usado para los iconos
+
 
 
 ## Autores ✒️
