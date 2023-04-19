@@ -1,6 +1,10 @@
-# Título del Proyecto
+# Bienestar universitario App
 
-_Acá va un párrafo que describa lo que es el proyecto_
+<div align="center">
+  <img src="https://github.com/DanielRamirez1901/proyecto-apps/blob/master/imagesReadme/LoginIdea3.png" alt="Imagen de login" width="400"/>
+</div>
+
+_Aplicacion de bienestar universitario que facilita la visualizacion de cursos, horarios, instructores y permite una comunicacion directa y en tiempo real con los integrantes de esta_
 
 ## Construido con 🛠️
 
