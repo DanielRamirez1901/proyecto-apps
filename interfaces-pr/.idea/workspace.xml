@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5611440-6406-457c-8213-8a321a8beaeb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/CourseActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/CourseActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/MainActivity2.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/adapter/CoursePublicationAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/interfaces_pr/adapter/CoursePublicationAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/publication_style.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/publication_style.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_publications.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_publications.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/course_publication_general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/course_publication_general.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,19 +88,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ResourceManagerPrefKey.ResourceType&quot;: &quot;ANIM&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;android-custom-viewC:/Users/danir/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED&quot;: &quot;RecyclerView&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/danir/Music/appsProyecto/interfaces-pr/app/src/main/res/values&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/danir/Music/appsProyecto/interfaces-pr/app/src/main/res/values&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ResourceManagerPrefKey.ResourceType": "ANIM",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-viewC:/Users/danir/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED": "RecyclerView",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "last_directory_selection": "C:/Users/danir/Music/appsProyecto/interfaces-pr/app/src/main/res/values",
+    "last_opened_file_path": "C:/Users/danir/Music/appsProyecto/interfaces-pr/app/src/main/res/values",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="android.template.-812434155">
       <recent name="com.example.interfaces_pr" />
