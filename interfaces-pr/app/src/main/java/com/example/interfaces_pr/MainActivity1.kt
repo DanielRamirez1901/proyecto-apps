@@ -27,19 +27,12 @@ class MainActivity1 : AppCompatActivity(){
     private lateinit var button_Cultura: Button
     private lateinit var button_Deportes: Button
     private lateinit var button_Desarrollo: Button
-
-    private lateinit var button_PublisGenerales: Button
-    private lateinit var buttonMisPublis: Button
-
-    private lateinit var adapter: NotificationAdapter
-    private lateinit var notifiRecyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val homeFragment = inflater.inflate(R.layout.homefragment, null)
-        val publis = inflater.inflate(R.layout.publifragment, null)
 
         button_home = findViewById(id.button_home)
         button_publi = findViewById(id.button_publi)

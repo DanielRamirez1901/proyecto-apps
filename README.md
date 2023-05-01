@@ -1,15 +1,10 @@
-# Bienestar Universitario App
+# Bienestar universitario App
+
 <div align="center">
-  <img src="imagesReadme/LoginIdea3.png" alt="Imagen de login" width="400"/>
+  <img src="https://github.com/DanielRamirez1901/proyecto-apps/blob/master/imagesReadme/LoginIdea3.png" alt="Imagen de login" width="400"/>
 </div>
 
-
-
-
-
-
-_Aplicación móvil de bienestar universitario que simplifica el proceso de encontrar cursos como deportes, artes u otras actividades al igual que permite
-una interacción directa con los miembros de cada curso_
+_Aplicacion de bienestar universitario que facilita la visualizacion de cursos, horarios, instructores y permite una comunicacion directa y en tiempo real con los integrantes de esta_
 
 ## Construido con 🛠️
 
@@ -17,8 +12,6 @@ una interacción directa con los miembros de cada curso_
 * [Kotlin](https://kotlinlang.org) - El lenguaje utilizado
 * [Google Fonts](https://fonts.google.com/icons?icon.platform=android) - Usado para los iconos
 * [Android Studio](https://developer.android.com/studio) - Usado como IDE
-* [Flaticon](https://www.flaticon.es) - Usado para los iconos
-
 
 
 ## Autores ✒️

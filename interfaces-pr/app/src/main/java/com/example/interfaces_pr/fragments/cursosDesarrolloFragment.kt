@@ -32,6 +32,7 @@ class cursosDesarrolloFragment  : Fragment() {
         }
         return binding.root // retorna la vista inflada a través de la variable binding
     }
+
     private fun goToCourse(){
         val intent = Intent(this.activity, CourseActivity::class.java)
         startActivity(intent)

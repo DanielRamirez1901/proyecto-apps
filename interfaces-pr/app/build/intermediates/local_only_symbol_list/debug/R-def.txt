@@ -110,6 +110,7 @@ id career
 id celular_icon
 id celular_label
 id codeLoginET
+id codeUsuarioET
 id contador_notificaciones
 id container_homeFragment
 id course_description_txt
@@ -121,12 +122,10 @@ id desarrolloImg
 id descipction_label
 id descripcionPubli
 id description_notification
-id editTextTextPersonName
-id editTextTextPersonName2
-id editTextTextPersonName3
 id editTextTextPersonName4
 id editTextTextPersonName5
-id editTextTextPersonName6
+id emaiL
+id emailET
 id fileBtn
 id fondo
 id fragment_container
@@ -172,6 +171,8 @@ id name
 id name_curso_label
 id notification_list_view
 id numerLikes_incommentTxt
+id pass
+id passET
 id passwordLoginET
 id pbGeneral_dayTxt
 id pbGeneral_mouthTxt
@@ -237,6 +238,7 @@ id user_commentToSendTxt
 id user_incommentImg
 id user_profile
 id usercont_incommentTxt
+id usernameET
 id username_incommentTxt
 id users_commentsList
 id view
@@ -274,6 +276,7 @@ layout format_notification
 layout format_publicacion
 layout homefragment
 layout list_item_notification
+layout login__fragment
 layout login_fragment
 layout mis_publicaciones
 layout perfilfragment
@@ -286,6 +289,13 @@ layout team_icesi
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string default_web_client_id
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string project_id
 style SplashTheme
 style Theme.Interfacespr
 xml backup_rules

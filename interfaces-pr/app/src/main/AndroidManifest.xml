@@ -12,6 +12,12 @@
         android:theme="@style/Theme.Interfacespr"
         tools:targetApi="31">
         <activity
+            android:name=".login_"
+            android:exported="false" />
+        <activity
+            android:name=".LoginFragmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostComment"
             android:exported="false" />
         <activity

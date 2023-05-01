@@ -4,7 +4,6 @@ package com.example.interfaces_pr.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -13,6 +12,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.interfaces_pr.R;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,16 +23,13 @@ public final class RegisterFragmentBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final EditText editTextTextPersonName;
+  public final TextInputLayout codeUsuarioET;
 
   @NonNull
-  public final EditText editTextTextPersonName2;
+  public final TextInputEditText emaiL;
 
   @NonNull
-  public final EditText editTextTextPersonName3;
-
-  @NonNull
-  public final EditText editTextTextPersonName6;
+  public final TextInputLayout emailET;
 
   @NonNull
   public final ImageView imageView10;
@@ -58,20 +56,29 @@ public final class RegisterFragmentBinding implements ViewBinding {
   public final ImageView imageView9;
 
   @NonNull
+  public final TextInputEditText pass;
+
+  @NonNull
+  public final TextInputLayout passET;
+
+  @NonNull
   public final TextView textView4;
 
+  @NonNull
+  public final TextInputLayout usernameET;
+
   private RegisterFragmentBinding(@NonNull ConstraintLayout rootView,
-      @NonNull EditText editTextTextPersonName, @NonNull EditText editTextTextPersonName2,
-      @NonNull EditText editTextTextPersonName3, @NonNull EditText editTextTextPersonName6,
-      @NonNull ImageView imageView10, @NonNull ImageView imageView11,
-      @NonNull ImageView imageView12, @NonNull ImageView imageView13,
-      @NonNull ImageView imageView14, @NonNull ImageView imageView15, @NonNull ImageView imageView8,
-      @NonNull ImageView imageView9, @NonNull TextView textView4) {
+      @NonNull TextInputLayout codeUsuarioET, @NonNull TextInputEditText emaiL,
+      @NonNull TextInputLayout emailET, @NonNull ImageView imageView10,
+      @NonNull ImageView imageView11, @NonNull ImageView imageView12,
+      @NonNull ImageView imageView13, @NonNull ImageView imageView14,
+      @NonNull ImageView imageView15, @NonNull ImageView imageView8, @NonNull ImageView imageView9,
+      @NonNull TextInputEditText pass, @NonNull TextInputLayout passET, @NonNull TextView textView4,
+      @NonNull TextInputLayout usernameET) {
     this.rootView = rootView;
-    this.editTextTextPersonName = editTextTextPersonName;
-    this.editTextTextPersonName2 = editTextTextPersonName2;
-    this.editTextTextPersonName3 = editTextTextPersonName3;
-    this.editTextTextPersonName6 = editTextTextPersonName6;
+    this.codeUsuarioET = codeUsuarioET;
+    this.emaiL = emaiL;
+    this.emailET = emailET;
     this.imageView10 = imageView10;
     this.imageView11 = imageView11;
     this.imageView12 = imageView12;
@@ -80,7 +87,10 @@ public final class RegisterFragmentBinding implements ViewBinding {
     this.imageView15 = imageView15;
     this.imageView8 = imageView8;
     this.imageView9 = imageView9;
+    this.pass = pass;
+    this.passET = passET;
     this.textView4 = textView4;
+    this.usernameET = usernameET;
   }
 
   @Override
@@ -110,27 +120,21 @@ public final class RegisterFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.editTextTextPersonName;
-      EditText editTextTextPersonName = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName == null) {
+      id = R.id.codeUsuarioET;
+      TextInputLayout codeUsuarioET = ViewBindings.findChildViewById(rootView, id);
+      if (codeUsuarioET == null) {
         break missingId;
       }
 
-      id = R.id.editTextTextPersonName2;
-      EditText editTextTextPersonName2 = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName2 == null) {
+      id = R.id.emaiL;
+      TextInputEditText emaiL = ViewBindings.findChildViewById(rootView, id);
+      if (emaiL == null) {
         break missingId;
       }
 
-      id = R.id.editTextTextPersonName3;
-      EditText editTextTextPersonName3 = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName3 == null) {
-        break missingId;
-      }
-
-      id = R.id.editTextTextPersonName6;
-      EditText editTextTextPersonName6 = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName6 == null) {
+      id = R.id.emailET;
+      TextInputLayout emailET = ViewBindings.findChildViewById(rootView, id);
+      if (emailET == null) {
         break missingId;
       }
 
@@ -182,16 +186,33 @@ public final class RegisterFragmentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.pass;
+      TextInputEditText pass = ViewBindings.findChildViewById(rootView, id);
+      if (pass == null) {
+        break missingId;
+      }
+
+      id = R.id.passET;
+      TextInputLayout passET = ViewBindings.findChildViewById(rootView, id);
+      if (passET == null) {
+        break missingId;
+      }
+
       id = R.id.textView4;
       TextView textView4 = ViewBindings.findChildViewById(rootView, id);
       if (textView4 == null) {
         break missingId;
       }
 
-      return new RegisterFragmentBinding((ConstraintLayout) rootView, editTextTextPersonName,
-          editTextTextPersonName2, editTextTextPersonName3, editTextTextPersonName6, imageView10,
-          imageView11, imageView12, imageView13, imageView14, imageView15, imageView8, imageView9,
-          textView4);
+      id = R.id.usernameET;
+      TextInputLayout usernameET = ViewBindings.findChildViewById(rootView, id);
+      if (usernameET == null) {
+        break missingId;
+      }
+
+      return new RegisterFragmentBinding((ConstraintLayout) rootView, codeUsuarioET, emaiL, emailET,
+          imageView10, imageView11, imageView12, imageView13, imageView14, imageView15, imageView8,
+          imageView9, pass, passET, textView4, usernameET);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

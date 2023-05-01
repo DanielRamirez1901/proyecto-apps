@@ -137,7 +137,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/nada"
         app:layout_constraintEnd_toEndOf="@+id/nada"
         app:layout_constraintStart_toStartOf="@+id/nada"
-        app:layout_constraintTop_toTopOf="@+id/nada"/>
+        app:layout_constraintTop_toTopOf="@+id/nada">
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,17 +21,16 @@ class cursosDeportesFragment  : Fragment() {
 
         binding = DeportesCursosBinding.inflate(inflater, container, false) // inicializa la variable binding
 
-        binding.desarrolloImg.setOnClickListener{
-            goToCourse()
-        }
-
-        binding.tiroArcoImg.setOnClickListener{
-            goToCourse()
-        }
         binding.futbolImg.setOnClickListener{
             goToCourse()
         }
         binding.tennisImg.setOnClickListener{
+            goToCourse()
+        }
+        binding.tiroArcoImg.setOnClickListener{
+            goToCourse()
+        }
+        binding.desarrolloImg.setOnClickListener{
             goToCourse()
         }
         return binding.root // retorna la vista inflada a través de la variable binding
@@ -41,5 +40,4 @@ class cursosDeportesFragment  : Fragment() {
         val intent = Intent(this.activity, CourseActivity::class.java)
         startActivity(intent)
     }
-
 }

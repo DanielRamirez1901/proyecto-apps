@@ -23,12 +23,15 @@ class cursosCulturaFragment  : Fragment() {
 
 
         binding.artesEscenicasImg.setOnClickListener{
+            println("wenas")
             goToCourse()
         }
         binding.artesVisualesImg.setOnClickListener{
+            println("wenas")
             goToCourse()
         }
         binding.desarrolloImg.setOnClickListener{
+            println("wenas")
             goToCourse()
         }
         return binding.root // retorna la vista inflada a través de la variable binding
