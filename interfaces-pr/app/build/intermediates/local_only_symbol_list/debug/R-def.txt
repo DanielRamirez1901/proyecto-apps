@@ -109,6 +109,7 @@ id cardView6
 id career
 id celular_icon
 id celular_label
+id code
 id codeLoginET
 id codeUsuarioET
 id contador_notificaciones
@@ -276,7 +277,6 @@ layout format_notification
 layout format_publicacion
 layout homefragment
 layout list_item_notification
-layout login__fragment
 layout login_fragment
 layout mis_publicaciones
 layout perfilfragment

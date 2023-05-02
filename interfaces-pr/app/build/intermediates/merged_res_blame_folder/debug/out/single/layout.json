@@ -64,10 +64,6 @@
         "source": "com.example.interfaces_pr.app-main-42:/layout/register_fragment.xml"
     },
     {
-        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/login__fragment.xml",
-        "source": "com.example.interfaces_pr.app-main-42:/layout/login__fragment.xml"
-    },
-    {
         "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/list_item_notification.xml",
         "source": "com.example.interfaces_pr.app-main-42:/layout/list_item_notification.xml"
     },

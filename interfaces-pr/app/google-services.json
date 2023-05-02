@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "570021947054",
-    "project_id": "interfaces-pr",
-    "storage_bucket": "interfaces-pr.appspot.com"
+    "project_number": "85622189194",
+    "project_id": "campus-83524",
+    "storage_bucket": "campus-83524.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:570021947054:android:cd10b1ca98bf3871346f3f",
+        "mobilesdk_app_id": "1:85622189194:android:be1c26d35e173f23805173",
         "android_client_info": {
           "package_name": "com.example.interfaces_pr"
         }
       },
       "oauth_client": [
         {
-          "client_id": "570021947054-t0b6ubpso7o973tebomtrnail64dpp3f.apps.googleusercontent.com",
+          "client_id": "85622189194-93370bstu6kosmc32g2vrpdcgm6ss0ku.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCjtm3oGsH_phev-8N4x__wzPTbIYyATAY"
+          "current_key": "AIzaSyCHCvjfvN7gIAXf9AospalyZXAIrAvagAU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "570021947054-t0b6ubpso7o973tebomtrnail64dpp3f.apps.googleusercontent.com",
+              "client_id": "85622189194-93370bstu6kosmc32g2vrpdcgm6ss0ku.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

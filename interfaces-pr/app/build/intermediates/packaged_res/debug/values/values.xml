@@ -10,13 +10,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">interfaces-pr</string>
-    <string name="default_web_client_id" translatable="false">570021947054-t0b6ubpso7o973tebomtrnail64dpp3f.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">570021947054</string>
-    <string name="google_api_key" translatable="false">AIzaSyCjtm3oGsH_phev-8N4x__wzPTbIYyATAY</string>
-    <string name="google_app_id" translatable="false">1:570021947054:android:cd10b1ca98bf3871346f3f</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCjtm3oGsH_phev-8N4x__wzPTbIYyATAY</string>
-    <string name="google_storage_bucket" translatable="false">interfaces-pr.appspot.com</string>
-    <string name="project_id" translatable="false">interfaces-pr</string>
+    <string name="default_web_client_id" translatable="false">85622189194-93370bstu6kosmc32g2vrpdcgm6ss0ku.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">85622189194</string>
+    <string name="google_api_key" translatable="false">AIzaSyCHCvjfvN7gIAXf9AospalyZXAIrAvagAU</string>
+    <string name="google_app_id" translatable="false">1:85622189194:android:be1c26d35e173f23805173</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCHCvjfvN7gIAXf9AospalyZXAIrAvagAU</string>
+    <string name="google_storage_bucket" translatable="false">campus-83524.appspot.com</string>
+    <string name="project_id" translatable="false">campus-83524</string>
     <style name="SplashTheme" parent="Theme.Interfacespr">
          <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>

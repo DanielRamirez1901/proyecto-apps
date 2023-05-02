@@ -38,12 +38,20 @@ class LoginActivity : AppCompatActivity() {
         binding.iniciarSesiontxt.setOnClickListener{
             binding.registrarsetxt.setTextColor(Color.rgb(129,129,129))
             binding.iniciarSesiontxt.setTextColor(Color.rgb(0,0,0))
+            register.binding.passET.editText?.setText("")
+            register.binding.emailET.editText?.setText("")
+            register.binding.codeUsuarioET.editText?.setText("")
+            register.binding.usernameET.editText?.setText("")
+
             showFragment(login)
         }
 
         binding.registrarsetxt.setOnClickListener{
             binding.iniciarSesiontxt.setTextColor(Color.rgb(129,129,129))
             binding.registrarsetxt.setTextColor(Color.rgb(0,0,0))
+            login.binding.codeLoginET.editText?.setText("")
+            login.binding.passwordLoginET.editText?.setText("")
+
             showFragment(register)
         }
         /*
@@ -81,7 +89,7 @@ class LoginActivity : AppCompatActivity() {
                             Toast.makeText(this, "su email aun no ha sido verificado", Toast.LENGTH_LONG).show()
                         }
                     }.addOnFailureListener{
-                        Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Porfavor ingrese un correo válido", Toast.LENGTH_LONG).show()
                     }
                 }
 
@@ -118,7 +126,7 @@ class LoginActivity : AppCompatActivity() {
                         sendVerifyEmail()
                     }
                 }.addOnFailureListener{
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "El correo ya está en uso, intenta con otro", Toast.LENGTH_LONG).show()
                 }
         }
 
@@ -128,7 +136,7 @@ class LoginActivity : AppCompatActivity() {
         Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
             Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
         }?.addOnFailureListener{
-            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Error al enviar el correo de verificación", Toast.LENGTH_LONG).show()
 
         }
     }

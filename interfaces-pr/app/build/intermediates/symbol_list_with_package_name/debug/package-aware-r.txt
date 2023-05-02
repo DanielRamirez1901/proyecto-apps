@@ -3074,6 +3074,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id code
 id codeLoginET
 id codeUsuarioET
 id collapseActionView
@@ -3742,7 +3743,6 @@ layout format_notification
 layout format_publicacion
 layout homefragment
 layout list_item_notification
-layout login__fragment
 layout login_fragment
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

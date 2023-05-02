@@ -3073,6 +3073,7 @@ int id clip_horizontal 0x7f080092
 int id clip_vertical 0x7f080093
 int id clockwise 0x7f080094
 int id closest 0x7f080095
+int id code 0x7f0802a5
 int id codeLoginET 0x7f080096
 int id codeUsuarioET 0x7f080097
 int id collapseActionView 0x7f080098
@@ -3741,7 +3742,6 @@ int layout format_notification 0x7f0b003a
 int layout format_publicacion 0x7f0b003b
 int layout homefragment 0x7f0b003c
 int layout list_item_notification 0x7f0b003d
-int layout login__fragment 0x7f0b003e
 int layout login_fragment 0x7f0b003f
 int layout m3_alert_dialog 0x7f0b0040
 int layout m3_alert_dialog_actions 0x7f0b0041

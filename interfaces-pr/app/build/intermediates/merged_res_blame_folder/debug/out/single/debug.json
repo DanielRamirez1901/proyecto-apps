@@ -44,10 +44,6 @@
         "source": "com.example.interfaces_pr.app-main-42:/drawable/userbanner_image.xml"
     },
     {
-        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_login__fragment.xml.flat",
-        "source": "com.example.interfaces_pr.app-main-42:/layout/login__fragment.xml"
-    },
-    {
         "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_post_comment.xml.flat",
         "source": "com.example.interfaces_pr.app-main-42:/layout/activity_post_comment.xml"
     },
