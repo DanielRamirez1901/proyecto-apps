@@ -9,7 +9,7 @@ import com.example.interfaces_pr.databinding.LoginFragmentBinding
 
 class LoginFragment : Fragment() {
 
-    private lateinit var binding : LoginFragmentBinding
+    lateinit var binding : LoginFragmentBinding
     override fun onCreateView(
         inflater:LayoutInflater,
         container: ViewGroup?,
@@ -23,9 +23,5 @@ class LoginFragment : Fragment() {
         fun newInstance(): LoginFragment {
             return LoginFragment()
         }
-    }
-
-    fun getBinding(): LoginFragmentBinding {
-        return binding
     }
 }

@@ -9,21 +9,23 @@ import com.example.interfaces_pr.databinding.RegisterFragmentBinding
 
 class RegisterFragment : Fragment() {
 
-    val binding: RegisterFragmentBinding by lazy {
-        RegisterFragmentBinding.inflate(layoutInflater)
-    }
-
+    lateinit var binding : RegisterFragmentBinding
     override fun onCreateView(
-        inflater: LayoutInflater,
+        inflater:LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = RegisterFragmentBinding.inflate(inflater,container,false)
         return binding.root
     }
+
 
     companion object {
         fun newInstance(): RegisterFragment {
             return RegisterFragment()
         }
+    }
+    fun getBindingRegister(): RegisterFragmentBinding {
+        return binding
     }
 }

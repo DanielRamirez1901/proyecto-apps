@@ -16,6 +16,8 @@ import com.example.interfaces_pr.model.User
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -51,8 +53,42 @@ class LoginActivity : AppCompatActivity() {
         Log.d("TAG", "Valor de EditText1: $codeLogin")
         Log.d("TAG", "Valor de EditText2: $passwordLogin")
          */
-        binding.loginBtn.setOnClickListener {
-            view -> registrarUsuario(view)
+
+        binding.loginBtn.setOnClickListener {view ->
+
+            val currentFragment = supportFragmentManager.findFragmentById(R.id.nada)
+
+            if (currentFragment is LoginFragment) {
+
+                val email = login.binding.codeLoginET.editText?.text.toString()
+                val pass = login.binding.passwordLoginET.editText?.text.toString()
+
+                if (email.isBlank() || pass.isBlank()){
+                    Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
+                }else{
+                    Firebase.auth.signInWithEmailAndPassword(email, pass).addOnSuccessListener {
+                        val fbuser = Firebase.auth.currentUser
+                        if (fbuser!!.isEmailVerified){
+                            //se le permite el acceso
+                            Firebase.firestore.collection("users").document(fbuser.uid).get().addOnSuccessListener {
+                                val user = it.toObject(User::class.java)
+                                //guardar usuario en la cache
+                                saveUser(user!!)
+                                goToMainActivity()
+                                finish()
+                            }
+                        }else{
+                            Toast.makeText(this, "su email aun no ha sido verificado", Toast.LENGTH_LONG).show()
+                        }
+                    }.addOnFailureListener{
+                        Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    }
+                }
+
+            } else if (currentFragment is RegisterFragment) {
+                registrarUsuario(view)
+            }
+
         }
 
     }
@@ -68,22 +104,42 @@ class LoginActivity : AppCompatActivity() {
         val codeUsuario = register.binding.codeUsuarioET.editText?.text.toString()
         val username = register.binding.usernameET.editText?.text.toString()
 
-        // Autentica al usuario con Firebase Auth
-        Firebase.auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener{
-                //Parte 2____
-                val id = Firebase.auth.currentUser?.uid
-                val user = User(id!!, codeUsuario, email, username)
+        if (email.isBlank() || password.isBlank() || codeUsuario.isBlank() || username.isBlank()){
+            Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
+        }else{
+            // Autentica al usuario con Firebase Auth
+            Firebase.auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener{
+                    //Parte 2____
+                    val id = Firebase.auth.currentUser?.uid
+                    val user = User(id!!, codeUsuario, email, username)
 
-                Firebase.firestore.collection("users").document(id).set(user)
-                goToMainActivity()
-            }
+                    Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
+                        sendVerifyEmail()
+                    }
+                }.addOnFailureListener{
+                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                }
+        }
+
+
+    }
+    fun sendVerifyEmail(){
+        Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
+            Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
+        }?.addOnFailureListener{
+            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+
+        }
+    }
+    fun saveUser(user: User){
+        val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
+        val json = Gson().toJson(user)
+        sp.edit().putString("user", json).apply()
     }
 
     private fun goToMainActivity() {
         val intent = Intent(this, MainActivity1::class.java)
         startActivity(intent)
     }
-
-
 }
