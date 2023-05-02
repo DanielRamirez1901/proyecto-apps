@@ -73,32 +73,35 @@ class LoginActivity : AppCompatActivity() {
 
                 if (email.isBlank() || pass.isBlank()){
                     Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
-                }else{
+                }else {
                     Firebase.auth.signInWithEmailAndPassword(email, pass).addOnSuccessListener {
                         val fbuser = Firebase.auth.currentUser
-                        if (fbuser!!.isEmailVerified){
+                        if (fbuser!!.isEmailVerified) {
                             //se le permite el acceso
-                            Firebase.firestore.collection("users").document(fbuser.uid).get().addOnSuccessListener {
-                                val user = it.toObject(User::class.java)
-                                //guardar usuario en la cache
-                                saveUser(user!!)
-                                goToMainActivity()
-                                finish()
-                            }
-                        }else{
-                            Toast.makeText(this, "su email aun no ha sido verificado", Toast.LENGTH_LONG).show()
+                            Firebase.firestore.collection("users").document(fbuser.uid).get()
+                                .addOnSuccessListener {
+                                    val user = it.toObject(User::class.java)
+                                    //guardar usuario en la cache
+                                    saveUser(user!!)
+                                    goToMainActivity()
+                                    finish()
+                                }
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "su email aun no ha sido verificado",
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
-                    }.addOnFailureListener{
-                        Toast.makeText(this, "Porfavor ingrese un correo válido", Toast.LENGTH_LONG).show()
+                    }.addOnFailureListener {
+                        Toast.makeText(this, "Correo o contraseña incorrecta", Toast.LENGTH_LONG)
+                            .show()
                     }
                 }
-
             } else if (currentFragment is RegisterFragment) {
                 registrarUsuario(view)
             }
-
         }
-
     }
 
     private fun showFragment(fragment:Fragment){

@@ -100,7 +100,7 @@
             android:id="@+id/pass"
             android:layout_width="271dp"
             android:layout_height="49dp"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:maxLines="1"
             android:textColor="@color/black"
             android:textColorHint="#666"
