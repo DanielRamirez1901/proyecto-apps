@@ -13,12 +13,17 @@ _Aplicacion de bienestar universitario que facilita la visualizacion de cursos, 
 * [Google Fonts](https://fonts.google.com/icons?icon.platform=android) - Usado para los iconos
 * [Android Studio](https://developer.android.com/studio) - Usado como IDE
 
+## Modelo lógico:
+[Modelo lógico](https://miro.com/app/board/uXjVMMngR30=/#tpicker-content)
+
+## Modelo estructural: 
+[Modelo estructural](https://miro.com/app/board/uXjVMMngR30=/#tpicker-content)
 
 ## Autores ✒️
 
 
-* **Steban Amilcar** 
-[Steban Amilcar](https://github.com/Amilcar-Steban)
+* **Amilcar Steban** 
+[Amilcar Steban](https://github.com/Amilcar-Steban)
 * **Sebastian Navia** 
 [Sebastian Navia](https://github.com/Sebastianavia)
 * **Daniel Ramirez** 
