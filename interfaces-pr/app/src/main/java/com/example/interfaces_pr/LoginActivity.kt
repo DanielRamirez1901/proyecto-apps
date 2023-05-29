@@ -38,9 +38,9 @@ class LoginActivity : AppCompatActivity() {
         showFragment(login)
 
 
-        binding.iniciarSesiontxt.setOnClickListener{
-            binding.registrarsetxt.setTextColor(Color.rgb(129,129,129))
-            binding.iniciarSesiontxt.setTextColor(Color.rgb(0,0,0))
+        binding.iniciarSesiontxt.setOnClickListener {
+            binding.registrarsetxt.setTextColor(Color.rgb(129, 129, 129))
+            binding.iniciarSesiontxt.setTextColor(Color.rgb(0, 0, 0))
             register.binding.passET.editText?.setText("")
             register.binding.emailET.editText?.setText("")
             register.binding.codeUsuarioET.editText?.setText("")
@@ -48,15 +48,15 @@ class LoginActivity : AppCompatActivity() {
 
             showFragment(login)
         }
-
-        binding.registrarsetxt.setOnClickListener{
-            binding.iniciarSesiontxt.setTextColor(Color.rgb(129,129,129))
-            binding.registrarsetxt.setTextColor(Color.rgb(0,0,0))
+        binding.registrarsetxt.setOnClickListener {
+            binding.iniciarSesiontxt.setTextColor(Color.rgb(129, 129, 129))
+            binding.registrarsetxt.setTextColor(Color.rgb(0, 0, 0))
             login.binding.codeLoginET.editText?.setText("")
             login.binding.passwordLoginET.editText?.setText("")
 
             showFragment(register)
         }
+
         /*
         val loginFragment = supportFragmentManager.findFragmentById(R.id.loginContainerFL) as? LoginFragment
         val codeLogin = loginFragment?.getBinding()?.codeLoginET?.text.toString()
@@ -64,19 +64,14 @@ class LoginActivity : AppCompatActivity() {
         Log.d("TAG", "Valor de EditText1: $codeLogin")
         Log.d("TAG", "Valor de EditText2: $passwordLogin")
          */
-        /*
-        binding.loginBtn.setOnClickListener {view ->
-
+        binding.loginBtn.setOnClickListener { view ->
             val currentFragment = supportFragmentManager.findFragmentById(R.id.nada)
-
             if (currentFragment is LoginFragment) {
-
                 val email = login.binding.codeLoginET.editText?.text.toString()
                 val pass = login.binding.passwordLoginET.editText?.text.toString()
-
-                if (email.isBlank() || pass.isBlank()){
+                if (email.isBlank() || pass.isBlank()) {
                     Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
-                }else {
+                } else {
                     Firebase.auth.signInWithEmailAndPassword(email, pass).addOnSuccessListener {
                         val fbuser = Firebase.auth.currentUser
                         if (fbuser!!.isEmailVerified) {
@@ -105,10 +100,10 @@ class LoginActivity : AppCompatActivity() {
                 registrarUsuario(view)
             }
         }
-         */
+    }
 
         //Todo esto es para pruebas
-        binding.loginBtn.setOnClickListener{
+        /*binding.loginBtn.setOnClickListener{
             val userID = UUID.randomUUID().toString()
             val username = login.binding.codeLoginET.editText?.text.toString()
             val password = login.binding.passwordLoginET.editText?.text.toString()
@@ -148,58 +143,57 @@ class LoginActivity : AppCompatActivity() {
             //Firebase.firestore.collection("users").document(user.id).set(user)
         }
         }
+*/
 
+private fun showFragment(fragment:Fragment){
+    supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
+}
 
+fun registrarUsuario(view: View) {
+    //Parte 1___
+    // Obtiene el correo electrónico y la contraseña de la actividad RegisterFragment
+    val email = register.binding.emailET.editText?.text.toString()
+    val password = register.binding.passET.editText?.text.toString()
+    val codeUsuario = register.binding.codeUsuarioET.editText?.text.toString()
+    val username = register.binding.usernameET.editText?.text.toString()
 
-    private fun showFragment(fragment:Fragment){
-        supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
-    }
-    fun registrarUsuario(view: View) {
-        //Parte 1___
-        // Obtiene el correo electrónico y la contraseña de la actividad RegisterFragment
-        val email = register.binding.emailET.editText?.text.toString()
-        val password = register.binding.passET.editText?.text.toString()
-        val codeUsuario = register.binding.codeUsuarioET.editText?.text.toString()
-        val username = register.binding.usernameET.editText?.text.toString()
+    if (email.isBlank() || password.isBlank() || codeUsuario.isBlank() || username.isBlank()){
+        Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
+    }else{
+        // Autentica al usuario con Firebase Auth
+        Firebase.auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener{
+                //Parte 2____
+                val id = Firebase.auth.currentUser?.uid
+                val user = User(id!!, codeUsuario, email, username)
 
-        if (email.isBlank() || password.isBlank() || codeUsuario.isBlank() || username.isBlank()){
-            Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
-        }else{
-            // Autentica al usuario con Firebase Auth
-            Firebase.auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener{
-                    //Parte 2____
-                    val id = Firebase.auth.currentUser?.uid
-                    val user = User(id!!, codeUsuario, email, username)
-
-                    Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
-                        sendVerifyEmail()
-                    }
-                }.addOnFailureListener{
-                    Toast.makeText(this, "El correo ya está en uso, intenta con otro", Toast.LENGTH_LONG).show()
+                Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
+                    sendVerifyEmail()
                 }
-        }
-
-
-    }
-    fun sendVerifyEmail(){
-        Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
-            Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
-        }?.addOnFailureListener{
-            Toast.makeText(this, "Error al enviar el correo de verificación", Toast.LENGTH_LONG).show()
-
-        }
-    }
-    private fun saveUser(user: User){
-
-        val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
-        val json = Gson().toJson(user)
-        sp.edit().putString("user", json).apply()
+            }.addOnFailureListener{
+                Toast.makeText(this, "El correo ya está en uso, intenta con otro", Toast.LENGTH_LONG).show()
+            }
     }
 
-    private fun goToMainActivity() {
-        val intent = Intent(this, MainActivity1::class.java)
-        startActivity(intent)
+
+}
+fun sendVerifyEmail(){
+    Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
+        Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
+    }?.addOnFailureListener{
+        Toast.makeText(this, "Error al enviar el correo de verificación", Toast.LENGTH_LONG).show()
     }
+}
+private fun saveUser(user: User){
+
+    val sp = getSharedPreferences("CampusBu", AppCompatActivity.MODE_PRIVATE)
+    val json = Gson().toJson(user)
+    sp.edit().putString("user", json).apply()
+}
+
+private fun goToMainActivity() {
+    val intent = Intent(this, MainActivity1::class.java)
+    startActivity(intent)
+}
 
 }

@@ -1,474 +1,470 @@
 [
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_football_course_image.jpg.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\football_course_image.jpg"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_escudo_basket.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/escudo_basket.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_id_card_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\id_card_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_pastel.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/pastel.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_celular_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\celular_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_main2.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main2.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_course_publication_general.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/course_publication_general.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_list_item_notification.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\list_item_notification.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_basketball_course_image.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/basketball_course_image.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_player3.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player3.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_desarrollo_personal_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/desarrollo_personal_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_publications.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_publications.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_cultura_cursos.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/cultura_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_x.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\x.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_login_image.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/login_image.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_send_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\send_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_cultura_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/cultura_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_publication_style.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\publication_style.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_main.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_search_bar.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\search_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\anim_rotate_close_anim.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\anim\\rotate_close_anim.xml"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_tiro_arco_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\tiro_arco_banner.png"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_artes_escenicas.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\artes_escenicas.png"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_borde_navegation_of_home.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\borde_navegation_of_home.xml"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_gallery_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\gallery_icon.png"
-    },
-    {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_splashcolorback.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\splashcolorback.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_userbanner_image.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/userbanner_image.xml"
     },
     {
         "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_post_comment.xml.flat",
         "source": "com.example.interfaces_pr.app-main-42:/layout/activity_post_comment.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_artes_plasticas.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\artes_plasticas.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_noti_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/noti_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_like_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\like_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_perfil_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/perfil_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_recuadro_lupa.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/recuadro_lupa.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_futbol.jpg.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/futbol.jpg"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_format_notification.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_notification.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_player2.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player2.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_profile2.jpg.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\profile2.jpg"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_banner_desarrollo.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/banner_desarrollo.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_register_fragment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\register_fragment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_password_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/password_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_banner_baloncesto.jpg.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\banner_baloncesto.jpg"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_unlike_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/unlike_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_recuadro_busqueda.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\recuadro_busqueda.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_borde_navegation_of_home.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/borde_navegation_of_home.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_user_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\user_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_publications.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_publications.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_acompanamiento_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\acompanamiento_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_back_login_color.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/back_login_color.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_home_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/home_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\anim_to_btn_anim.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\anim\\to_btn_anim.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_player2.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/player2.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_splashimagen.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\splashimagen.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_list_item_notification.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/list_item_notification.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_perfil_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\perfil_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_mochila_perdida.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/mochila_perdida.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_teacher_publication.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\teacher_publication.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_x.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/x.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_perfilfragment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\perfilfragment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_banner_circle.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\banner_circle.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_send_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/send_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_search_bar.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/search_bar.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_profile1.jpg.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\profile1.jpg"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_course.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_course.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_unlike_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\unlike_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_splashcolorback.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/splashcolorback.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_post_comment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_post_comment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/anim_rotate_close_anim.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/anim/rotate_close_anim.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_recuadro_lupa.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\recuadro_lupa.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_like_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/like_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-anydpi-v33\\ic_launcher.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_banner_login.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/banner_login.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_artes_plasticas_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\artes_plasticas_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_splashimagen.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/splashimagen.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\anim_rotate_open_anim.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\anim\\rotate_open_anim.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_id_card_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/id_card_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_banner_login.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\banner_login.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_perfile_format.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/perfile_format.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_perfile_format.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\perfile_format.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_border_text.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/border_text.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_course.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_course.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_tiro_arco_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/tiro_arco_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_termo.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\termo.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_corazon_notification.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/corazon_notification.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_mochila.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\mochila.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_artes_musicales.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/artes_musicales.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_login_image.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\login_image.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\xml\\data_extraction_rules.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_publi_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\publi_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_publi_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/publi_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_team_icesi.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/team_icesi.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_abajo.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\abajo.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/xml_backup_rules.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_format_publicacion.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_publicacion.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_teacher_publication_style.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/teacher_publication_style.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_mis_publicaciones.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\mis_publicaciones.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_publication_style.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/publication_style.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_player1.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player1.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_artes_plasticas_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/artes_plasticas_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_border_text.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\border_text.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_mis_publicaciones.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/mis_publicaciones.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_back_login_color.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\back_login_color.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_tennis_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/tennis_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_baloncestobanner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\baloncestobanner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_termo.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/termo.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_deportes.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\deportes.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_foto_perfil.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/foto_perfil.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_publifragment.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/publifragment.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_artes_plasticas.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/artes_plasticas.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_baloncestobanner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/baloncestobanner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_desarrollo_personal_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\desarrollo_personal_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_perfilfragment.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/perfilfragment.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_foto_perfil.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\foto_perfil.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_lupa.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/lupa.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_plus_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\plus_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_format_publicacion.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/format_publicacion.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_banner_desarrollo.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\banner_desarrollo.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_profile2.jpg.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/profile2.jpg"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_induccion_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\induccion_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_pastel.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\pastel.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_correo_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\correo_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_celular_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/celular_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\anim_from_btn_anim.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\anim\\from_btn_anim.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_banner_baloncesto.jpg.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/banner_baloncesto.jpg"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_home_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\home_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-anydpi-v33/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_arrow_searchbar_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\arrow_searchbar_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_gallery_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/gallery_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_file_icon.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\file_icon.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_futbol_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/futbol_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_teacher.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\teacher.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/anim_rotate_open_anim.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/anim/rotate_open_anim.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_futbol_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\futbol_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_course_schedule.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/course_schedule.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_futbol.jpg.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\futbol.jpg"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_deportes.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/deportes.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_futbol_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\futbol_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/anim_from_btn_anim.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/anim/from_btn_anim.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_mochila_perdida.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\mochila_perdida.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_player3.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/player3.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_main2.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main2.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_cultura_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\cultura_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_football_course_image.jpg.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/football_course_image.jpg"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_arrow_searchbar_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/arrow_searchbar_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_lupa.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\lupa.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_desarrollo_cursos.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\desarrollo_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_teacher_publication.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/teacher_publication.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_banner_circle_blue.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\banner_circle_blue.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_recuadro_busqueda.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/recuadro_busqueda.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_team_icesi.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\team_icesi.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_deportes_cursos.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\deportes_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_course_publication_general.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\course_publication_general.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_publicaciones_generales.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/publicaciones_generales.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_artes_musicales.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\artes_musicales.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_induccion_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/induccion_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_teacher_publication_style.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\teacher_publication_style.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_format_notification.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/format_notification.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_escudo_basket.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\escudo_basket.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_teacher.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/teacher.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/anim_to_btn_anim.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/anim/to_btn_anim.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_tennis_banner.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\tennis_banner.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_abajo.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/abajo.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_publish_button.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\publish_button.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_plus_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/plus_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_userbanner_image.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\userbanner_image.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_activity_main1.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main1.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\xml\\backup_rules.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_artes_visuales.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/artes_visuales.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_splashscreen.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\splashscreen.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_splashscreen.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/splashscreen.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_artes_visuales.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\artes_visuales.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_correo_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/correo_icon.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_noti_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\noti_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_login_fragment.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/login_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_publicaciones_generales.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\publicaciones_generales.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_file_icon.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/file_icon.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_corazon_blanco.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\corazon_blanco.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_banner_circle.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/banner_circle.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_publi_style.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\publi_style.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_player1.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/player1.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_corazon_notification.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\corazon_notification.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_profile1.jpg.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/profile1.jpg"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_main1.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main1.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_register_fragment.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/register_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_basketball_course_image.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\basketball_course_image.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_publifragment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\publifragment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_corazon_blanco.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/corazon_blanco.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_course_schedule.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\course_schedule.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_artes_escenicas.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/artes_escenicas.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_password_icon.png.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\password_icon.png"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_publi_style.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/publi_style.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_login_fragment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\login_fragment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_acompanamiento_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/acompanamiento_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_cultura_cursos.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\cultura_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_futbol_banner.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/futbol_banner.png"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_comment_style.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\comment_style.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_publish_button.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/publish_button.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_homefragment.xml.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\homefragment.xml"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_banner_circle_blue.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/banner_circle_blue.xml"
     },
     {
-        "merged": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\danir\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_user_icon.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/user_icon.png"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_comment_style.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/comment_style.xml"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_mochila.png.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/drawable/mochila.png"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_desarrollo_cursos.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/desarrollo_cursos.xml"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_homefragment.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/homefragment.xml"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.interfaces_pr.app-merged_res-40:/layout_deportes_cursos.xml.flat",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/deportes_cursos.xml"
     }
 ]
