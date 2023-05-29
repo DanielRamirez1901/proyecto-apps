@@ -33,13 +33,13 @@ public final class ActivityPostCommentBinding implements ViewBinding {
   public final CardView cardView3;
 
   @NonNull
-  public final EditText editTextTextPersonName5;
-
-  @NonNull
   public final FloatingActionButton fileBtn;
 
   @NonNull
   public final FloatingActionButton galleryBtn;
+
+  @NonNull
+  public final EditText publiContTxt;
 
   @NonNull
   public final ImageView publicationImg;
@@ -67,8 +67,8 @@ public final class ActivityPostCommentBinding implements ViewBinding {
 
   private ActivityPostCommentBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton addBtn, @NonNull ImageView backButton,
-      @NonNull CardView cardView3, @NonNull EditText editTextTextPersonName5,
-      @NonNull FloatingActionButton fileBtn, @NonNull FloatingActionButton galleryBtn,
+      @NonNull CardView cardView3, @NonNull FloatingActionButton fileBtn,
+      @NonNull FloatingActionButton galleryBtn, @NonNull EditText publiContTxt,
       @NonNull ImageView publicationImg, @NonNull TextView publicationTitleTxt,
       @NonNull TextView textView16, @NonNull TextView textView17, @NonNull TextView textView5,
       @NonNull ImageView userImg, @NonNull View view14, @NonNull View view15) {
@@ -76,9 +76,9 @@ public final class ActivityPostCommentBinding implements ViewBinding {
     this.addBtn = addBtn;
     this.backButton = backButton;
     this.cardView3 = cardView3;
-    this.editTextTextPersonName5 = editTextTextPersonName5;
     this.fileBtn = fileBtn;
     this.galleryBtn = galleryBtn;
+    this.publiContTxt = publiContTxt;
     this.publicationImg = publicationImg;
     this.publicationTitleTxt = publicationTitleTxt;
     this.textView16 = textView16;
@@ -134,12 +134,6 @@ public final class ActivityPostCommentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editTextTextPersonName5;
-      EditText editTextTextPersonName5 = ViewBindings.findChildViewById(rootView, id);
-      if (editTextTextPersonName5 == null) {
-        break missingId;
-      }
-
       id = R.id.fileBtn;
       FloatingActionButton fileBtn = ViewBindings.findChildViewById(rootView, id);
       if (fileBtn == null) {
@@ -149,6 +143,12 @@ public final class ActivityPostCommentBinding implements ViewBinding {
       id = R.id.galleryBtn;
       FloatingActionButton galleryBtn = ViewBindings.findChildViewById(rootView, id);
       if (galleryBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.publiContTxt;
+      EditText publiContTxt = ViewBindings.findChildViewById(rootView, id);
+      if (publiContTxt == null) {
         break missingId;
       }
 
@@ -201,8 +201,8 @@ public final class ActivityPostCommentBinding implements ViewBinding {
       }
 
       return new ActivityPostCommentBinding((ConstraintLayout) rootView, addBtn, backButton,
-          cardView3, editTextTextPersonName5, fileBtn, galleryBtn, publicationImg,
-          publicationTitleTxt, textView16, textView17, textView5, userImg, view14, view15);
+          cardView3, fileBtn, galleryBtn, publiContTxt, publicationImg, publicationTitleTxt,
+          textView16, textView17, textView5, userImg, view14, view15);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

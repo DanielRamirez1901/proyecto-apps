@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -17,6 +18,7 @@ import com.example.interfaces_pr.adapter.NotificationAdapter
 import com.example.interfaces_pr.fragments.*
 import com.example.interfaces_pr.R.id
 import com.example.interfaces_pr.databinding.ActivityMainBinding
+import com.example.interfaces_pr.model.User
 
 class MainActivity1 : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
@@ -33,6 +35,7 @@ class MainActivity1 : AppCompatActivity(){
         setContentView(binding.root)
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val homeFragment = inflater.inflate(R.layout.homefragment, null)
+
 
         button_home = findViewById(id.button_home)
         button_publi = findViewById(id.button_publi)
@@ -117,5 +120,8 @@ class MainActivity1 : AppCompatActivity(){
     fun onClickButtonPublicacionesGenerales(view: View){
         replaceFragmentHome(publicaciones_generalesFragment())
     }
+
+
+
 
 }

@@ -3,6 +3,7 @@ package com.example.interfaces_pr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.*
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
@@ -26,13 +27,17 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     private lateinit var memberTeamAdapter:MemberTeamAdapter
     private lateinit var coursePublicationsAdapter:CoursePublicationAdapter
     private lateinit var coursePublicationsGeneralAdapter:CoursePublicationGeneralAdapter
-
+    private var courseName:String? = null
+    private var courseType:String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
+        courseName = intent.extras?.getString("course name")
+        courseType = intent.extras?.getString("course type")
+        Log.d(">>>","Estoy en: $courseName")
         val courseType: String = "Basketball"
         val courseDescr: String = getCourseDescription(courseType)
         val courseimg: Int = getCourseImage(courseType)
@@ -95,7 +100,10 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     }
 
     private fun goToPublishActivity(){
-        val intent = Intent(this,PostComment::class.java)
+        val intent = Intent(this,PostComment::class.java).apply {
+            putExtra("course name",courseName)
+            putExtra("course type",courseType)
+        }
         startActivity(intent)
     }
 

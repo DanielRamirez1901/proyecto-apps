@@ -3140,7 +3140,6 @@ id easeInOut
 id easeOut
 id east
 id editTextTextPersonName4
-id editTextTextPersonName5
 id edit_query
 id elastic
 id emaiL
@@ -3380,6 +3379,7 @@ id pubGeneral_Img
 id pubGeneral_descriptionTxt
 id pubGeneral_usernameTxt
 id pubgeneral_userImg
+id publiContTxt
 id publicaciones_btn_homa
 id publication_Img
 id publication_contTxt

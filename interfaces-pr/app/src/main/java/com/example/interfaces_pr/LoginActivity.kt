@@ -1,5 +1,6 @@
 package com.example.interfaces_pr
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -17,6 +18,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
+import java.util.UUID
 
 
 class LoginActivity : AppCompatActivity() {
@@ -34,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         showFragment(login)
+
 
         binding.iniciarSesiontxt.setOnClickListener{
             binding.registrarsetxt.setTextColor(Color.rgb(129,129,129))
@@ -61,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
         Log.d("TAG", "Valor de EditText1: $codeLogin")
         Log.d("TAG", "Valor de EditText2: $passwordLogin")
          */
-
+        /*
         binding.loginBtn.setOnClickListener {view ->
 
             val currentFragment = supportFragmentManager.findFragmentById(R.id.nada)
@@ -102,7 +105,51 @@ class LoginActivity : AppCompatActivity() {
                 registrarUsuario(view)
             }
         }
-    }
+         */
+
+        //Todo esto es para pruebas
+        binding.loginBtn.setOnClickListener{
+            val userID = UUID.randomUUID().toString()
+            val username = login.binding.codeLoginET.editText?.text.toString()
+            val password = login.binding.passwordLoginET.editText?.text.toString()
+            val userCode = "none"
+            val userEmail = "none"
+            val user =User(userID,userCode,userEmail,username,password)
+            //guardar usuario en la cache
+
+
+            val query = Firebase.firestore.collection("usersPrueba").whereEqualTo("username",username)
+            query.get().addOnCompleteListener{task ->
+                //Si user no existe, crearlo e iniciar sesion con el
+                if(task.result.size()==0){
+                    Firebase.firestore.collection("usersPrueba").document(user.id).set(user)
+                    val intent = Intent(this,MainActivity1::class.java)
+                    saveUser(user!!)
+                    startActivity(intent)
+                }
+                //Si ya existe, descargar el usuario e iniciar sesionn con el
+                else{
+                    lateinit var existingUser : User
+                    for(document in task.result!!){
+                        existingUser = document.toObject(User::class.java)
+                        break
+                    }
+                    if(existingUser.password == password){
+                        val intent = Intent(this,MainActivity1::class.java).apply {
+                            saveUser(existingUser!!)
+                            putExtra("user",existingUser)
+                        }
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(this,"Contraseña incorrecta", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+            //Firebase.firestore.collection("users").document(user.id).set(user)
+        }
+        }
+
+
 
     private fun showFragment(fragment:Fragment){
         supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
@@ -143,7 +190,8 @@ class LoginActivity : AppCompatActivity() {
 
         }
     }
-    fun saveUser(user: User){
+    private fun saveUser(user: User){
+
         val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
         val json = Gson().toJson(user)
         sp.edit().putString("user", json).apply()
@@ -153,4 +201,5 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity1::class.java)
         startActivity(intent)
     }
+
 }
