@@ -11,8 +11,9 @@ import com.example.interfaces_pr.databinding.DeportesCursosBinding
 import com.example.interfaces_pr.databinding.DesarrolloCursosBinding
 
 class cursosDesarrolloFragment  : Fragment() {
-    private lateinit var binding: DesarrolloCursosBinding // declara la variable binding
 
+    private lateinit var binding: DesarrolloCursosBinding // declara la variable binding
+    private val courseType:String = "Desarrollo H"
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,19 +23,25 @@ class cursosDesarrolloFragment  : Fragment() {
         binding = DesarrolloCursosBinding.inflate(inflater, container, false) // inicializa la variable binding
 
         binding.desarrolloImg.setOnClickListener{
-            goToCourse()
+            val courseName = "Desarrollo Personal"
+            goToCourse(courseName,courseType)
         }
         binding.acompaAmientoImg.setOnClickListener{
-            goToCourse()
+            val courseName = "Acompañamiento"
+            goToCourse(courseName,courseType)
         }
         binding.induccionImg.setOnClickListener{
-            goToCourse()
+            val courseName = "Induccion"
+            goToCourse(courseName,courseType)
         }
         return binding.root // retorna la vista inflada a través de la variable binding
     }
 
-    private fun goToCourse(){
-        val intent = Intent(this.activity, CourseActivity::class.java)
+    private fun goToCourse(courseName:String,courseType:String){
+        val intent = Intent(this.activity,CourseActivity::class.java).apply {
+            putExtra("course name",courseName)
+            putExtra("course type",courseType)
+        }
         startActivity(intent)
     }
 }

@@ -98,6 +98,7 @@ class cursosCulturaFragment  : Fragment() {
 
     }
 
+    /*
     private fun getUser(): User? {
         val sp = activity?.getSharedPreferences("CampusBu", AppCompatActivity.MODE_PRIVATE)
         val json = sp?.getString("user", null)
@@ -107,5 +108,7 @@ class cursosCulturaFragment  : Fragment() {
             null
         }
     }
+
+     */
 
 }
