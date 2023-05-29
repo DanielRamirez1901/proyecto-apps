@@ -1,5 +1,7 @@
 package com.example.interfaces_pr.model
 
+import java.io.Serializable
+
 data class CoursePublicationGeneral (
     val pubGeneral_userImg:Int=0,
     val pubGeneral_Img:Int=0,

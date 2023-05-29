@@ -1,5 +1,6 @@
 package com.example.interfaces_pr.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,6 +52,13 @@ class CoursePublicationGeneralAdapter():Adapter<CoursePublicationGeneralViewHold
 
     override fun getItemCount(): Int {
         return generalPublications.size
+    }
+
+    fun addPublication(publication: CoursePublicationGeneral) {
+        Log.d(">>>", "Llegue al adapter con : $publication")
+        generalPublications.add(publication)
+        notifyItemInserted(generalPublications.lastIndex)
+
     }
 
 }

@@ -12,6 +12,8 @@ import com.example.interfaces_pr.model.CoursePublicationGeneral
 import com.example.interfaces_pr.recyclerview.ItemOffsetDecoration
 import com.example.interfaces_pr.model.CoursePublications
 import com.example.interfaces_pr.model.cursoAtri
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 class CourseActivity : AppCompatActivity(),OnItemClickListener{
@@ -28,7 +30,8 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     private lateinit var coursePublicationsAdapter:CoursePublicationAdapter
     private lateinit var coursePublicationsGeneralAdapter:CoursePublicationGeneralAdapter
     private var courseName:String? = null
-    private var courseType:String? = null
+    private var courseTypeP:String? = null
+    private lateinit var publications:ArrayList<CoursePublicationGeneral>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,8 +39,8 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
 
         //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
         courseName = intent.extras?.getString("course name")
-        courseType = intent.extras?.getString("course type")
-        Log.d(">>>","Estoy en: $courseName")
+        courseTypeP = intent.extras?.getString("course type")
+
         val courseType: String = "Basketball"
         val courseDescr: String = getCourseDescription(courseType)
         val courseimg: Int = getCourseImage(courseType)
@@ -76,20 +79,38 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
 
         coursePublicationsGeneralAdapter = CoursePublicationGeneralAdapter()
-        coursePublicationsGeneralAdapter.listener=this
+        coursePublicationsGeneralAdapter.listener = this
         binding.publicationsGeneralList.adapter = coursePublicationsGeneralAdapter
         binding.publicationsGeneralList.setHasFixedSize(true)
         binding.publicationsGeneralList.layoutManager = LinearLayoutManager(this)
         binding.publicationsGeneralList.addItemDecoration(itemDecoration)
 
-        binding.addPublishBtn.setOnClickListener{
+        binding.addPublishBtn.setOnClickListener {
             goToPublishActivity()
         }
 
-        binding.returnBtn.setOnClickListener{
-            val intent = Intent(this,MainActivity1::class.java)
+        binding.returnBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity1::class.java)
             startActivity(intent)
         }
+
+        Log.d(">>>","Estoy en: ${courseName.toString()}")
+        Log.d(">>>","En type: $courseTypeP")
+        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(courseName.toString()).get().addOnCompleteListener{task ->
+            Log.d(">>>", "Llega aqui?")
+            for(doc in task.result!!){
+                Log.d(">>>", "Llega aqui? for")
+
+                val publication = doc.toObject(CoursePublicationGeneral::class.java)
+                coursePublicationsGeneralAdapter.addPublication(publication)
+                Log.d(">>>", publication.toString())
+
+
+
+            }
+        }
+
+
 
 
     }
@@ -102,7 +123,7 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     private fun goToPublishActivity(){
         val intent = Intent(this,PostComment::class.java).apply {
             putExtra("course name",courseName)
-            putExtra("course type",courseType)
+            putExtra("course type",courseTypeP)
         }
         startActivity(intent)
     }

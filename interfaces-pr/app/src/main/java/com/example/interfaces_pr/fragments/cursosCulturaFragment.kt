@@ -65,6 +65,7 @@ class cursosCulturaFragment  : Fragment() {
     }
 
     private fun creationCourseInDb(typeActivity:String){
+        /*
         val user = this?.getUser()
         user?.username?.let { Log.d(">>>", it) }
 
@@ -92,6 +93,8 @@ class cursosCulturaFragment  : Fragment() {
                 }
             }
         }
+
+         */
 
     }
 
