@@ -31,88 +31,99 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
     private lateinit var coursePublicationsGeneralAdapter:CoursePublicationGeneralAdapter
     private var courseName:String? = null
     private var courseTypeP:String? = null
-    private lateinit var publications:ArrayList<CoursePublicationGeneral>
+    private val itemDecoration=ItemOffsetDecoration(16)
+    private lateinit var coursePublicationsG: ArrayList<CoursePublicationGeneral>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        //Aqui dependiendo de a que curso acceda, le paso los parametros al curso y el mismo los setea
         courseName = intent.extras?.getString("course name")
         courseTypeP = intent.extras?.getString("course type")
 
-        val courseType: String = "Basketball"
-        val courseDescr: String = getCourseDescription(courseType)
-        val courseimg: Int = getCourseImage(courseType)
-        val course = Course(binding, courseimg, courseType, courseDescr)
+
+        val courseDescr: String = getCourseDescription(courseName!!)
+        val courseImg: Int = getCourseImage(courseName!!)
+        val course = Course(binding, courseImg, courseName!!, courseDescr)
         course.setCourse()
 
-        val itemDecoration = ItemOffsetDecoration(16)
+
         val layoutManagerMemberTeamAdapter =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val layoutManagerCoursePublicationAdapter =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        scheduleAdapter = CourseScheduleAdapter(courseType)
-        binding.courseScheduleList.adapter = scheduleAdapter
-        binding.courseScheduleList.setHasFixedSize(true)
-        binding.courseScheduleList.addItemDecoration(itemDecoration)
 
 
-        teacherAdapter = TeacherAdapter(courseType)
-        binding.teachersList.adapter = teacherAdapter
-        binding.teachersList.setHasFixedSize(false)
-        binding.teachersList.layoutManager = LinearLayoutManager(this)
-        binding.teachersList.addItemDecoration(itemDecoration)
-
-        memberTeamAdapter = MemberTeamAdapter(courseType)
-        binding.teamIcesiList.adapter = memberTeamAdapter
-        binding.teamIcesiList.setHasFixedSize(true)
-        binding.teamIcesiList.layoutManager = layoutManagerMemberTeamAdapter
-        binding.teamBannerIMG.setImageResource(courseimg)
-
-        coursePublicationsAdapter = CoursePublicationAdapter()
-        coursePublicationsAdapter.listener = this
-        binding.importantPbList.adapter = coursePublicationsAdapter
-        binding.importantPbList.setHasFixedSize(true)
-        binding.importantPbList.addItemDecoration(itemDecoration)
-        binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
-
-        coursePublicationsGeneralAdapter = CoursePublicationGeneralAdapter()
-        coursePublicationsGeneralAdapter.listener = this
-        binding.publicationsGeneralList.adapter = coursePublicationsGeneralAdapter
-        binding.publicationsGeneralList.setHasFixedSize(true)
-        binding.publicationsGeneralList.layoutManager = LinearLayoutManager(this)
-        binding.publicationsGeneralList.addItemDecoration(itemDecoration)
+        adapterCourseSchedule()
+        adapterTeacher()
+        adapterMemberTeam(layoutManagerMemberTeamAdapter,courseImg)
+        adapterCoursePublication(layoutManagerCoursePublicationAdapter)
+        adapterCoursePublicationGeneral()
 
         binding.addPublishBtn.setOnClickListener {
             goToPublishActivity()
         }
 
         binding.returnBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity1::class.java)
+            val intent = Intent(this,MainActivity1::class.java)
             startActivity(intent)
         }
 
-        Log.d(">>>","Estoy en: ${courseName.toString()}")
-        Log.d(">>>","En type: $courseTypeP")
-        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(courseName.toString()).get().addOnCompleteListener{task ->
-            Log.d(">>>", "Llega aqui?")
-            for(doc in task.result!!){
-                Log.d(">>>", "Llega aqui? for")
+        startConnectionPublications()
 
+    }
+
+    //*********************** Adapters Init Here **************************
+
+    private fun adapterCourseSchedule(){
+        scheduleAdapter = CourseScheduleAdapter()
+        binding.courseScheduleList.adapter = scheduleAdapter
+        binding.courseScheduleList.setHasFixedSize(true)
+        binding.courseScheduleList.addItemDecoration(itemDecoration)
+    }
+
+    private fun adapterTeacher(){
+        teacherAdapter = TeacherAdapter()
+        binding.teachersList.adapter = teacherAdapter
+        binding.teachersList.setHasFixedSize(false)
+        binding.teachersList.layoutManager = LinearLayoutManager(this)
+        binding.teachersList.addItemDecoration(itemDecoration)
+    }
+
+    private fun adapterMemberTeam(layoutManagerMemberTeamAdapter:LinearLayoutManager,courseImg:Int){
+        memberTeamAdapter = MemberTeamAdapter()
+        binding.teamIcesiList.adapter = memberTeamAdapter
+        binding.teamIcesiList.setHasFixedSize(true)
+        binding.teamIcesiList.layoutManager = layoutManagerMemberTeamAdapter
+        binding.teamBannerIMG.setImageResource(courseImg)
+    }
+    private fun adapterCoursePublication(layoutManagerCoursePublicationAdapter:LinearLayoutManager){
+        coursePublicationsAdapter = CoursePublicationAdapter()
+        coursePublicationsAdapter.listener = this
+        binding.importantPbList.adapter = coursePublicationsAdapter
+        binding.importantPbList.setHasFixedSize(true)
+        binding.importantPbList.addItemDecoration(itemDecoration)
+        binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
+    }
+    private fun adapterCoursePublicationGeneral(){
+        coursePublicationsGeneralAdapter = CoursePublicationGeneralAdapter()
+        coursePublicationsGeneralAdapter.listener = this
+        binding.publicationsGeneralList.adapter = coursePublicationsGeneralAdapter
+        binding.publicationsGeneralList.setHasFixedSize(true)
+        binding.publicationsGeneralList.layoutManager = LinearLayoutManager(this)
+        binding.publicationsGeneralList.addItemDecoration(itemDecoration)
+    }
+
+    //*********************************************************************
+
+    private fun startConnectionPublications(){
+        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(courseName.toString()).get().addOnCompleteListener{task ->
+            for(doc in task.result!!){
                 val publication = doc.toObject(CoursePublicationGeneral::class.java)
                 coursePublicationsGeneralAdapter.addPublication(publication)
-                Log.d(">>>", publication.toString())
-
-
-
             }
         }
-
-
-
-
     }
 
      fun irAPrimeraActivity() {
@@ -128,25 +139,40 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         startActivity(intent)
     }
 
-    fun getCourseDescription(courseType : String):String{
-        var type:String = ""
-        if(courseType == "Soccer"){
-            type="Esta es la descripcion del curso futbol"
-        }else if(courseType == "Basketball"){
-            type="Esta es la descripcion del curso basket"
-        }
-        return type
+    private fun getCourseDescription(courseType: String): String {
+        val courseDescriptions = mapOf(
+            "Futbol" to "Esta es la descripción del curso futbol",
+            "Basketball" to "Esta es la descripción del curso basket",
+            "Tennis" to "Esta es la descripción del curso de Tennis",
+            "Tiro con Arco" to "Esta es la descripción del curso de Tiro con Arco",
+            "Artes Escenicas" to "Esta es la descripción del curso de Artes Escenicas",
+            "Artes Visuales" to "Esta es la descripción del curso de Artes Visuales",
+            "Artes Plasticas" to "Esta es la descripción del curso de Artes Plasticas",
+            "Desarrollo Personal" to "Esta es la descripción del curso de Desarrollo Personal",
+            "Acompañamiento" to "Esta es la descripción del curso de Acompañamiento",
+            "Induccion" to "Esta es la descripción del curso de Induccion"
+        )
+        return courseDescriptions.getOrElse(courseType) { "" }
     }
 
-    fun getCourseImage(courseType:String): Int {
-        var image : Int = 0
-        if(courseType == "Soccer"){
-            image = R.drawable.football_course_image
-        }else if(courseType == "Basketball"){
-            image = R.drawable.basketball_course_image
-        }
-        return image
+
+    private fun getCourseImage(courseType: String): Int {
+        val courseImages = mapOf(
+            "Futbol" to R.drawable.football_course_image,
+            "Basketball" to R.drawable.basketball_course_image,
+            "Tennis" to R.drawable.tennis_course_image,
+            "Tiro con Arco" to R.drawable.tiro_course_image,
+            "Artes Escenicas" to R.drawable.escenicas_course_image,
+            "Artes Visuales" to R.drawable.visuales_course_image,
+            "Artes Plasticas" to R.drawable.plasticas_course_image,
+            "Desarrollo Personal" to R.drawable.personal_course_image,
+            "Acompañamiento" to R.drawable.acompanamiento_course_image,
+            "Induccion" to R.drawable.induccion_course_image,
+        )
+
+        return courseImages[courseType] ?: 0
     }
+
 
     override fun onItemClick(coursePublications: CoursePublications) {
         val publicationTitle = coursePublications.userName
@@ -167,21 +193,14 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         TODO("Not yet implemented")
     }
 
-    override fun onItemClick(courseGeneralPublications: CoursePublicationGeneral) {
-        val publicationTitle = courseGeneralPublications.pubGeneral_username
-        val publicationCont = courseGeneralPublications.pubGeneral_description
-        val userImg = courseGeneralPublications.pubGeneral_userImg
-        val publicationImg = courseGeneralPublications.pubGeneral_Img
+    override fun onItemClick(coursePublicationsG: CoursePublicationGeneral) {
 
-        val intent = Intent(this,PublicationsActivity::class.java)
+        val intent = Intent(this, PublicationsActivity::class.java)
+        intent.putExtra("coursePublicationG", coursePublicationsG)
 
-        intent.putExtra("publicationTitle",publicationTitle)
-        intent.putExtra("publicationCont",publicationCont)
-        intent.putExtra("userImg",userImg)
-        intent.putExtra("publicationImg",publicationImg)
         startActivity(intent)
-
     }
+
 
 
 }

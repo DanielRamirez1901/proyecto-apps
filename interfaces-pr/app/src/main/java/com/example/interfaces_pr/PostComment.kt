@@ -39,6 +39,10 @@ class PostComment : AppCompatActivity() {
             goToCourseActivity()
         }
 
+        binding.userImg.setOnClickListener{
+
+        }
+
     }
 
 
@@ -72,7 +76,7 @@ class PostComment : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun getUser(): User? {
+    private fun getUser(): User? {
         val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
         val json = sp.getString("user", null)
         return if (json != null) {

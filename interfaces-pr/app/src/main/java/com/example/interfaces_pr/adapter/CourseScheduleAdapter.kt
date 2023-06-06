@@ -8,22 +8,16 @@ import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.CourseSchedule
 import com.example.interfaces_pr.viewholders.CourseScheduleViewHolder
 
-class CourseScheduleAdapter(courseType : String) : Adapter<CourseScheduleViewHolder>() {
+class CourseScheduleAdapter() : Adapter<CourseScheduleViewHolder>() {
 
     private var courseSchedule : ArrayList<CourseSchedule> = arrayListOf()
 
 
     init{
-        if(courseType == "Basketball") {
-            courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Lunes", "Stephen Curry"))
-            courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Lunes", "Stephen Curry"))
-            courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Lunes", "Stephen Curry"))
-        }else if(courseType == "Soccer"){
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
             courseSchedule.add(CourseSchedule("5:00 pm", "7:00 pm", "Martes", "Stephen Curry"))
-        }
     }
 
     //Crea los esqueletos de los items

@@ -19,8 +19,10 @@ import com.example.interfaces_pr.fragments.*
 import com.example.interfaces_pr.R.id
 import com.example.interfaces_pr.databinding.ActivityMainBinding
 import com.example.interfaces_pr.model.User
+import com.google.gson.Gson
 
 class MainActivity1 : AppCompatActivity(){
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var button_home: ImageButton
     private lateinit var button_publi: ImageButton
@@ -29,12 +31,15 @@ class MainActivity1 : AppCompatActivity(){
     private lateinit var button_Cultura: Button
     private lateinit var button_Deportes: Button
     private lateinit var button_Desarrollo: Button
+    private var username:String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val homeFragment = inflater.inflate(R.layout.homefragment, null)
+
+        username = intent.extras?.getString("username")
 
 
         button_home = findViewById(id.button_home)
@@ -54,7 +59,14 @@ class MainActivity1 : AppCompatActivity(){
             .commit()
         replaceFragmentHome(cursosCulturaFragment())
 
-
+        if(username!=null || username==""){
+            replaceFragment(PerfilFragment(username!!))
+            button_home.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
+            button_publi.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
+            button_noti.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
+            button_perfil.setColorFilter(ContextCompat.getColor(this,R.color.azulito), PorterDuff.Mode.SRC_IN)
+            username=""
+        }
         //para cambiar el color a la barra de navegación
         button_noti.setOnClickListener {
             replaceFragment(NotiFragment())
@@ -81,7 +93,8 @@ class MainActivity1 : AppCompatActivity(){
             replaceFragmentHome(publicaciones_generalesFragment())
         }
         button_perfil.setOnClickListener {
-            replaceFragment(PerfilFragment())
+            var usernamePrincipal = getUser()?.username
+            replaceFragment(PerfilFragment(usernamePrincipal!!))
             button_home.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
             button_publi.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
             button_noti.setColorFilter(ContextCompat.getColor(this,R.color.grisesito), PorterDuff.Mode.SRC_IN)
@@ -100,28 +113,36 @@ class MainActivity1 : AppCompatActivity(){
             .replace(id.fragment_container_home, fragment)
             .commit()
     }
-    fun onClickButtonCultura(view: View) {
+    private fun onClickButtonCultura(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosCulturaFragment())
     }
-    fun onClickButtonDeportes(view: View) {
+    private fun onClickButtonDeportes(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosDeportesFragment())
     }
-    fun onClickButtonDesarrollo(view: View) {
+    private fun onClickButtonDesarrollo(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosDesarrolloFragment())
 
     }
 
-    fun onClickButtonMisPublicaciones(view: View){
+    private fun onClickButtonMisPublicaciones(view: View){
         replaceFragmentHome(mis_publicacionesFragment())
     }
-    fun onClickButtonPublicacionesGenerales(view: View){
+    private fun onClickButtonPublicacionesGenerales(view: View){
         replaceFragmentHome(publicaciones_generalesFragment())
     }
 
-
+    private fun getUser(): User? {
+        val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
+        val json = sp.getString("user", null)
+        return if (json != null) {
+            Gson().fromJson(json, User::class.java)
+        } else {
+            null
+        }
+    }
 
 
 }

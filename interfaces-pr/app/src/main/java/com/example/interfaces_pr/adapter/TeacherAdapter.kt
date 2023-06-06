@@ -11,20 +11,16 @@ import com.example.interfaces_pr.viewholders.TeacherViewHolder
 
 
 
-class TeacherAdapter(courseType:String): Adapter<TeacherViewHolder>() {
+class TeacherAdapter(): Adapter<TeacherViewHolder>() {
 
     private var teachers : ArrayList<Teacher> = arrayListOf()
 
 
 
     init{
-        if(courseType == "Basketball") {
-            teachers.add(Teacher(R.drawable.basketball_course_image,R.drawable.profile1,"Stephen Curry","Descripcion del profesor aqui"))
-            teachers.add(Teacher(R.drawable.basketball_course_image,R.drawable.profile2,"Stephen Curry 2","Descripcion del profesor aqui 2"))
-        }else if(courseType == "Soccer"){
-            teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile1,"Stephen Curry","Descripcion del profesor aqui"))
-            teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile2,"Stephen Curry2","Descripcion del profesor aqui2"))
-        }
+        teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile1,"Stephen Curry","Descripcion del profesor aqui"))
+        teachers.add(Teacher(R.drawable.football_course_image,R.drawable.profile2,"Stephen Curry2","Descripcion del profesor aqui2"))
+
     }
 
 

@@ -8,22 +8,16 @@ import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.MemberTeam
 import com.example.interfaces_pr.viewholders.MemberTeamViewHolder
 
-class MemberTeamAdapter(courseType:String):Adapter<MemberTeamViewHolder>() {
+class MemberTeamAdapter():Adapter<MemberTeamViewHolder>() {
 
 
     private var membersTeam :ArrayList<MemberTeam> = arrayListOf()
 
     init{
-        if(courseType == "Basketball"){
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player1,"Stephen Curry","Capitan"))
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player2,"Stephen Curry","Capitan"))
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player3,"Stephen Curry","Capitan"))
-        }else if(courseType == "Soccer"){
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player1,"Stephen Curry","Capitan"))
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player2,"Stephen Curry","Capitan"))
-            membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player3,"Stephen Curry","Capitan"))
+        membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player1,"Stephen Curry","Capitan"))
+        membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player2,"Stephen Curry","Capitan"))
+        membersTeam.add(MemberTeam(R.drawable.escudo_basket,R.drawable.player3,"Stephen Curry","Capitan"))
 
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemberTeamViewHolder {

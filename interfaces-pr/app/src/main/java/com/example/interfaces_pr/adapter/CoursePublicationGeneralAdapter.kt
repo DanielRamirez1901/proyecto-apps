@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.CoursePublicationGeneral
+import com.example.interfaces_pr.model.CoursePublications
 import com.example.interfaces_pr.viewholders.CoursePublicationGeneralViewHolder
 import java.util.*
 import kotlin.collections.ArrayList
@@ -59,6 +60,10 @@ class CoursePublicationGeneralAdapter():Adapter<CoursePublicationGeneralViewHold
         generalPublications.add(publication)
         notifyItemInserted(generalPublications.lastIndex)
 
+    }
+
+    fun getItem(position: Int): CoursePublicationGeneral {
+        return generalPublications[position]
     }
 
 }

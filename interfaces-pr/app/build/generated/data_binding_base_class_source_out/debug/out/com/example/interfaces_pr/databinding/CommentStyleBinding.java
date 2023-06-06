@@ -22,7 +22,19 @@ public final class CommentStyleBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final CardView actualUserContainerImg;
+
+  @NonNull
+  public final ImageView actualUserImg;
+
+  @NonNull
   public final CardView cardView5;
+
+  @NonNull
+  public final TextView comentarBtn;
+
+  @NonNull
+  public final ImageView fieldToCommentTxt;
 
   @NonNull
   public final ImageView imageView18;
@@ -37,7 +49,7 @@ public final class CommentStyleBinding implements ViewBinding {
   public final TextView numerLikesIncommentTxt;
 
   @NonNull
-  public final TextView textView15;
+  public final ImageView sendCommentBtn;
 
   @NonNull
   public final TextView timeIncommentTxt;
@@ -51,19 +63,25 @@ public final class CommentStyleBinding implements ViewBinding {
   @NonNull
   public final TextView usernameIncommentTxt;
 
-  private CommentStyleBinding(@NonNull ConstraintLayout rootView, @NonNull CardView cardView5,
-      @NonNull ImageView imageView18, @NonNull ImageView imageView20,
-      @NonNull ImageView likeIncommentImg, @NonNull TextView numerLikesIncommentTxt,
-      @NonNull TextView textView15, @NonNull TextView timeIncommentTxt,
-      @NonNull ImageView userIncommentImg, @NonNull TextView usercontIncommentTxt,
-      @NonNull TextView usernameIncommentTxt) {
+  private CommentStyleBinding(@NonNull ConstraintLayout rootView,
+      @NonNull CardView actualUserContainerImg, @NonNull ImageView actualUserImg,
+      @NonNull CardView cardView5, @NonNull TextView comentarBtn,
+      @NonNull ImageView fieldToCommentTxt, @NonNull ImageView imageView18,
+      @NonNull ImageView imageView20, @NonNull ImageView likeIncommentImg,
+      @NonNull TextView numerLikesIncommentTxt, @NonNull ImageView sendCommentBtn,
+      @NonNull TextView timeIncommentTxt, @NonNull ImageView userIncommentImg,
+      @NonNull TextView usercontIncommentTxt, @NonNull TextView usernameIncommentTxt) {
     this.rootView = rootView;
+    this.actualUserContainerImg = actualUserContainerImg;
+    this.actualUserImg = actualUserImg;
     this.cardView5 = cardView5;
+    this.comentarBtn = comentarBtn;
+    this.fieldToCommentTxt = fieldToCommentTxt;
     this.imageView18 = imageView18;
     this.imageView20 = imageView20;
     this.likeIncommentImg = likeIncommentImg;
     this.numerLikesIncommentTxt = numerLikesIncommentTxt;
-    this.textView15 = textView15;
+    this.sendCommentBtn = sendCommentBtn;
     this.timeIncommentTxt = timeIncommentTxt;
     this.userIncommentImg = userIncommentImg;
     this.usercontIncommentTxt = usercontIncommentTxt;
@@ -97,9 +115,33 @@ public final class CommentStyleBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.actualUserContainerImg;
+      CardView actualUserContainerImg = ViewBindings.findChildViewById(rootView, id);
+      if (actualUserContainerImg == null) {
+        break missingId;
+      }
+
+      id = R.id.actualUserImg;
+      ImageView actualUserImg = ViewBindings.findChildViewById(rootView, id);
+      if (actualUserImg == null) {
+        break missingId;
+      }
+
       id = R.id.cardView5;
       CardView cardView5 = ViewBindings.findChildViewById(rootView, id);
       if (cardView5 == null) {
+        break missingId;
+      }
+
+      id = R.id.comentarBtn;
+      TextView comentarBtn = ViewBindings.findChildViewById(rootView, id);
+      if (comentarBtn == null) {
+        break missingId;
+      }
+
+      id = R.id.fieldToCommentTxt;
+      ImageView fieldToCommentTxt = ViewBindings.findChildViewById(rootView, id);
+      if (fieldToCommentTxt == null) {
         break missingId;
       }
 
@@ -127,9 +169,9 @@ public final class CommentStyleBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView15;
-      TextView textView15 = ViewBindings.findChildViewById(rootView, id);
-      if (textView15 == null) {
+      id = R.id.sendCommentBtn;
+      ImageView sendCommentBtn = ViewBindings.findChildViewById(rootView, id);
+      if (sendCommentBtn == null) {
         break missingId;
       }
 
@@ -157,8 +199,9 @@ public final class CommentStyleBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CommentStyleBinding((ConstraintLayout) rootView, cardView5, imageView18,
-          imageView20, likeIncommentImg, numerLikesIncommentTxt, textView15, timeIncommentTxt,
+      return new CommentStyleBinding((ConstraintLayout) rootView, actualUserContainerImg,
+          actualUserImg, cardView5, comentarBtn, fieldToCommentTxt, imageView18, imageView20,
+          likeIncommentImg, numerLikesIncommentTxt, sendCommentBtn, timeIncommentTxt,
           userIncommentImg, usercontIncommentTxt, usernameIncommentTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

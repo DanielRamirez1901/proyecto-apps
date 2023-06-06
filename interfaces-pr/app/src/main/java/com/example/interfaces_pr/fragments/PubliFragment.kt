@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.interfaces_pr.R
+import com.example.interfaces_pr.databinding.PublifragmentBinding
 
 class PubliFragment : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -16,6 +19,8 @@ class PubliFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflar el layout para este fragmento
+
+
         return inflater.inflate(R.layout.publifragment, container, false)
     }
 }

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-#Sun May 28 23:08:47 COT 2023
+#Fri Jun 02 16:24:23 COT 2023
 base.0=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
@@ -10,19 +9,6 @@ base.6=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\
 base.7=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.8=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.9=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-=======
-#Sun May 28 21:50:37 COT 2023
-base.0=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
-base.3=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.4=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-base.5=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.6=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
-base.7=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.8=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.9=C\:\\Users\\stebr\\Documents\\proyectoApps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
->>>>>>> be92b079146d49bd61dc3ad990864a3d96b6b0e4
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=15/classes.dex

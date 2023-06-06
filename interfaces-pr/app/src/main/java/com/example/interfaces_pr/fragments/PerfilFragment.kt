@@ -6,15 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.interfaces_pr.R
+import com.example.interfaces_pr.databinding.PerfilfragmentBinding
 
-class PerfilFragment : Fragment() {
+class PerfilFragment(private val username: String) : Fragment() {
 
+    private lateinit var binding: PerfilfragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
-        // Inflar el layout para este fragmento
-        return inflater.inflate(R.layout.perfilfragment, container, false)
+        binding = PerfilfragmentBinding.inflate(inflater, container, false)
+
+        binding.name.text = username
+
+        return binding.root
     }
 }

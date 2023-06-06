@@ -2731,6 +2731,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable acompanamiento_banner
+drawable acompanamiento_course_image
 drawable arrow_searchbar_icon
 drawable artes_escenicas
 drawable artes_musicales
@@ -2788,6 +2789,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
 drawable football_course_image
@@ -2815,6 +2817,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable id_card_icon
 drawable induccion_banner
+drawable induccion_course_image
 drawable like_icon
 drawable login_image
 drawable lupa
@@ -2896,6 +2899,8 @@ drawable password_icon
 drawable pastel
 drawable perfil_icon
 drawable perfile_format
+drawable personal_course_image
+drawable plasticas_course_image
 drawable player1
 drawable player2
 drawable player3
@@ -2915,14 +2920,17 @@ drawable splashimagen
 drawable splashscreen
 drawable teacher_publication_style
 drawable tennis_banner
+drawable tennis_course_image
 drawable termo
 drawable test_level_drawable
 drawable tiro_arco_banner
+drawable tiro_course_image
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable unlike_icon
 drawable user_icon
 drawable userbanner_image
+drawable visuales_course_image
 drawable x
 id ALT
 id BOTTOM_END
@@ -2995,6 +3003,8 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id actualUserContainerImg
+id actualUserImg
 id add
 id addBtn
 id add_publishBtn
@@ -3078,6 +3088,7 @@ id code
 id codeLoginET
 id codeUsuarioET
 id collapseActionView
+id comentarBtn
 id compress
 id confirm_button
 id constraint
@@ -3153,6 +3164,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fieldToCommentTxt
 id fileBtn
 id fill
 id fill_horizontal
@@ -3438,6 +3450,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id sendCommentBtn
 id send_commentBtn
 id sharedValueSet
 id sharedValueUnset
@@ -3511,7 +3524,6 @@ id textView10
 id textView11
 id textView12
 id textView13
-id textView15
 id textView16
 id textView17
 id textView2

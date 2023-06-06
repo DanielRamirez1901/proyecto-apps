@@ -13,4 +13,8 @@ data class CoursePublicationGeneral (
     val courseName:String="",
     val userID:String="",
 
-)
+) : Serializable{
+    override fun toString(): String {
+        return pubGeneral_username
+    }
+}

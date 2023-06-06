@@ -15,6 +15,7 @@ color teal_700
 color white
 drawable abajo
 drawable acompanamiento_banner
+drawable acompanamiento_course_image
 drawable arrow_searchbar_icon
 drawable artes_escenicas
 drawable artes_musicales
@@ -38,6 +39,7 @@ drawable correo_icon
 drawable cultura_banner
 drawable deportes
 drawable desarrollo_personal_banner
+drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
 drawable football_course_image
@@ -51,6 +53,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable id_card_icon
 drawable induccion_banner
+drawable induccion_course_image
 drawable like_icon
 drawable login_image
 drawable lupa
@@ -61,6 +64,8 @@ drawable password_icon
 drawable pastel
 drawable perfil_icon
 drawable perfile_format
+drawable personal_course_image
+drawable plasticas_course_image
 drawable player1
 drawable player2
 drawable player3
@@ -80,13 +85,18 @@ drawable splashimagen
 drawable splashscreen
 drawable teacher_publication_style
 drawable tennis_banner
+drawable tennis_course_image
 drawable termo
 drawable tiro_arco_banner
+drawable tiro_course_image
 drawable unlike_icon
 drawable user_icon
 drawable userbanner_image
+drawable visuales_course_image
 drawable x
 id acompañamientoImg
+id actualUserContainerImg
+id actualUserImg
 id addBtn
 id add_publishBtn
 id artesEscenicasImg
@@ -112,6 +122,7 @@ id celular_label
 id code
 id codeLoginET
 id codeUsuarioET
+id comentarBtn
 id contador_notificaciones
 id container_homeFragment
 id course_description_txt
@@ -126,6 +137,7 @@ id description_notification
 id editTextTextPersonName4
 id emaiL
 id emailET
+id fieldToCommentTxt
 id fileBtn
 id fondo
 id fragment_container
@@ -205,6 +217,7 @@ id returnBtn
 id role_teamTxt
 id search_container
 id search_plainTxt
+id sendCommentBtn
 id send_commentBtn
 id shield_teamImg
 id teacher_descTxt
@@ -219,7 +232,6 @@ id textView10
 id textView11
 id textView12
 id textView13
-id textView15
 id textView16
 id textView17
 id textView2

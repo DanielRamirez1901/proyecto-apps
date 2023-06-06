@@ -3,16 +3,19 @@ package com.example.interfaces_pr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CourseCommentAdapter
 import com.example.interfaces_pr.adapter.CoursePublicationGeneralAdapter
 import com.example.interfaces_pr.databinding.ActivityPublicationsBinding
 import com.example.interfaces_pr.model.CourseComment
+import com.example.interfaces_pr.model.CoursePublicationGeneral
 
 class PublicationsActivity : AppCompatActivity() {
 
     private var numLikes = 0
     private var isLiked = false
+    private lateinit var coursePublicationG:CoursePublicationGeneral
 
     private val binding by lazy{
         ActivityPublicationsBinding.inflate(layoutInflater)
@@ -25,25 +28,28 @@ class PublicationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val publicationTitle:String? = intent.extras?.getString("publicationTitle")
-        val publicationCont:String? = intent.extras?.getString("publicationCont")
-        val userImg:Int? = intent.extras?.getInt("userImg")
-        val publicationImg:Int? = intent.extras?.getInt("publicationImg")
+        coursePublicationG =intent.extras?.get("coursePublicationG") as CoursePublicationGeneral
 
-        binding.publicationTitleTxt.text = publicationTitle
-        binding.publicationContTxt.text = publicationCont
-        userImg?.let {
-            binding.userImg.setImageResource(userImg)
-            binding.userCommentImg.setImageResource(userImg)
-        }
-        publicationImg?.let {
-            binding.publicationImg.setImageResource(publicationImg)
-        }
+
+        binding.publicationTitleTxt.text = coursePublicationG.pubGeneral_username
+        binding.publicationContTxt.text = coursePublicationG.pubGeneral_description
+        binding.userImg.setImageResource(coursePublicationG.pubGeneral_userImg)
+        binding.userCommentImg.setImageResource(coursePublicationG.pubGeneral_userImg)
+        binding.publicationImg.setImageResource(coursePublicationG.pubGeneral_Img)
+
 
         binding.backButton.setOnClickListener{
             val intent = Intent(this,CourseActivity::class.java)
             startActivity(intent)
         }
+
+        binding.userImg.setOnClickListener{
+            var username = binding.publicationTitleTxt.text.toString()
+            Log.d(">>>","Username en publicacion: $username")
+            goToUserProfile(username)
+        }
+
+
 
         binding.likeImg.setOnClickListener{
             if(isLiked){
@@ -81,6 +87,13 @@ class PublicationsActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun goToUserProfile(username:String){
+        val intent = Intent(this,MainActivity1::class.java).apply {
+            putExtra("username",username)
+        }
+        startActivity(intent)
     }
 
     fun getMinutesElapsedFromTimestamp(timestamp: Long): Long {

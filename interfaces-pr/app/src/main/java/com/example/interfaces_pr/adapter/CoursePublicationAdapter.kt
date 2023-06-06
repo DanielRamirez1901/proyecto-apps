@@ -14,8 +14,10 @@ import java.util.Calendar
 interface OnItemClickListener {
     fun onItemClick(coursePublications: CoursePublications)
 
+    fun onItemClick(coursePublicationsG: CoursePublicationGeneral)
+
     fun onItemClick(coursePublications: cursoAtri)
-    fun onItemClick(courseGeneralPublications: CoursePublicationGeneral)
+
 }
 class CoursePublicationAdapter():Adapter<CoursePublicationViewHolder>() {
 

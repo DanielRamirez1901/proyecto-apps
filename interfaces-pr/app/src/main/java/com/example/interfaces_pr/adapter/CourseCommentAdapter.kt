@@ -3,6 +3,8 @@ package com.example.interfaces_pr.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.CourseComment
@@ -24,7 +26,11 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseCommentViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val view:View = layoutInflater.inflate(R.layout.comment_style,parent,false)
-        return CourseCommentViewHolder(view)
+        val viewHolder = CourseCommentViewHolder(view)
+        viewHolder.comentarBtn.setOnClickListener {
+            viewHolder.setVisibility(true)
+        }
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: CourseCommentViewHolder, position: Int) {
@@ -34,6 +40,7 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
         holder.userCont_inComment.text = comments[position].userCont_inComment
         holder.time_inComment.text = comments[position].time_inComment
         holder.numberLike_inComment.text = comments[position].numberLike_inComment
+        holder.setVisibility(false)
     }
 
 

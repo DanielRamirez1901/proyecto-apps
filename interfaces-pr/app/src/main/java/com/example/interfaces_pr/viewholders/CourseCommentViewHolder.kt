@@ -13,4 +13,24 @@ class CourseCommentViewHolder(root:View):ViewHolder(root) {
     val userCont_inComment = binding.usercontIncommentTxt
     val time_inComment = binding.timeIncommentTxt
     val numberLike_inComment = binding.numerLikesIncommentTxt
+    val comentarBtn = binding.comentarBtn
+    val actualUserImg = binding.actualUserImg
+    val containerActual = binding.actualUserContainerImg
+    val fieldToComment = binding.fieldToCommentTxt
+    val sendBtnComment = binding.sendCommentBtn
+
+
+    fun setVisibility(isVisible: Boolean) {
+        var visibility = 0
+        if (isVisible){
+            visibility = View.VISIBLE
+        } else{
+            visibility = View.INVISIBLE
+        }
+        actualUserImg.visibility = visibility
+        fieldToComment.visibility = visibility
+        sendBtnComment.visibility = visibility
+        containerActual.visibility = visibility
+    }
+
 }
