@@ -101,6 +101,7 @@ class MainActivity1 : AppCompatActivity(){
             button_perfil.setColorFilter(ContextCompat.getColor(this,R.color.azulito), PorterDuff.Mode.SRC_IN)
 
         }
+
     }
     // Reemplazar el fragmento actual con uno nuevo
     private fun replaceFragment(fragment: Fragment) {
@@ -113,24 +114,24 @@ class MainActivity1 : AppCompatActivity(){
             .replace(id.fragment_container_home, fragment)
             .commit()
     }
-    private fun onClickButtonCultura(view: View) {
+    fun onClickButtonCultura(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosCulturaFragment())
     }
-    private fun onClickButtonDeportes(view: View) {
+    fun onClickButtonDeportes(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosDeportesFragment())
     }
-    private fun onClickButtonDesarrollo(view: View) {
+    fun onClickButtonDesarrollo(view: View) {
         // Código que se ejecuta cuando el botón es presionado
         replaceFragmentHome(cursosDesarrolloFragment())
 
     }
 
-    private fun onClickButtonMisPublicaciones(view: View){
+    fun onClickButtonMisPublicaciones(view: View){
         replaceFragmentHome(mis_publicacionesFragment())
     }
-    private fun onClickButtonPublicacionesGenerales(view: View){
+    fun onClickButtonPublicacionesGenerales(view: View){
         replaceFragmentHome(publicaciones_generalesFragment())
     }
 

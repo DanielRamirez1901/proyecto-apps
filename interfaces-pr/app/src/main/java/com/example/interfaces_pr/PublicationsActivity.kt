@@ -10,12 +10,18 @@ import com.example.interfaces_pr.adapter.CoursePublicationGeneralAdapter
 import com.example.interfaces_pr.databinding.ActivityPublicationsBinding
 import com.example.interfaces_pr.model.CourseComment
 import com.example.interfaces_pr.model.CoursePublicationGeneral
+import com.example.interfaces_pr.model.User
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
+import java.util.UUID
 
 class PublicationsActivity : AppCompatActivity() {
 
     private var numLikes = 0
     private var isLiked = false
     private lateinit var coursePublicationG:CoursePublicationGeneral
+    private var courseTypeP:String? = null
 
     private val binding by lazy{
         ActivityPublicationsBinding.inflate(layoutInflater)
@@ -29,7 +35,7 @@ class PublicationsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         coursePublicationG =intent.extras?.get("coursePublicationG") as CoursePublicationGeneral
-
+        courseTypeP = intent.extras?.getString("courseType")
 
         binding.publicationTitleTxt.text = coursePublicationG.pubGeneral_username
         binding.publicationContTxt.text = coursePublicationG.pubGeneral_description
@@ -39,7 +45,11 @@ class PublicationsActivity : AppCompatActivity() {
 
 
         binding.backButton.setOnClickListener{
-            val intent = Intent(this,CourseActivity::class.java)
+            val intent = Intent(this,CourseActivity::class.java).apply {
+                putExtra("course name",coursePublicationG.courseName)
+                putExtra("course type",courseTypeP)
+            }
+
             startActivity(intent)
         }
 
@@ -65,28 +75,44 @@ class PublicationsActivity : AppCompatActivity() {
             }
         }
 
+
+        adapterCourseComment()
+
+        binding.sendCommentBtn.setOnClickListener{
+           sendCommentFunction()
+        }
+        startConnectionComments()
+    }
+
+    private fun adapterCourseComment(){
         courseCommentAdapter = CourseCommentAdapter()
         binding.usersCommentsList.adapter = courseCommentAdapter
         binding.usersCommentsList.setHasFixedSize(true)
         binding.usersCommentsList.layoutManager = LinearLayoutManager(this)
+    }
 
+    private fun sendCommentFunction(){
+        val userInComment = getUser()
+        val textInComment = binding.userCommentToSendTxt.text?.toString().orEmpty()
+        val commentID = userInComment?.id!!+"+"+UUID.randomUUID().toString()
+        if (textInComment.isNotEmpty()) {
+            val timestamp = System.currentTimeMillis() // Obtener la marca de tiempo actual
+            val minutesElapsed = getMinutesElapsedFromTimestamp(timestamp)
 
-
-
-
-        binding.sendCommentBtn.setOnClickListener{
-            val textInComment = binding.userCommentToSendTxt.text?.toString().orEmpty().trim()
-            if (textInComment.isNotEmpty()) {
-                val timestamp = System.currentTimeMillis() // Obtener la marca de tiempo actual
-                val minutesElapsed = getMinutesElapsedFromTimestamp(timestamp)
-
-                val newComment = CourseComment(R.drawable.profile1, R.drawable.unlike_icon, "Pepito", textInComment, getFormattedTimeElapsed(minutesElapsed), "1")
-                courseCommentAdapter.addComment(newComment)
-                courseCommentAdapter.notifyDataSetChanged()
-                binding.userCommentToSendTxt.text?.clear()
+            val newComment = CourseComment(R.drawable.profile1, R.drawable.unlike_icon, userInComment?.username!!, textInComment, getFormattedTimeElapsed(minutesElapsed), "0",userInComment.id)
+            Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").document(commentID).set(newComment)
+            Log.d(">>>","ID user: ${userInComment.id}")
+            courseCommentAdapter.addComment(newComment)
+            binding.userCommentToSendTxt.text?.clear()
+        }
+    }
+    private fun startConnectionComments(){
+        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").get().addOnCompleteListener{task ->
+            for(doc in task.result!!){
+                val comment = doc.toObject(CourseComment::class.java)
+                courseCommentAdapter.addComment(comment)
             }
         }
-
     }
 
     private fun goToUserProfile(username:String){
@@ -109,6 +135,16 @@ class PublicationsActivity : AppCompatActivity() {
             minutesElapsed < 60 -> "hace ${minutesElapsed} minutos"
             minutesElapsed < 120 -> "hace 1 hora"
             else -> "hace ${minutesElapsed/60} horas y ${minutesElapsed%60} minutos"
+        }
+    }
+
+    private fun getUser(): User? {
+        val sp = getSharedPreferences("CampusBu", MODE_PRIVATE)
+        val json = sp.getString("user", null)
+        return if (json != null) {
+            Gson().fromJson(json, User::class.java)
+        } else {
+            null
         }
     }
 

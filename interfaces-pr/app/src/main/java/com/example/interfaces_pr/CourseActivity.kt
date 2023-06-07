@@ -197,6 +197,7 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
 
         val intent = Intent(this, PublicationsActivity::class.java)
         intent.putExtra("coursePublicationG", coursePublicationsG)
+        intent.putExtra("courseType",courseTypeP)
 
         startActivity(intent)
     }

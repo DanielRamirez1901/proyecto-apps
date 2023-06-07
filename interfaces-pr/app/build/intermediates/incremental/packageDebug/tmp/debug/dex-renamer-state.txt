@@ -1,4 +1,4 @@
-#Fri Jun 02 16:24:23 COT 2023
+#Tue Jun 06 20:21:45 COT 2023
 base.0=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\danir\\Documents\\SeptimoSemestre\\AppsMoviles\\ProyectFinal\\proyecto-apps\\interfaces-pr\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex

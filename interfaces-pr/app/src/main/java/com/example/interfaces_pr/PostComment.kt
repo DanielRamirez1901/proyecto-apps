@@ -3,6 +3,7 @@ package com.example.interfaces_pr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.databinding.ActivityPostCommentBinding
 import com.example.interfaces_pr.model.CoursePublicationGeneral
@@ -11,6 +12,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 import java.util.Calendar
+import java.util.UUID
 
 class PostComment : AppCompatActivity() {
 
@@ -58,12 +60,13 @@ class PostComment : AppCompatActivity() {
         courseName = intent.extras?.getString("course name").toString()
         courseType = intent.extras?.getString("course type").toString()
         val publiCont = binding.publiContTxt.text.toString()
+        val publiID = UUID.randomUUID().toString()
 
-        val publication = user?.let {
-            CoursePublicationGeneral(userImg,publiImg, it.username,day,month,year,publiCont,courseName,it.id)
-        }
+        val publication = CoursePublicationGeneral(userImg,publiImg, user?.username!!,day,month,year,publiCont,courseName,user?.id!!,publiID)
+
         if (publication != null) {
-            Firebase.firestore.collection("Courses").document(courseType).collection(courseName).document().set(publication)
+            Firebase.firestore.collection("Courses").document(courseType).collection(courseName).document(publiID).set(publication)
+            Log.d(">>>",publiID)
         }
 
     }

@@ -34,7 +34,7 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: CourseCommentViewHolder, position: Int) {
-        holder.user_inComment.setImageResource(comments[position].user_inComment)
+        holder.user_inComment.setImageResource(comments[position].userPicture_inComment)
         holder.like_inComment.setImageResource(comments[position].like_inComment)
         holder.userName_inComment.text = comments[position].userName_inComment
         holder.userCont_inComment.text = comments[position].userCont_inComment
