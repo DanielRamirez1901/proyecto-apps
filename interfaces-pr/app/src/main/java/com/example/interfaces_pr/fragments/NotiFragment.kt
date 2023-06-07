@@ -14,6 +14,7 @@ import com.example.interfaces_pr.databinding.ListItemNotificationBinding
 
 class NotiFragment : Fragment() {
     private lateinit var binding: ListItemNotificationBinding
+    private lateinit var notificationAdapter: NotificationAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -21,10 +22,11 @@ class NotiFragment : Fragment() {
     ): View? {
         // Inflar el layout para este fragmento
         binding = ListItemNotificationBinding.inflate(inflater, container, false)
+        notificationAdapter = NotificationAdapter()
+        binding.notificationListView.adapter = notificationAdapter
+        binding.notificationListView.setHasFixedSize(false)
+        binding.notificationListView.layoutManager = LinearLayoutManager(requireContext())
         return binding.root
-
-
-
 
 
     }

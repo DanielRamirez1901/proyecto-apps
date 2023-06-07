@@ -124,6 +124,7 @@ id codeLoginET
 id codeUsuarioET
 id comentarBtn
 id contador_notificaciones
+id container
 id container_homeFragment
 id course_description_txt
 id course_image

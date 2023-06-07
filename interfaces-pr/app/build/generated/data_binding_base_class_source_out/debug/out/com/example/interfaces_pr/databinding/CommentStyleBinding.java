@@ -34,6 +34,9 @@ public final class CommentStyleBinding implements ViewBinding {
   public final TextView comentarBtn;
 
   @NonNull
+  public final ConstraintLayout container;
+
+  @NonNull
   public final ImageView fieldToCommentTxt;
 
   @NonNull
@@ -66,16 +69,18 @@ public final class CommentStyleBinding implements ViewBinding {
   private CommentStyleBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView actualUserContainerImg, @NonNull ImageView actualUserImg,
       @NonNull CardView cardView5, @NonNull TextView comentarBtn,
-      @NonNull ImageView fieldToCommentTxt, @NonNull ImageView imageView18,
-      @NonNull ImageView imageView20, @NonNull ImageView likeIncommentImg,
-      @NonNull TextView numerLikesIncommentTxt, @NonNull ImageView sendCommentBtn,
-      @NonNull TextView timeIncommentTxt, @NonNull ImageView userIncommentImg,
-      @NonNull TextView usercontIncommentTxt, @NonNull TextView usernameIncommentTxt) {
+      @NonNull ConstraintLayout container, @NonNull ImageView fieldToCommentTxt,
+      @NonNull ImageView imageView18, @NonNull ImageView imageView20,
+      @NonNull ImageView likeIncommentImg, @NonNull TextView numerLikesIncommentTxt,
+      @NonNull ImageView sendCommentBtn, @NonNull TextView timeIncommentTxt,
+      @NonNull ImageView userIncommentImg, @NonNull TextView usercontIncommentTxt,
+      @NonNull TextView usernameIncommentTxt) {
     this.rootView = rootView;
     this.actualUserContainerImg = actualUserContainerImg;
     this.actualUserImg = actualUserImg;
     this.cardView5 = cardView5;
     this.comentarBtn = comentarBtn;
+    this.container = container;
     this.fieldToCommentTxt = fieldToCommentTxt;
     this.imageView18 = imageView18;
     this.imageView20 = imageView20;
@@ -139,6 +144,8 @@ public final class CommentStyleBinding implements ViewBinding {
         break missingId;
       }
 
+      ConstraintLayout container = (ConstraintLayout) rootView;
+
       id = R.id.fieldToCommentTxt;
       ImageView fieldToCommentTxt = ViewBindings.findChildViewById(rootView, id);
       if (fieldToCommentTxt == null) {
@@ -200,8 +207,8 @@ public final class CommentStyleBinding implements ViewBinding {
       }
 
       return new CommentStyleBinding((ConstraintLayout) rootView, actualUserContainerImg,
-          actualUserImg, cardView5, comentarBtn, fieldToCommentTxt, imageView18, imageView20,
-          likeIncommentImg, numerLikesIncommentTxt, sendCommentBtn, timeIncommentTxt,
+          actualUserImg, cardView5, comentarBtn, container, fieldToCommentTxt, imageView18,
+          imageView20, likeIncommentImg, numerLikesIncommentTxt, sendCommentBtn, timeIncommentTxt,
           userIncommentImg, usercontIncommentTxt, usernameIncommentTxt);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -5,15 +5,12 @@ import android.content.Context
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.interfaces_pr.adapter.NotificationAdapter
 import com.example.interfaces_pr.fragments.*
 import com.example.interfaces_pr.R.id
@@ -31,6 +28,7 @@ class MainActivity1 : AppCompatActivity(){
     private lateinit var button_Cultura: Button
     private lateinit var button_Deportes: Button
     private lateinit var button_Desarrollo: Button
+    private lateinit var notiAdapter:NotificationAdapter
     private var username:String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

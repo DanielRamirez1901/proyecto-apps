@@ -3,12 +3,15 @@ package com.example.interfaces_pr.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.interfaces_pr.R
 import com.example.interfaces_pr.model.CourseComment
+import com.example.interfaces_pr.model.User
 import com.example.interfaces_pr.viewholders.CourseCommentViewHolder
+import com.google.gson.Gson
 
 class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
 
@@ -42,6 +45,9 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
         holder.numberLike_inComment.text = comments[position].numberLike_inComment
         holder.setVisibility(false)
     }
+
+
+
 
 
     override fun getItemCount(): Int {

@@ -20,11 +20,10 @@ class NotificationAdapter : Adapter<NotificationViewHolder>(){
 
     //crea los esqueletos de items
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
-        val layoutInflater:LayoutInflater = LayoutInflater.from(parent.context)
+        val layoutInflater = LayoutInflater.from(parent.context)
         //xml --> View
         val view: View = layoutInflater.inflate(R.layout.format_notification, parent, false)
-        val holder = NotificationViewHolder(view)
-        return holder
+        return NotificationViewHolder(view)
     }
 
     //Pone datos en el esqueleto

@@ -87,7 +87,7 @@ class PublicationsActivity : AppCompatActivity() {
     private fun adapterCourseComment(){
         courseCommentAdapter = CourseCommentAdapter()
         binding.usersCommentsList.adapter = courseCommentAdapter
-        binding.usersCommentsList.setHasFixedSize(true)
+        binding.usersCommentsList.setHasFixedSize(false)
         binding.usersCommentsList.layoutManager = LinearLayoutManager(this)
     }
 
@@ -108,9 +108,12 @@ class PublicationsActivity : AppCompatActivity() {
     }
     private fun startConnectionComments(){
         Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").get().addOnCompleteListener{task ->
+            var cont = 0
             for(doc in task.result!!){
                 val comment = doc.toObject(CourseComment::class.java)
                 courseCommentAdapter.addComment(comment)
+                cont++
+                Log.d(">>>","User $cont : $comment\r")
             }
         }
     }
