@@ -58,7 +58,7 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         adapterCourseSchedule()
         adapterTeacher()
         adapterMemberTeam(layoutManagerMemberTeamAdapter,courseImg)
-        adapterCoursePublication(layoutManagerCoursePublicationAdapter)
+        //adapterCoursePublication(layoutManagerCoursePublicationAdapter)
         adapterCoursePublicationGeneral()
 
         binding.addPublishBtn.setOnClickListener {
@@ -98,6 +98,7 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.teamIcesiList.layoutManager = layoutManagerMemberTeamAdapter
         binding.teamBannerIMG.setImageResource(courseImg)
     }
+    /*
     private fun adapterCoursePublication(layoutManagerCoursePublicationAdapter:LinearLayoutManager){
         coursePublicationsAdapter = CoursePublicationAdapter()
         coursePublicationsAdapter.listener = this
@@ -106,6 +107,8 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
         binding.importantPbList.addItemDecoration(itemDecoration)
         binding.importantPbList.layoutManager = layoutManagerCoursePublicationAdapter
     }
+
+     */
     private fun adapterCoursePublicationGeneral(){
         coursePublicationsGeneralAdapter = CoursePublicationGeneralAdapter()
         coursePublicationsGeneralAdapter.listener = this

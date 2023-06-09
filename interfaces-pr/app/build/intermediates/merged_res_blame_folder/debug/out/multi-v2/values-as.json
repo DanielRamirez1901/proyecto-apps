@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-38:/values-as/values-as.xml",
+            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-39:/values-as/values-as.xml",
             "map": [
                 {
                     "source": "C:\\Users\\danir\\.gradle\\caches\\transforms-3\\a492423055c6314e938e663b9202d2ab\\transformed\\appcompat-1.6.1\\res\\values-as\\values-as.xml",

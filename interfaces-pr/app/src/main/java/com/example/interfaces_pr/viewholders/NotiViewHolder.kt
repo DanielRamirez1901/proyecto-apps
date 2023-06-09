@@ -7,9 +7,12 @@ import com.example.interfaces_pr.databinding.FormatNotificationBinding
 
 class NotificationViewHolder(root: View) : ViewHolder(root){
     private val binding = FormatNotificationBinding.bind(root)
-    val image = binding.iconNotification
-    val title = binding.titleNotification
-    val description = binding.descriptionNotification
+    val userProfileImg = binding.userProfileImg
+    val typeActivityImg = binding.typeActivityImg
+    val activityImg = binding.activityImg
+    val courseTypeTxt = binding.courseTypeTxt
+    val courseNameTxt = binding.courseNameTxt
+    val notificationDescTxt = binding.notificationDescTxt
 
 }
 

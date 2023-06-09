@@ -2759,6 +2759,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable celular_icon
+drawable comentario_reaction
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2780,6 +2781,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable corazon_blanco
 drawable corazon_notification
+drawable corazon_reaction
 drawable correo_icon
 drawable cultura_banner
 drawable deportes
@@ -2789,6 +2791,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_perfil_camera
 drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
@@ -2897,6 +2900,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable password_icon
 drawable pastel
+drawable pencil_icon_edit
 drawable perfil_icon
 drawable perfile_format
 drawable personal_course_image
@@ -3002,6 +3006,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id activityImg
 id activity_chooser_view_content
 id actualUserContainerImg
 id actualUserImg
@@ -3063,6 +3068,8 @@ id cardView3
 id cardView4
 id cardView5
 id cardView6
+id cardView7
+id cardView8
 id career
 id carryVelocity
 id celular_icon
@@ -3102,6 +3109,8 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id courseNameTxt
+id courseTypeTxt
 id course_description_txt
 id course_image
 id course_nametxt
@@ -3122,8 +3131,7 @@ id deltaRelative
 id dependency_ordering
 id desarrolloImg
 id descipction_label
-id descripcionPubli
-id description_notification
+id description_date
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3150,8 +3158,11 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editIMG
 id editTextTextPersonName4
+id edit_nacimiento_Button
 id edit_query
+id edit_telefono_Button
 id elastic
 id emaiL
 id emailET
@@ -3191,6 +3202,7 @@ id galleryBtn
 id galleryImg
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3226,7 +3238,9 @@ id imageView18
 id imageView19
 id imageView2
 id imageView20
+id imageView23
 id imageView3
+id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -3235,7 +3249,6 @@ id imageView9
 id image_back
 id image_curso
 id immediateStop
-id important_pbList
 id included
 id indeterminate
 id induccionImg
@@ -3323,6 +3336,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id myPublisListView
 id nada
 id name
 id name_curso_label
@@ -3341,6 +3355,7 @@ id noState
 id none
 id normal
 id north
+id notificationDescTxt
 id notification_background
 id notification_list_view
 id notification_main_column
@@ -3349,6 +3364,7 @@ id numerLikes_incommentTxt
 id off
 id on
 id onInterceptTouchReturnSwipe
+id othersPublisListView
 id outline
 id outward
 id overshoot
@@ -3376,8 +3392,8 @@ id pb_userNameTxt
 id pb_yearTxt
 id peekHeight
 id percent
+id perfil_edit_img
 id perfil_icon_img
-id perfil_photo_img
 id pin
 id player_nameTxt
 id position
@@ -3562,12 +3578,14 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id typeActivityImg
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
 id userImg
+id userProfileImg
 id user_commentImg
 id user_commentToSendTxt
 id user_incommentImg
@@ -3580,7 +3598,6 @@ id vertical_only
 id view
 id view10
 id view11
-id view12
 id view13
 id view14
 id view15

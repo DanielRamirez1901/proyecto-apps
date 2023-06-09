@@ -45,11 +45,15 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
 
     override fun onBindViewHolder(holder: CourseCommentViewHolder, position: Int) {
         holder.user_inComment.setImageResource(comments[position].userPicture_inComment)
-        holder.like_inComment.setImageResource(comments[position].like_inComment)
         holder.userName_inComment.text = comments[position].userName_inComment
         holder.userCont_inComment.text = comments[position].userCont_inComment
         holder.time_inComment.text = comments[position].time_inComment
-        holder.numberLike_inComment.text = comments[position].numberLike_inComment
+        holder.numberLike_inComment.text = comments[position].usersLikes.size.toString()
+        if(comments[position].comprobateUserExist(comments[position].userID)){
+            holder.like_inComment.setImageResource(R.drawable.like_icon)
+        }else{
+            holder.like_inComment.setImageResource(R.drawable.unlike_icon)
+        }
         holder.like_inComment.setOnClickListener {
             Log.d(">>>", "Llego hasta onBind")
             commentButtonClickListener?.onCommentButtonClick(holder,comments[position])

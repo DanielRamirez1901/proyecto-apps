@@ -86,7 +86,6 @@ class PublicationsActivity : AppCompatActivity(),OnItemButtonListener{
     }
 
     private fun likePublication(){
-        Log.d(">>>", coursePublicationG.comprobateUserExist(userActual?.id!!).toString())
         if(coursePublicationG.comprobateUserExist(userActual?.id!!)){
             binding.likeImg.setImageResource(R.drawable.unlike_icon)
             coursePublicationG.addOrDelUserLike(userActual?.id!!,false)
@@ -94,13 +93,13 @@ class PublicationsActivity : AppCompatActivity(),OnItemButtonListener{
             binding.likeImg.setImageResource(R.drawable.like_icon)
             coursePublicationG.addOrDelUserLike(userActual?.id!!,true)
             if(coursePublicationG.userID!=userActual?.id){
-                val notificationUser = NotificationAtri(0,"","", userActual?.id!!,coursePublicationG.publicationID)
+                    val notificationUser = NotificationAtri(R.drawable.profile1,courseTypeP.toString(),coursePublicationG.courseName,
+                        R.drawable.basketball_course_image,userActual?.username!!,"Reaction",userActual?.id!!,coursePublicationG.publicationID)
                 Firebase.firestore.collection("Notifications").document(coursePublicationG.userID).collection("Reaction").document(userActual?.id!!).set(notificationUser)
             }
         }
         binding.reactionsTxt.text = coursePublicationG.usersLikes.size.toString()
         Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).set(coursePublicationG)
-        Log.d(">>>",coursePublicationG.usersLikes.toString())
     }
 
     private fun adapterCourseComment(){
@@ -123,7 +122,8 @@ class PublicationsActivity : AppCompatActivity(),OnItemButtonListener{
             )
             Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").document(commentID).set(newComment)
             if(coursePublicationG.userID!=userActual?.id){
-                val notificationUser = NotificationAtri(0,"","",userActual?.id!!,commentID)
+                val notificationUser = NotificationAtri(R.drawable.profile1,courseTypeP.toString(),coursePublicationG.courseName,
+                    R.drawable.basketball_course_image,userActual?.username!!,"Comment",userActual?.id!!,coursePublicationG.publicationID)
                 Firebase.firestore.collection("Notifications").document(coursePublicationG.userID).collection("Comment").document(userActual?.id!!).set(notificationUser)
             }
             Log.d(">>>","ID user: ${userActual?.id}")
@@ -183,6 +183,12 @@ class PublicationsActivity : AppCompatActivity(),OnItemButtonListener{
         }else{
             commentHolder.like_inComment.setImageResource(R.drawable.like_icon)
             commentObject.addOrDelUserLike(userActual?.id!!,true)
+            if(commentObject.userID!=userActual?.id){
+                Log.d(">>>","User en Publicacion: ${commentObject.userID} ::: User en Login: ${userActual?.id}")
+                val notificationUser = NotificationAtri(R.drawable.profile1,courseTypeP.toString(),coursePublicationG.courseName,
+                    R.drawable.basketball_course_image,userActual?.username!!,"ReactionComment",userActual?.id!!,coursePublicationG.publicationID)
+                Firebase.firestore.collection("Notifications").document(coursePublicationG.userID).collection("ReactionsInComment").document(userActual?.id!!).set(notificationUser)
+            }
         }
         commentHolder.numberLike_inComment.text = commentObject.usersLikes.size.toString()
         Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").document(commentObject.commentID).set(commentObject)

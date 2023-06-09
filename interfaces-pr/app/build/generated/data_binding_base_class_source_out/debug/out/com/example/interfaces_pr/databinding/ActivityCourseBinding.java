@@ -44,9 +44,6 @@ public final class ActivityCourseBinding implements ViewBinding {
   public final ImageView fondo;
 
   @NonNull
-  public final RecyclerView importantPbList;
-
-  @NonNull
   public final RecyclerView publicationsGeneralList;
 
   @NonNull
@@ -83,9 +80,6 @@ public final class ActivityCourseBinding implements ViewBinding {
   public final View view11;
 
   @NonNull
-  public final View view12;
-
-  @NonNull
   public final View view2;
 
   @NonNull
@@ -107,13 +101,13 @@ public final class ActivityCourseBinding implements ViewBinding {
       @NonNull TextView courseDescriptionTxt, @NonNull ImageView courseImage,
       @NonNull TextView courseNametxt, @NonNull RecyclerView courseScheduleList,
       @NonNull EditText editTextTextPersonName4, @NonNull ImageView fondo,
-      @NonNull RecyclerView importantPbList, @NonNull RecyclerView publicationsGeneralList,
-      @NonNull ImageView returnBtn, @NonNull RecyclerView teachersList,
-      @NonNull ImageView teamBannerIMG, @NonNull RecyclerView teamIcesiList,
-      @NonNull TextView textView10, @NonNull TextView textView11, @NonNull TextView textView7,
-      @NonNull TextView textView8, @NonNull TextView textView9, @NonNull View view,
-      @NonNull View view11, @NonNull View view12, @NonNull View view2, @NonNull View view3,
-      @NonNull View view4, @NonNull View view6, @NonNull View view8, @NonNull View view9) {
+      @NonNull RecyclerView publicationsGeneralList, @NonNull ImageView returnBtn,
+      @NonNull RecyclerView teachersList, @NonNull ImageView teamBannerIMG,
+      @NonNull RecyclerView teamIcesiList, @NonNull TextView textView10,
+      @NonNull TextView textView11, @NonNull TextView textView7, @NonNull TextView textView8,
+      @NonNull TextView textView9, @NonNull View view, @NonNull View view11, @NonNull View view2,
+      @NonNull View view3, @NonNull View view4, @NonNull View view6, @NonNull View view8,
+      @NonNull View view9) {
     this.rootView = rootView;
     this.addPublishBtn = addPublishBtn;
     this.courseDescriptionTxt = courseDescriptionTxt;
@@ -122,7 +116,6 @@ public final class ActivityCourseBinding implements ViewBinding {
     this.courseScheduleList = courseScheduleList;
     this.editTextTextPersonName4 = editTextTextPersonName4;
     this.fondo = fondo;
-    this.importantPbList = importantPbList;
     this.publicationsGeneralList = publicationsGeneralList;
     this.returnBtn = returnBtn;
     this.teachersList = teachersList;
@@ -135,7 +128,6 @@ public final class ActivityCourseBinding implements ViewBinding {
     this.textView9 = textView9;
     this.view = view;
     this.view11 = view11;
-    this.view12 = view12;
     this.view2 = view2;
     this.view3 = view3;
     this.view4 = view4;
@@ -213,12 +205,6 @@ public final class ActivityCourseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.important_pbList;
-      RecyclerView importantPbList = ViewBindings.findChildViewById(rootView, id);
-      if (importantPbList == null) {
-        break missingId;
-      }
-
       id = R.id.publications_generalList;
       RecyclerView publicationsGeneralList = ViewBindings.findChildViewById(rootView, id);
       if (publicationsGeneralList == null) {
@@ -291,12 +277,6 @@ public final class ActivityCourseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view12;
-      View view12 = ViewBindings.findChildViewById(rootView, id);
-      if (view12 == null) {
-        break missingId;
-      }
-
       id = R.id.view2;
       View view2 = ViewBindings.findChildViewById(rootView, id);
       if (view2 == null) {
@@ -335,9 +315,9 @@ public final class ActivityCourseBinding implements ViewBinding {
 
       return new ActivityCourseBinding((ScrollView) rootView, addPublishBtn, courseDescriptionTxt,
           courseImage, courseNametxt, courseScheduleList, editTextTextPersonName4, fondo,
-          importantPbList, publicationsGeneralList, returnBtn, teachersList, teamBannerIMG,
-          teamIcesiList, textView10, textView11, textView7, textView8, textView9, view, view11,
-          view12, view2, view3, view4, view6, view8, view9);
+          publicationsGeneralList, returnBtn, teachersList, teamBannerIMG, teamIcesiList,
+          textView10, textView11, textView7, textView8, textView9, view, view11, view2, view3,
+          view4, view6, view8, view9);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

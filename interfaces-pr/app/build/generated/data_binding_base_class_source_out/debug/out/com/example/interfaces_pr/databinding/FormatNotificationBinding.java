@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -21,21 +22,52 @@ public final class FormatNotificationBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView descriptionNotification;
+  public final ImageView activityImg;
 
   @NonNull
-  public final ImageView iconNotification;
+  public final CardView cardView7;
 
   @NonNull
-  public final TextView titleNotification;
+  public final CardView cardView8;
+
+  @NonNull
+  public final TextView courseNameTxt;
+
+  @NonNull
+  public final TextView courseTypeTxt;
+
+  @NonNull
+  public final ImageView imageView23;
+
+  @NonNull
+  public final ImageView imageView4;
+
+  @NonNull
+  public final TextView notificationDescTxt;
+
+  @NonNull
+  public final ImageView typeActivityImg;
+
+  @NonNull
+  public final ImageView userProfileImg;
 
   private FormatNotificationBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView descriptionNotification, @NonNull ImageView iconNotification,
-      @NonNull TextView titleNotification) {
+      @NonNull ImageView activityImg, @NonNull CardView cardView7, @NonNull CardView cardView8,
+      @NonNull TextView courseNameTxt, @NonNull TextView courseTypeTxt,
+      @NonNull ImageView imageView23, @NonNull ImageView imageView4,
+      @NonNull TextView notificationDescTxt, @NonNull ImageView typeActivityImg,
+      @NonNull ImageView userProfileImg) {
     this.rootView = rootView;
-    this.descriptionNotification = descriptionNotification;
-    this.iconNotification = iconNotification;
-    this.titleNotification = titleNotification;
+    this.activityImg = activityImg;
+    this.cardView7 = cardView7;
+    this.cardView8 = cardView8;
+    this.courseNameTxt = courseNameTxt;
+    this.courseTypeTxt = courseTypeTxt;
+    this.imageView23 = imageView23;
+    this.imageView4 = imageView4;
+    this.notificationDescTxt = notificationDescTxt;
+    this.typeActivityImg = typeActivityImg;
+    this.userProfileImg = userProfileImg;
   }
 
   @Override
@@ -65,26 +97,69 @@ public final class FormatNotificationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.description_notification;
-      TextView descriptionNotification = ViewBindings.findChildViewById(rootView, id);
-      if (descriptionNotification == null) {
+      id = R.id.activityImg;
+      ImageView activityImg = ViewBindings.findChildViewById(rootView, id);
+      if (activityImg == null) {
         break missingId;
       }
 
-      id = R.id.icon_notification;
-      ImageView iconNotification = ViewBindings.findChildViewById(rootView, id);
-      if (iconNotification == null) {
+      id = R.id.cardView7;
+      CardView cardView7 = ViewBindings.findChildViewById(rootView, id);
+      if (cardView7 == null) {
         break missingId;
       }
 
-      id = R.id.title_notification;
-      TextView titleNotification = ViewBindings.findChildViewById(rootView, id);
-      if (titleNotification == null) {
+      id = R.id.cardView8;
+      CardView cardView8 = ViewBindings.findChildViewById(rootView, id);
+      if (cardView8 == null) {
         break missingId;
       }
 
-      return new FormatNotificationBinding((ConstraintLayout) rootView, descriptionNotification,
-          iconNotification, titleNotification);
+      id = R.id.courseNameTxt;
+      TextView courseNameTxt = ViewBindings.findChildViewById(rootView, id);
+      if (courseNameTxt == null) {
+        break missingId;
+      }
+
+      id = R.id.courseTypeTxt;
+      TextView courseTypeTxt = ViewBindings.findChildViewById(rootView, id);
+      if (courseTypeTxt == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView23;
+      ImageView imageView23 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView23 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView4;
+      ImageView imageView4 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView4 == null) {
+        break missingId;
+      }
+
+      id = R.id.notificationDescTxt;
+      TextView notificationDescTxt = ViewBindings.findChildViewById(rootView, id);
+      if (notificationDescTxt == null) {
+        break missingId;
+      }
+
+      id = R.id.typeActivityImg;
+      ImageView typeActivityImg = ViewBindings.findChildViewById(rootView, id);
+      if (typeActivityImg == null) {
+        break missingId;
+      }
+
+      id = R.id.userProfileImg;
+      ImageView userProfileImg = ViewBindings.findChildViewById(rootView, id);
+      if (userProfileImg == null) {
+        break missingId;
+      }
+
+      return new FormatNotificationBinding((ConstraintLayout) rootView, activityImg, cardView7,
+          cardView8, courseNameTxt, courseTypeTxt, imageView23, imageView4, notificationDescTxt,
+          typeActivityImg, userProfileImg);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

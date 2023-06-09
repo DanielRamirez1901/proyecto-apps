@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.interfaces_pr.R
+import com.example.interfaces_pr.adapter.CoursePublicationGeneralAdapter
+import com.example.interfaces_pr.databinding.ListItemNotificationBinding
 import com.example.interfaces_pr.databinding.PublifragmentBinding
 
 class PubliFragment : Fragment() {
-
 
 
     override fun onCreateView(

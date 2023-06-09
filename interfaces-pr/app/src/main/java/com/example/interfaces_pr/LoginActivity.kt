@@ -102,98 +102,98 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-        //Todo esto es para pruebas
-        /*binding.loginBtn.setOnClickListener{
-            val userID = UUID.randomUUID().toString()
-            val username = login.binding.codeLoginET.editText?.text.toString()
-            val password = login.binding.passwordLoginET.editText?.text.toString()
-            val userCode = "none"
-            val userEmail = "none"
-            val user =User(userID,userCode,userEmail,username,password)
-            //guardar usuario en la cache
+    //Todo esto es para pruebas
+    /*binding.loginBtn.setOnClickListener{
+        val userID = UUID.randomUUID().toString()
+        val username = login.binding.codeLoginET.editText?.text.toString()
+        val password = login.binding.passwordLoginET.editText?.text.toString()
+        val userCode = "none"
+        val userEmail = "none"
+        val user =User(userID,userCode,userEmail,username,password)
+        //guardar usuario en la cache
 
 
-            val query = Firebase.firestore.collection("usersPrueba").whereEqualTo("username",username)
-            query.get().addOnCompleteListener{task ->
-                //Si user no existe, crearlo e iniciar sesion con el
-                if(task.result.size()==0){
-                    Firebase.firestore.collection("usersPrueba").document(user.id).set(user)
-                    val intent = Intent(this,MainActivity1::class.java)
-                    saveUser(user!!)
-                    startActivity(intent)
+        val query = Firebase.firestore.collection("usersPrueba").whereEqualTo("username",username)
+        query.get().addOnCompleteListener{task ->
+            //Si user no existe, crearlo e iniciar sesion con el
+            if(task.result.size()==0){
+                Firebase.firestore.collection("usersPrueba").document(user.id).set(user)
+                val intent = Intent(this,MainActivity1::class.java)
+                saveUser(user!!)
+                startActivity(intent)
+            }
+            //Si ya existe, descargar el usuario e iniciar sesionn con el
+            else{
+                lateinit var existingUser : User
+                for(document in task.result!!){
+                    existingUser = document.toObject(User::class.java)
+                    break
                 }
-                //Si ya existe, descargar el usuario e iniciar sesionn con el
-                else{
-                    lateinit var existingUser : User
-                    for(document in task.result!!){
-                        existingUser = document.toObject(User::class.java)
-                        break
+                if(existingUser.password == password){
+                    val intent = Intent(this,MainActivity1::class.java).apply {
+                        saveUser(existingUser!!)
+                        putExtra("user",existingUser)
                     }
-                    if(existingUser.password == password){
-                        val intent = Intent(this,MainActivity1::class.java).apply {
-                            saveUser(existingUser!!)
-                            putExtra("user",existingUser)
-                        }
-                        startActivity(intent)
-                    }else{
-                        Toast.makeText(this,"Contraseña incorrecta", Toast.LENGTH_LONG).show()
-                    }
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(this,"Contraseña incorrecta", Toast.LENGTH_LONG).show()
                 }
             }
-            //Firebase.firestore.collection("users").document(user.id).set(user)
         }
-        }
+        //Firebase.firestore.collection("users").document(user.id).set(user)
+    }
+    }
 */
 
-private fun showFragment(fragment:Fragment){
-    supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
-}
+    private fun showFragment(fragment:Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.nada,fragment).commit()
+    }
 
-fun registrarUsuario(view: View) {
-    //Parte 1___
-    // Obtiene el correo electrónico y la contraseña de la actividad RegisterFragment
-    val email = register.binding.emailET.editText?.text.toString()
-    val password = register.binding.passET.editText?.text.toString()
-    val codeUsuario = register.binding.codeUsuarioET.editText?.text.toString()
-    val username = register.binding.usernameET.editText?.text.toString()
+    fun registrarUsuario(view: View) {
+        //Parte 1___
+        // Obtiene el correo electrónico y la contraseña de la actividad RegisterFragment
+        val email = register.binding.emailET.editText?.text.toString()
+        val password = register.binding.passET.editText?.text.toString()
+        val codeUsuario = register.binding.codeUsuarioET.editText?.text.toString()
+        val username = register.binding.usernameET.editText?.text.toString()
 
-    if (email.isBlank() || password.isBlank() || codeUsuario.isBlank() || username.isBlank()){
-        Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
-    }else{
-        // Autentica al usuario con Firebase Auth
-        Firebase.auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener{
-                //Parte 2____
-                val id = Firebase.auth.currentUser?.uid
-                val user = User(id!!, codeUsuario, email, username)
+        if (email.isBlank() || password.isBlank() || codeUsuario.isBlank() || username.isBlank()){
+            Toast.makeText(this, "Rellena los campos vacios", Toast.LENGTH_LONG).show()
+        }else{
+            // Autentica al usuario con Firebase Auth
+            Firebase.auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener{
+                    //Parte 2____
+                    val id = Firebase.auth.currentUser?.uid
+                    val user = User(id!!, codeUsuario, email, username,R.drawable.ic_launcher_background.toString())
 
-                Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
-                    sendVerifyEmail()
+                    Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
+                        sendVerifyEmail()
+                    }
+                }.addOnFailureListener{
+                    Toast.makeText(this, "El correo ya está en uso, intenta con otro", Toast.LENGTH_LONG).show()
                 }
-            }.addOnFailureListener{
-                Toast.makeText(this, "El correo ya está en uso, intenta con otro", Toast.LENGTH_LONG).show()
-            }
+        }
+
+
+    }
+    fun sendVerifyEmail(){
+        Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
+            Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
+        }?.addOnFailureListener{
+            Toast.makeText(this, "Error al enviar el correo de verificación", Toast.LENGTH_LONG).show()
+        }
+    }
+    private fun saveUser(user: User){
+
+        val sp = getSharedPreferences("CampusBu", AppCompatActivity.MODE_PRIVATE)
+        val json = Gson().toJson(user)
+        sp.edit().putString("user", json).apply()
     }
 
-
-}
-fun sendVerifyEmail(){
-    Firebase.auth.currentUser?.sendEmailVerification()?.addOnSuccessListener {
-        Toast.makeText(this, "Listo! Verifica el correo que te mandamos", Toast.LENGTH_LONG).show()
-    }?.addOnFailureListener{
-        Toast.makeText(this, "Error al enviar el correo de verificación", Toast.LENGTH_LONG).show()
+    private fun goToMainActivity() {
+        val intent = Intent(this, MainActivity1::class.java)
+        startActivity(intent)
     }
-}
-private fun saveUser(user: User){
-
-    val sp = getSharedPreferences("CampusBu", AppCompatActivity.MODE_PRIVATE)
-    val json = Gson().toJson(user)
-    sp.edit().putString("user", json).apply()
-}
-
-private fun goToMainActivity() {
-    val intent = Intent(this, MainActivity1::class.java)
-    startActivity(intent)
-}
 
 }

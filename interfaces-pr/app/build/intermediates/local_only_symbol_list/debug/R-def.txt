@@ -33,12 +33,15 @@ drawable basketball_course_image
 drawable borde_navegation_of_home
 drawable border_text
 drawable celular_icon
+drawable comentario_reaction
 drawable corazon_blanco
 drawable corazon_notification
+drawable corazon_reaction
 drawable correo_icon
 drawable cultura_banner
 drawable deportes
 drawable desarrollo_personal_banner
+drawable edit_perfil_camera
 drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
@@ -62,6 +65,7 @@ drawable mochila_perdida
 drawable noti_icon
 drawable password_icon
 drawable pastel
+drawable pencil_icon_edit
 drawable perfil_icon
 drawable perfile_format
 drawable personal_course_image
@@ -95,6 +99,7 @@ drawable userbanner_image
 drawable visuales_course_image
 drawable x
 id acompañamientoImg
+id activityImg
 id actualUserContainerImg
 id actualUserImg
 id addBtn
@@ -116,6 +121,8 @@ id cardView3
 id cardView4
 id cardView5
 id cardView6
+id cardView7
+id cardView8
 id career
 id celular_icon
 id celular_label
@@ -126,6 +133,8 @@ id comentarBtn
 id contador_notificaciones
 id container
 id container_homeFragment
+id courseNameTxt
+id courseTypeTxt
 id course_description_txt
 id course_image
 id course_nametxt
@@ -133,9 +142,11 @@ id course_scheduleList
 id daytxt
 id desarrolloImg
 id descipction_label
-id descripcionPubli
-id description_notification
+id description_date
+id editIMG
 id editTextTextPersonName4
+id edit_nacimiento_Button
+id edit_telefono_Button
 id emaiL
 id emailET
 id fieldToCommentTxt
@@ -163,7 +174,9 @@ id imageView18
 id imageView19
 id imageView2
 id imageView20
+id imageView23
 id imageView3
+id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -171,7 +184,6 @@ id imageView8
 id imageView9
 id image_back
 id image_curso
-id important_pbList
 id induccionImg
 id iniciarSesiontxt
 id likeImg
@@ -179,11 +191,14 @@ id like_incommentImg
 id loginBtn
 id loginContainerFL
 id mis_publicaciones_btn_homa
+id myPublisListView
 id nada
 id name
 id name_curso_label
+id notificationDescTxt
 id notification_list_view
 id numerLikes_incommentTxt
+id othersPublisListView
 id pass
 id passET
 id passwordLoginET
@@ -197,8 +212,8 @@ id pb_mouthTxt
 id pb_userImg
 id pb_userNameTxt
 id pb_yearTxt
+id perfil_edit_img
 id perfil_icon_img
-id perfil_photo_img
 id player_nameTxt
 id profile_teamImg
 id pruebaCV
@@ -246,7 +261,9 @@ id textView9
 id time_incommentTxt
 id tiroArcoImg
 id title_notification
+id typeActivityImg
 id userImg
+id userProfileImg
 id user_commentImg
 id user_commentToSendTxt
 id user_incommentImg
@@ -258,7 +275,6 @@ id users_commentsList
 id view
 id view10
 id view11
-id view12
 id view13
 id view14
 id view15

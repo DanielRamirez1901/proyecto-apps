@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-38:/values-sk/values-sk.xml",
+            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-39:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\danir\\.gradle\\caches\\transforms-3\\03e6674ecfdcdd1a9634684917e62b5c\\transformed\\core-1.9.0\\res\\values-sk\\values-sk.xml",

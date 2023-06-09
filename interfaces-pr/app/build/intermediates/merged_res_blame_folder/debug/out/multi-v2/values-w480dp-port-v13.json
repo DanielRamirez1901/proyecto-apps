@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-38:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
+            "outputFile": "com.example.interfaces_pr.app-mergeDebugResources-39:/values-w480dp-port-v13/values-w480dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\danir\\.gradle\\caches\\transforms-3\\0bd18739b0a6396ad4ec8f12f5078ae6\\transformed\\material-1.8.0\\res\\values-w480dp-port-v13\\values-w480dp-port-v13.xml",

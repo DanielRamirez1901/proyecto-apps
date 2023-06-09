@@ -1,11 +1,15 @@
 package com.example.interfaces_pr
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.databinding.ActivityPostCommentBinding
+import com.example.interfaces_pr.model.CourseComment
 import com.example.interfaces_pr.model.CoursePublicationGeneral
 import com.example.interfaces_pr.model.NotificationAtri
 import com.example.interfaces_pr.model.User
@@ -20,6 +24,7 @@ class PostComment : AppCompatActivity() {
 
     private var courseName:String?=null
     private var courseType:String?=null
+    private val REQUEST_GALLERY = 1
 
     private val binding by lazy{
         ActivityPostCommentBinding.inflate(layoutInflater)
@@ -29,10 +34,10 @@ class PostComment : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        val userActual = getUser()
         binding.userImg.setImageResource(R.drawable.profile1)
-        binding.galleryBtn.setOnClickListener{
-            binding.publicationImg.setImageResource(R.drawable.basketball_course_image)
-        }
+        binding.publicationTitleTxt.text = userActual?.username.toString()
+
 
         courseType = intent.extras?.getString("course type")
         courseName = intent.extras?.getString("course name")
@@ -46,10 +51,29 @@ class PostComment : AppCompatActivity() {
             goToCourseActivity()
         }
 
-        binding.userImg.setOnClickListener{
 
+        binding.galleryBtn.setOnClickListener{
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, REQUEST_GALLERY)
         }
 
+
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK && data != null) {
+            // Obtiene la Uri de la imagen seleccionada
+            val imageUri: Uri? = data.data
+            if (imageUri != null) {
+                // Decodifica la Uri en un Bitmap
+                val bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri))
+                // se muestra la imagen seleccionada
+                binding.publicationImg.setImageBitmap(bitmap)
+            }
+        }
     }
 
 
@@ -67,11 +91,38 @@ class PostComment : AppCompatActivity() {
 
         val publication = CoursePublicationGeneral(userImg,publiImg, user?.username!!,day,month,year,publiCont,courseName.toString(),user?.id!!,publiID,ArrayList())
         if (publication != null) {
-            Firebase.firestore.collection("Courses").document(courseType.toString()).collection(courseName.toString()).document(publiID).set(publication)
-            Log.d(">>>",publiID)
-        }
 
+            Firebase.firestore.collection("Courses")
+                .document(courseType.toString())
+                .collection(courseName.toString())
+                .document(publiID).set(publication)
+
+            Firebase.firestore.collection("UserPublications")
+                .document(user.id)
+                .collection("My Publications")
+                .document(publiID)
+                .set(publication)
+
+            var usersPublications : ArrayList<User> = ArrayList()
+            Firebase.firestore.collection("users").get().addOnCompleteListener{task ->
+                if (task.isSuccessful) {
+                    for(doc in task.result!!){
+                        Log.d(">>>","Entre")
+                        val user = doc.toObject(User::class.java)
+                        usersPublications.add(user)
+                    }
+                    Log.d(">>>","Arreglo usuarios ${usersPublications.toList()}")
+                    for(element in usersPublications){
+                        val userID = element.id
+                        if(userID!=publication.userID){
+                            Firebase.firestore.collection("UserPublications").document(userID).collection("Others Publications").document(publiID).set(publication)
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
     private fun goToCourseActivity(){
         val intent = Intent(this,CourseActivity::class.java).apply {
