@@ -1,106 +1,102 @@
 [
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\comment_style.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\comment_style.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/team_icesi.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/team_icesi.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\desarrollo_cursos.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\desarrollo_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_publications.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_publications.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\list_item_notification.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\list_item_notification.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/homefragment.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/homefragment.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\register_fragment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\register_fragment.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/format_notification.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/format_notification.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_main2.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main2.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_main2.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main2.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\deportes_cursos.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\deportes_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/cultura_cursos.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/cultura_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_publications.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_publications.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/login_fragment.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/login_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\cultura_cursos.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\cultura_cursos.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_post_comment.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_post_comment.xml"
     },
     {
         "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/perfilfragment.xml",
         "source": "com.example.interfaces_pr.app-main-42:/layout/perfilfragment.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\course_publication_general.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\course_publication_general.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/publicaciones_generales.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/publicaciones_generales.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\format_publicacion.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_publicacion.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/deportes_cursos.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/deportes_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\format_notification.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_notification.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_course.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_course.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_main1.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main1.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_main1.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_main1.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/desarrollo_cursos.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/desarrollo_cursos.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\publifragment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\publifragment.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/format_publicacion.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/format_publicacion.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\teacher.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\teacher.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/register_fragment.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/register_fragment.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\team_icesi.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\team_icesi.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/list_item_notification.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/list_item_notification.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_post_comment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_post_comment.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/comment_style.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/comment_style.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\activity_course.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\activity_course.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/publifragment.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/publifragment.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\course_schedule.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\course_schedule.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/teacher.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/teacher.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\teacher_publication.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\teacher_publication.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\login_fragment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\login_fragment.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/teacher_publication.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/teacher_publication.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\perfilfragment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\perfilfragment.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/mis_publicaciones.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/mis_publicaciones.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\publicaciones_generales.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\publicaciones_generales.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/course_publication_general.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/course_publication_general.xml"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\homefragment.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\homefragment.xml"
-    },
-    {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-mergeDebugResources-39:\\layout\\mis_publicaciones.xml",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\mis_publicaciones.xml"
+        "merged": "com.example.interfaces_pr.app-mergeDebugResources-39:/layout/course_schedule.xml",
+        "source": "com.example.interfaces_pr.app-main-42:/layout/course_schedule.xml"
     }
 ]

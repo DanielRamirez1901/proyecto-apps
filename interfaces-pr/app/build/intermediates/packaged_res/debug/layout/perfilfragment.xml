@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
-            android:scaleType="centerCrop"
+            android:scaleType="center"
             app:srcCompat="@drawable/foto_perfil" />
 
     </androidx.cardview.widget.CardView>
@@ -72,7 +72,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Ingeniero telemático"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -190,7 +189,9 @@
         android:id="@+id/editIMG"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:background="#FFFFFF"
         android:contentDescription="Descripción accesible del ImageButton"
+        android:scaleType="center"
         android:translationX="-20dp"
         android:translationY="-10dp"
         app:layout_constraintBottom_toTopOf="@+id/name"

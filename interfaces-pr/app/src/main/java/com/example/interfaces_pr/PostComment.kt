@@ -36,24 +36,19 @@ class PostComment : AppCompatActivity() {
         binding.galleryBtn.setOnClickListener{
             binding.publicationImg.setImageResource(R.drawable.basketball_course_image)
         }
-
         binding.addBtn.setOnClickListener{
             publish()
             goToCourseActivity()
         }
-
         binding.backButton.setOnClickListener{
             goToCourseActivity()
         }
-
         binding.userImg.setOnClickListener{
 
         }
-
         binding.galleryBtn.setOnClickListener{
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             startActivityForResult(intent, REQUEST_GALLERY)
-
         }
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

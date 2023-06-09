@@ -13,23 +13,24 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.interfaces_pr.databinding.PerfilfragmentBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.auth.User
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
+import java.io.File
 import java.util.Locale
 
 class PerfilFragment(private val username: String) : Fragment() {
 
     private lateinit var imagePickerLauncher: ActivityResultLauncher<String>
     lateinit var binding: PerfilfragmentBinding
-
+    private lateinit var storage: FirebaseStorage
+    private lateinit var storageRef: StorageReference
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,18 +39,7 @@ class PerfilFragment(private val username: String) : Fragment() {
     ): View? {
         binding = PerfilfragmentBinding.inflate(inflater, container, false)
         binding.name.text = username
-
         downloadSubcollectionData()
-
-        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
-            if (uri != null) {
-                val bitmap =
-                    BitmapFactory.decodeStream(requireContext().contentResolver.openInputStream(uri))
-                binding.perfilEditImg.setImageBitmap(bitmap)
-            }
-        }
-
-        verifyUserId()
 
         binding.editIMG.setOnClickListener {
             imagePickerLauncher.launch("image/*") //falta que suba a base de datos
@@ -63,6 +53,53 @@ class PerfilFragment(private val username: String) : Fragment() {
         binding.career.setOnClickListener {
             showEditDialog2()
         }
+        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            if (uri != null) {
+                val bitmap = BitmapFactory.decodeStream(requireContext().contentResolver.openInputStream(uri))
+                binding.perfilEditImg.setImageBitmap(bitmap)
+
+                // Subir la imagen a Firebase Storage
+                val storageRef = FirebaseStorage.getInstance().reference
+                val userId = FirebaseAuth.getInstance().currentUser?.uid // Obtener el ID único del usuario actual
+                val imageRef = storageRef.child("images/${userId}/profile.jpg") // Ruta de almacenamiento en Firebase Storage
+                val uploadTask = imageRef.putFile(uri)
+
+                uploadTask.continueWithTask { task ->
+                    if (!task.isSuccessful) {
+                        task.exception?.let { throw it }
+                    }
+                    imageRef.downloadUrl
+                }.addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val downloadUri = task.result
+
+                        // Obtener el ID único de Firebase del usuario actual
+                        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+                        // Verificar que el ID de usuario no sea nulo
+                        if (userId != null) {
+                            // Obtener una referencia al documento del usuario utilizando su ID único
+                            val userDocument = FirebaseFirestore.getInstance().collection("users").document(userId)
+
+                            // Actualizar el atributo "userImg" del documento del usuario con la URL de descarga de la imagen
+                            userDocument.update("userImg", downloadUri.toString())
+                                .addOnSuccessListener {
+                                    // La actualización se realizó exitosamente en la base de datos
+                                    Toast.makeText(requireContext(), "Imagen subida correctamente", Toast.LENGTH_SHORT).show()
+                                }
+                                .addOnFailureListener { e ->
+                                    // Ocurrió un error al realizar la actualización en la base de datos
+                                    Toast.makeText(requireContext(), "Error al subir la imagen: ${e.message}", Toast.LENGTH_SHORT).show()
+                                }
+                        }
+                    } else {
+                        // Ocurrió un error al obtener la URL de descarga de la imagen
+                        Toast.makeText(requireContext(), "Error al obtener la URL de descarga de la imagen", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+
         return binding.root
     }
     private fun showDatePickerDialog() {
@@ -110,36 +147,7 @@ class PerfilFragment(private val username: String) : Fragment() {
         val dateFormat = java.text.SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         return dateFormat.format(calendar.time)
     }
-    private fun verifyUserId() {
-        val currentUser = FirebaseAuth.getInstance().currentUser
-        val userId = currentUser?.uid
-        val database = FirebaseDatabase.getInstance().reference
 
-        if (userId != null) {
-            database.child("users").child(userId).addListenerForSingleValueEvent(object :
-                ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val user = dataSnapshot.getValue(User::class.java)
-                    if (user != null) {
-                        // Comparar el ID del usuario actual con el ID almacenado en Firebase
-                        if (userId == username) {
-                            // El ID del usuario actual coincide con el ID almacenado en Firebase
-                            // Mostrar el botón editIMG
-                            binding.editIMG.visibility = View.VISIBLE
-                        } else {
-                            // El ID del usuario actual no coincide con el ID almacenado en Firebase
-                            // Ocultar el botón editIMG
-                            binding.editIMG.visibility = View.GONE
-                        }
-                    }
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                    // Manejar el error de la consulta a la base de datos, si es necesario
-                }
-            })
-        }
-    }
     private fun showEditDialog() {
         val builder = AlertDialog.Builder(requireContext())
         val editText = EditText(requireContext())
@@ -209,6 +217,8 @@ class PerfilFragment(private val username: String) : Fragment() {
     }
 
     private fun downloadSubcollectionData() {
+        storage = FirebaseStorage.getInstance()
+        storageRef = storage.reference
         // Obtén el ID único de Firebase del usuario actual
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
@@ -224,17 +234,29 @@ class PerfilFragment(private val username: String) : Fragment() {
                         val description = documentSnapshot.getString("description")
                         val fecha = documentSnapshot.getString("fecha")
                         val telefono = documentSnapshot.getString("telefono")
-                        val intValue = documentSnapshot.getLong("userImg")?.toInt() ?: 0
-                        val drawable = ContextCompat.getDrawable(requireContext(), intValue)
+
+
+
+                        // Obten la referencia a la imagen en Firebase Storage
+                        val imageRef = storageRef.child("images/${userId}/profile.jpg")
+
+                        // Descarga la imagen en un archivo local temporal
+                        val localFile = File.createTempFile("images", "jpg")
+                        imageRef.getFile(localFile).addOnSuccessListener {
+                            // La imagen se descargó exitosamente, ahora puedes cargarla en el ImageView
+                            val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
+                            binding.perfilEditImg.setImageBitmap(bitmap)
+                        }.addOnFailureListener {
+                            // Ocurrió un error al descargar la imagen
+                            // Maneja el error según tus necesidades
+                        }
+
 
                         // Asigna los valores descargados a los labels e ImageView correspondientes en la interfaz de usuario
                         binding.career.text = description
                         binding.descriptionDate.text = fecha
                         binding.celularLabel.text = telefono
-                        binding.perfilEditImg.setImageDrawable(drawable)
 
-                        // Realiza las operaciones necesarias con los atributos descargados
-                        // ...
                     } else {
                         // El documento del usuario no existe
                         Toast.makeText(requireContext(), "El documento del usuario no existe", Toast.LENGTH_SHORT).show()
@@ -246,6 +268,4 @@ class PerfilFragment(private val username: String) : Fragment() {
                 }
         }
     }
-
-
 }
