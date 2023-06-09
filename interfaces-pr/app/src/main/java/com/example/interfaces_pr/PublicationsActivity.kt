@@ -6,22 +6,24 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.interfaces_pr.adapter.CourseCommentAdapter
-import com.example.interfaces_pr.adapter.CoursePublicationGeneralAdapter
+import com.example.interfaces_pr.adapter.OnItemButtonListener
 import com.example.interfaces_pr.databinding.ActivityPublicationsBinding
 import com.example.interfaces_pr.model.CourseComment
 import com.example.interfaces_pr.model.CoursePublicationGeneral
+import com.example.interfaces_pr.model.NotificationAtri
 import com.example.interfaces_pr.model.User
+import com.example.interfaces_pr.viewholders.CourseCommentViewHolder
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 import java.util.UUID
 
-class PublicationsActivity : AppCompatActivity() {
+class PublicationsActivity : AppCompatActivity(),OnItemButtonListener{
 
-    private var numLikes = 0
-    private var isLiked = false
+
     private lateinit var coursePublicationG:CoursePublicationGeneral
     private var courseTypeP:String? = null
+    private var userActual:User?=null
 
     private val binding by lazy{
         ActivityPublicationsBinding.inflate(layoutInflater)
@@ -36,6 +38,7 @@ class PublicationsActivity : AppCompatActivity() {
 
         coursePublicationG =intent.extras?.get("coursePublicationG") as CoursePublicationGeneral
         courseTypeP = intent.extras?.getString("courseType")
+        userActual = getUser()
 
         binding.publicationTitleTxt.text = coursePublicationG.pubGeneral_username
         binding.publicationContTxt.text = coursePublicationG.pubGeneral_description
@@ -62,18 +65,16 @@ class PublicationsActivity : AppCompatActivity() {
 
 
         binding.likeImg.setOnClickListener{
-            if(isLiked){
-                numLikes --
-                binding.likeImg.setImageResource(R.drawable.unlike_icon)
-                binding.reactionsTxt.text = numLikes.toString()
-                isLiked = false
-            }else{
-                numLikes++
-                binding.likeImg.setImageResource(R.drawable.like_icon)
-                binding.reactionsTxt.text = numLikes.toString()
-                isLiked = true
-            }
+            likePublication()
         }
+
+        if(coursePublicationG.comprobateUserExist(userActual?.id!!)){
+            binding.likeImg.setImageResource(R.drawable.like_icon)
+        }else{
+            binding.likeImg.setImageResource(R.drawable.unlike_icon)
+        }
+        binding.reactionsTxt.text = coursePublicationG.usersLikes.size.toString()
+
 
 
         adapterCourseComment()
@@ -84,24 +85,48 @@ class PublicationsActivity : AppCompatActivity() {
         startConnectionComments()
     }
 
+    private fun likePublication(){
+        Log.d(">>>", coursePublicationG.comprobateUserExist(userActual?.id!!).toString())
+        if(coursePublicationG.comprobateUserExist(userActual?.id!!)){
+            binding.likeImg.setImageResource(R.drawable.unlike_icon)
+            coursePublicationG.addOrDelUserLike(userActual?.id!!,false)
+        }else{
+            binding.likeImg.setImageResource(R.drawable.like_icon)
+            coursePublicationG.addOrDelUserLike(userActual?.id!!,true)
+            if(coursePublicationG.userID!=userActual?.id){
+                val notificationUser = NotificationAtri(0,"","", userActual?.id!!,coursePublicationG.publicationID)
+                Firebase.firestore.collection("Notifications").document(coursePublicationG.userID).collection("Reaction").document(userActual?.id!!).set(notificationUser)
+            }
+        }
+        binding.reactionsTxt.text = coursePublicationG.usersLikes.size.toString()
+        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).set(coursePublicationG)
+        Log.d(">>>",coursePublicationG.usersLikes.toString())
+    }
+
     private fun adapterCourseComment(){
         courseCommentAdapter = CourseCommentAdapter()
+        courseCommentAdapter.commentButtonClickListener = this  // Configurar el listener
         binding.usersCommentsList.adapter = courseCommentAdapter
         binding.usersCommentsList.setHasFixedSize(false)
         binding.usersCommentsList.layoutManager = LinearLayoutManager(this)
     }
 
     private fun sendCommentFunction(){
-        val userInComment = getUser()
         val textInComment = binding.userCommentToSendTxt.text?.toString().orEmpty()
-        val commentID = userInComment?.id!!+"+"+UUID.randomUUID().toString()
+        val commentID = UUID.randomUUID().toString()
         if (textInComment.isNotEmpty()) {
             val timestamp = System.currentTimeMillis() // Obtener la marca de tiempo actual
             val minutesElapsed = getMinutesElapsedFromTimestamp(timestamp)
 
-            val newComment = CourseComment(R.drawable.profile1, R.drawable.unlike_icon, userInComment?.username!!, textInComment, getFormattedTimeElapsed(minutesElapsed), "0",userInComment.id)
+            val newComment = CourseComment(R.drawable.profile1, R.drawable.unlike_icon, userActual?.username!!, textInComment, getFormattedTimeElapsed(minutesElapsed), "0",userActual?.id!!,
+                ArrayList(),commentID
+            )
             Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").document(commentID).set(newComment)
-            Log.d(">>>","ID user: ${userInComment.id}")
+            if(coursePublicationG.userID!=userActual?.id){
+                val notificationUser = NotificationAtri(0,"","",userActual?.id!!,commentID)
+                Firebase.firestore.collection("Notifications").document(coursePublicationG.userID).collection("Comment").document(userActual?.id!!).set(notificationUser)
+            }
+            Log.d(">>>","ID user: ${userActual?.id}")
             courseCommentAdapter.addComment(newComment)
             binding.userCommentToSendTxt.text?.clear()
         }
@@ -150,5 +175,18 @@ class PublicationsActivity : AppCompatActivity() {
             null
         }
     }
+
+    override fun onCommentButtonClick(commentHolder: CourseCommentViewHolder, commentObject: CourseComment) {
+        if(commentObject.comprobateUserExist(userActual?.id!!)){
+            commentHolder.like_inComment.setImageResource(R.drawable.unlike_icon)
+            commentObject.addOrDelUserLike(userActual?.id!!,false)
+        }else{
+            commentHolder.like_inComment.setImageResource(R.drawable.like_icon)
+            commentObject.addOrDelUserLike(userActual?.id!!,true)
+        }
+        commentHolder.numberLike_inComment.text = commentObject.usersLikes.size.toString()
+        Firebase.firestore.collection("Courses").document(courseTypeP.toString()).collection(coursePublicationG.courseName).document(coursePublicationG.publicationID).collection("Comments").document(commentObject.commentID).set(commentObject)
+    }
+
 
 }

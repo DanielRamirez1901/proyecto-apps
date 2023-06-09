@@ -18,6 +18,8 @@ interface OnItemClickListener {
 
     fun onItemClick(coursePublications: cursoAtri)
 
+
+
 }
 class CoursePublicationAdapter():Adapter<CoursePublicationViewHolder>() {
 

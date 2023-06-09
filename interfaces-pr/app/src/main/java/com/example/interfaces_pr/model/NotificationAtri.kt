@@ -1,7 +1,9 @@
 package com.example.interfaces_pr.model
 
 data class NotificationAtri(
-    val icon: Int,
-    val title: String,
-    val description: String
+    val icon: Int=0,
+    val title: String="",
+    val description: String="",
+    val userID:String="",
+    val publiID:String=""
     )

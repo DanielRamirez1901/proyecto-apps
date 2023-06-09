@@ -1,5 +1,6 @@
 package com.example.interfaces_pr.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +13,17 @@ import com.example.interfaces_pr.model.CourseComment
 import com.example.interfaces_pr.model.User
 import com.example.interfaces_pr.viewholders.CourseCommentViewHolder
 import com.google.gson.Gson
+import com.google.gson.JsonObject
+
+interface OnItemButtonListener {
+    fun onCommentButtonClick(commentHolder: CourseCommentViewHolder,commentObject:CourseComment)
+}
 
 class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
 
     var comments:ArrayList<CourseComment> = arrayListOf()
-    private var commentInPub:String = ""
+    var commentButtonClickListener: OnItemButtonListener? = null
+
 
     /*
     init{
@@ -43,6 +50,10 @@ class CourseCommentAdapter():Adapter<CourseCommentViewHolder>() {
         holder.userCont_inComment.text = comments[position].userCont_inComment
         holder.time_inComment.text = comments[position].time_inComment
         holder.numberLike_inComment.text = comments[position].numberLike_inComment
+        holder.like_inComment.setOnClickListener {
+            Log.d(">>>", "Llego hasta onBind")
+            commentButtonClickListener?.onCommentButtonClick(holder,comments[position])
+        }
         holder.setVisibility(false)
     }
 

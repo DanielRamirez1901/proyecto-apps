@@ -12,10 +12,28 @@ data class CoursePublicationGeneral (
     val pubGeneral_description:String="",
     val courseName:String="",
     val userID:String="",
-    val publicationID:String=""
-
+    val publicationID:String="",
+    var usersLikes:ArrayList<String> = ArrayList()
 ) : Serializable{
     override fun toString(): String {
         return pubGeneral_username
     }
+    fun addOrDelUserLike(userID: String,action:Boolean) {
+        if(action){
+            usersLikes.add(userID)
+        }else{
+            usersLikes.remove(userID)
+        }
+
+    }
+
+    fun comprobateUserExist(userID: String):Boolean{
+        if(usersLikes.contains(userID)){
+            return true
+        }
+        return false
+    }
+
 }
+
+

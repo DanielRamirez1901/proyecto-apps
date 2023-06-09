@@ -7,17 +7,19 @@ import android.util.Log
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.databinding.ActivityPostCommentBinding
 import com.example.interfaces_pr.model.CoursePublicationGeneral
+import com.example.interfaces_pr.model.NotificationAtri
 import com.example.interfaces_pr.model.User
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
+import java.util.ArrayList
 import java.util.Calendar
 import java.util.UUID
 
 class PostComment : AppCompatActivity() {
 
-    private lateinit var courseName:String
-    private lateinit var courseType:String
+    private var courseName:String?=null
+    private var courseType:String?=null
 
     private val binding by lazy{
         ActivityPostCommentBinding.inflate(layoutInflater)
@@ -31,6 +33,9 @@ class PostComment : AppCompatActivity() {
         binding.galleryBtn.setOnClickListener{
             binding.publicationImg.setImageResource(R.drawable.basketball_course_image)
         }
+
+        courseType = intent.extras?.getString("course type")
+        courseName = intent.extras?.getString("course name")
 
         binding.addBtn.setOnClickListener{
             publish()
@@ -57,15 +62,12 @@ class PostComment : AppCompatActivity() {
         val day = calendar.get(Calendar.DAY_OF_MONTH).toString()
         val month = (calendar.get(Calendar.MONTH) + 1).toString()
         val year = calendar.get(Calendar.YEAR).toString()
-        courseName = intent.extras?.getString("course name").toString()
-        courseType = intent.extras?.getString("course type").toString()
         val publiCont = binding.publiContTxt.text.toString()
         val publiID = UUID.randomUUID().toString()
 
-        val publication = CoursePublicationGeneral(userImg,publiImg, user?.username!!,day,month,year,publiCont,courseName,user?.id!!,publiID)
-
+        val publication = CoursePublicationGeneral(userImg,publiImg, user?.username!!,day,month,year,publiCont,courseName.toString(),user?.id!!,publiID,ArrayList())
         if (publication != null) {
-            Firebase.firestore.collection("Courses").document(courseType).collection(courseName).document(publiID).set(publication)
+            Firebase.firestore.collection("Courses").document(courseType.toString()).collection(courseName.toString()).document(publiID).set(publication)
             Log.d(">>>",publiID)
         }
 

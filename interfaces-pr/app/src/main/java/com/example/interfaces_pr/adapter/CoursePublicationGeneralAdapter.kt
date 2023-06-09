@@ -18,7 +18,7 @@ class CoursePublicationGeneralAdapter():Adapter<CoursePublicationGeneralViewHold
     private var generalPublications:ArrayList<CoursePublicationGeneral> = arrayListOf()
     var listener: OnItemClickListener? = null
 
-
+    /*
     init{
         val calendar = Calendar.getInstance()
         val day = calendar.get(Calendar.DAY_OF_MONTH).toString()
@@ -29,6 +29,8 @@ class CoursePublicationGeneralAdapter():Adapter<CoursePublicationGeneralViewHold
         generalPublications.add(CoursePublicationGeneral(R.drawable.profile1,R.drawable.basketball_course_image,"Pepito3",day,month,year,"Esta es una publicacion random que se debe ubicar en los comentarios de la publicacion"))
 
     }
+
+     */
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursePublicationGeneralViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
