@@ -37,9 +37,7 @@ class MainActivity1 : AppCompatActivity(){
         setContentView(binding.root)
         val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val homeFragment = inflater.inflate(R.layout.homefragment, null)
-
         username = intent.extras?.getString("username")
-
 
         button_home = findViewById(id.button_home)
         button_publi = findViewById(id.button_publi)

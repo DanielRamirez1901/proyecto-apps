@@ -165,7 +165,7 @@ fun registrarUsuario(view: View) {
             .addOnCompleteListener{
                 //Parte 2____
                 val id = Firebase.auth.currentUser?.uid
-                val user = User(id!!, codeUsuario, email, username)
+                val user = User(id!!, codeUsuario, email, username,R.drawable.ic_launcher_background)
 
                 Firebase.firestore.collection("users").document(id).set(user).addOnCompleteListener {
                     sendVerifyEmail()

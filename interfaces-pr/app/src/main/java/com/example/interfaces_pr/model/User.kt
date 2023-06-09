@@ -7,8 +7,12 @@ data class User(
     var codeUsuario: String = "",
     var email:String = "",
     var username:String = "",
-    var password:String = "",
-    val userImg:Int = 0
+    val userImg:Int = 0,
+    var telefono:String = "",
+    var description:String = "",
+    var fecha:String = ""
+
+
     ) : Serializable{
         override fun toString(): String{
             return codeUsuario

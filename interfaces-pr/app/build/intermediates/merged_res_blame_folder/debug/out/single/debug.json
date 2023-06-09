@@ -12,12 +12,12 @@
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player1.png"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_induccion_banner.png.flat",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\induccion_banner.png"
-    },
-    {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_login_image.png.flat",
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\login_image.png"
+    },
+    {
+        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_induccion_banner.png.flat",
+        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\induccion_banner.png"
     },
     {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -44,12 +44,12 @@
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\visuales_course_image.jpg"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_player2.png.flat",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player2.png"
-    },
-    {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_border_text.xml.flat",
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\border_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_player2.png.flat",
+        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\player2.png"
     },
     {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_plasticas_course_image.jpeg.flat",
@@ -196,10 +196,6 @@
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.interfaces_pr.app-merged_res-40:/drawable_pencil_icon_edit.png.flat",
-        "source": "com.example.interfaces_pr.app-main-42:/drawable/pencil_icon_edit.png"
-    },
-    {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
@@ -216,12 +212,12 @@
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\mochila.png"
     },
     {
-        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_format_publicacion.xml.flat",
-        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_publicacion.xml"
-    },
-    {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\anim_rotate_close_anim.xml.flat",
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\anim\\rotate_close_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_format_publicacion.xml.flat",
+        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\layout\\format_publicacion.xml"
     },
     {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_activity_publications.xml.flat",
@@ -238,6 +234,10 @@
     {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_splashcolorback.xml.flat",
         "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\splashcolorback.xml"
+    },
+    {
+        "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\drawable_pencil_icon_edit.png.flat",
+        "source": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-main-42:\\drawable\\pencil_icon_edit.png"
     },
     {
         "merged": "C:\\Users\\karol\\.gradle\\daemon\\7.5\\com.example.interfaces_pr.app-merged_res-40:\\layout_team_icesi.xml.flat",
