@@ -4,6 +4,7 @@ package com.example.interfaces_pr.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -43,7 +44,16 @@ public final class PerfilfragmentBinding implements ViewBinding {
   public final TextView celularLabel;
 
   @NonNull
-  public final TextView descriptionNotification;
+  public final TextView descriptionDate;
+
+  @NonNull
+  public final ImageButton editIMG;
+
+  @NonNull
+  public final ImageButton editNacimientoButton;
+
+  @NonNull
+  public final ImageButton editTelefonoButton;
 
   @NonNull
   public final ImageView iconNotification;
@@ -52,7 +62,7 @@ public final class PerfilfragmentBinding implements ViewBinding {
   public final TextView name;
 
   @NonNull
-  public final ImageView perfilPhotoImg;
+  public final ImageView perfilEditImg;
 
   @NonNull
   public final TextView textView4;
@@ -63,9 +73,10 @@ public final class PerfilfragmentBinding implements ViewBinding {
   private PerfilfragmentBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView bannerImg,
       @NonNull CardView cardView, @NonNull CardView cardView2, @NonNull CardView cardView3,
       @NonNull TextView career, @NonNull ImageView celularIcon, @NonNull TextView celularLabel,
-      @NonNull TextView descriptionNotification, @NonNull ImageView iconNotification,
-      @NonNull TextView name, @NonNull ImageView perfilPhotoImg, @NonNull TextView textView4,
-      @NonNull TextView titleNotification) {
+      @NonNull TextView descriptionDate, @NonNull ImageButton editIMG,
+      @NonNull ImageButton editNacimientoButton, @NonNull ImageButton editTelefonoButton,
+      @NonNull ImageView iconNotification, @NonNull TextView name, @NonNull ImageView perfilEditImg,
+      @NonNull TextView textView4, @NonNull TextView titleNotification) {
     this.rootView = rootView;
     this.bannerImg = bannerImg;
     this.cardView = cardView;
@@ -74,10 +85,13 @@ public final class PerfilfragmentBinding implements ViewBinding {
     this.career = career;
     this.celularIcon = celularIcon;
     this.celularLabel = celularLabel;
-    this.descriptionNotification = descriptionNotification;
+    this.descriptionDate = descriptionDate;
+    this.editIMG = editIMG;
+    this.editNacimientoButton = editNacimientoButton;
+    this.editTelefonoButton = editTelefonoButton;
     this.iconNotification = iconNotification;
     this.name = name;
-    this.perfilPhotoImg = perfilPhotoImg;
+    this.perfilEditImg = perfilEditImg;
     this.textView4 = textView4;
     this.titleNotification = titleNotification;
   }
@@ -151,9 +165,27 @@ public final class PerfilfragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.description_notification;
-      TextView descriptionNotification = ViewBindings.findChildViewById(rootView, id);
-      if (descriptionNotification == null) {
+      id = R.id.description_date;
+      TextView descriptionDate = ViewBindings.findChildViewById(rootView, id);
+      if (descriptionDate == null) {
+        break missingId;
+      }
+
+      id = R.id.editIMG;
+      ImageButton editIMG = ViewBindings.findChildViewById(rootView, id);
+      if (editIMG == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_nacimiento_Button;
+      ImageButton editNacimientoButton = ViewBindings.findChildViewById(rootView, id);
+      if (editNacimientoButton == null) {
+        break missingId;
+      }
+
+      id = R.id.edit_telefono_Button;
+      ImageButton editTelefonoButton = ViewBindings.findChildViewById(rootView, id);
+      if (editTelefonoButton == null) {
         break missingId;
       }
 
@@ -169,9 +201,9 @@ public final class PerfilfragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.perfil_photo_img;
-      ImageView perfilPhotoImg = ViewBindings.findChildViewById(rootView, id);
-      if (perfilPhotoImg == null) {
+      id = R.id.perfil_edit_img;
+      ImageView perfilEditImg = ViewBindings.findChildViewById(rootView, id);
+      if (perfilEditImg == null) {
         break missingId;
       }
 
@@ -188,8 +220,9 @@ public final class PerfilfragmentBinding implements ViewBinding {
       }
 
       return new PerfilfragmentBinding((ConstraintLayout) rootView, bannerImg, cardView, cardView2,
-          cardView3, career, celularIcon, celularLabel, descriptionNotification, iconNotification,
-          name, perfilPhotoImg, textView4, titleNotification);
+          cardView3, career, celularIcon, celularLabel, descriptionDate, editIMG,
+          editNacimientoButton, editTelefonoButton, iconNotification, name, perfilEditImg,
+          textView4, titleNotification);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

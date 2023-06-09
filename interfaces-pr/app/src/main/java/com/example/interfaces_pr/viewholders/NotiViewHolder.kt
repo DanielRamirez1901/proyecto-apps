@@ -9,7 +9,7 @@ class NotificationViewHolder(root: View) : ViewHolder(root){
     private val binding = FormatNotificationBinding.bind(root)
     val image = binding.iconNotification
     val title = binding.titleNotification
-    val description = binding.descriptionNotification
+    val description = binding.description
 
 }
 

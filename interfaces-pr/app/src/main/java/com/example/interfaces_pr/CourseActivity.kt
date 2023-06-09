@@ -69,7 +69,6 @@ class CourseActivity : AppCompatActivity(),OnItemClickListener{
             val intent = Intent(this,MainActivity1::class.java)
             startActivity(intent)
         }
-
         startConnectionPublications()
 
     }

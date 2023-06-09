@@ -2789,6 +2789,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_perfil_camera
 drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
@@ -2897,6 +2898,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable password_icon
 drawable pastel
+drawable pencil_icon_edit
 drawable perfil_icon
 drawable perfile_format
 drawable personal_course_image
@@ -3123,7 +3125,8 @@ id dependency_ordering
 id desarrolloImg
 id descipction_label
 id descripcionPubli
-id description_notification
+id description_
+id description_date
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3150,8 +3153,11 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editIMG
 id editTextTextPersonName4
+id edit_nacimiento_Button
 id edit_query
+id edit_telefono_Button
 id elastic
 id emaiL
 id emailET
@@ -3376,8 +3382,8 @@ id pb_userNameTxt
 id pb_yearTxt
 id peekHeight
 id percent
+id perfil_edit_img
 id perfil_icon_img
-id perfil_photo_img
 id pin
 id player_nameTxt
 id position

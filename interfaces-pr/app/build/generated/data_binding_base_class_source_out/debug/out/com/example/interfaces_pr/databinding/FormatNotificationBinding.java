@@ -21,7 +21,7 @@ public final class FormatNotificationBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView descriptionNotification;
+  public final TextView description;
 
   @NonNull
   public final ImageView iconNotification;
@@ -30,10 +30,10 @@ public final class FormatNotificationBinding implements ViewBinding {
   public final TextView titleNotification;
 
   private FormatNotificationBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView descriptionNotification, @NonNull ImageView iconNotification,
+      @NonNull TextView description, @NonNull ImageView iconNotification,
       @NonNull TextView titleNotification) {
     this.rootView = rootView;
-    this.descriptionNotification = descriptionNotification;
+    this.description = description;
     this.iconNotification = iconNotification;
     this.titleNotification = titleNotification;
   }
@@ -65,9 +65,9 @@ public final class FormatNotificationBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.description_notification;
-      TextView descriptionNotification = ViewBindings.findChildViewById(rootView, id);
-      if (descriptionNotification == null) {
+      id = R.id.description_;
+      TextView description = ViewBindings.findChildViewById(rootView, id);
+      if (description == null) {
         break missingId;
       }
 
@@ -83,7 +83,7 @@ public final class FormatNotificationBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FormatNotificationBinding((ConstraintLayout) rootView, descriptionNotification,
+      return new FormatNotificationBinding((ConstraintLayout) rootView, description,
           iconNotification, titleNotification);
     }
     String missingId = rootView.getResources().getResourceName(id);

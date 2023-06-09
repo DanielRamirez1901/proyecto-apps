@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -30,8 +32,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="-62dp"
         app:cardCornerRadius="150dp"
         app:cardElevation="15dp"
@@ -41,12 +43,13 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <ImageView
-            android:id="@+id/perfil_photo_img"
+            android:id="@+id/perfil_edit_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFFFFF"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/foto_perfil" />
+
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -110,7 +113,7 @@
             android:translationY="25dp" />
 
         <TextView
-            android:id="@+id/description_notification"
+            android:id="@+id/description_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 de agosto de 2003"
@@ -118,6 +121,16 @@
             android:textStyle="bold"
             android:translationX="90dp"
             android:translationY="50dp" />
+
+        <ImageButton
+            android:id="@+id/edit_nacimiento_Button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:translationX="340dp"
+            android:translationY="30dp"
+            app:srcCompat="@drawable/pencil_icon_edit" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -128,6 +141,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <ImageButton
+            android:id="@+id/edit_telefono_Button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#FFFFFF"
+            android:scaleType="centerInside"
+            android:translationX="340dp"
+            android:translationY="30dp"
+            app:srcCompat="@drawable/pencil_icon_edit" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="50dp"
@@ -162,6 +185,18 @@
             android:textStyle="bold"
             android:translationX="90dp"
             android:translationY="50dp" />
+
     </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/editIMG"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="Descripción accesible del ImageButton"
+        android:translationX="-20dp"
+        android:translationY="-10dp"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:srcCompat="@drawable/edit_perfil_camera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

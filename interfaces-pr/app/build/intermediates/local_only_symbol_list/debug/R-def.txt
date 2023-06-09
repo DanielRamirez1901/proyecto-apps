@@ -39,6 +39,7 @@ drawable correo_icon
 drawable cultura_banner
 drawable deportes
 drawable desarrollo_personal_banner
+drawable edit_perfil_camera
 drawable escenicas_course_image
 drawable escudo_basket
 drawable file_icon
@@ -62,6 +63,7 @@ drawable mochila_perdida
 drawable noti_icon
 drawable password_icon
 drawable pastel
+drawable pencil_icon_edit
 drawable perfil_icon
 drawable perfile_format
 drawable personal_course_image
@@ -134,8 +136,12 @@ id daytxt
 id desarrolloImg
 id descipction_label
 id descripcionPubli
-id description_notification
+id description_
+id description_date
+id editIMG
 id editTextTextPersonName4
+id edit_nacimiento_Button
+id edit_telefono_Button
 id emaiL
 id emailET
 id fieldToCommentTxt
@@ -197,8 +203,8 @@ id pb_mouthTxt
 id pb_userImg
 id pb_userNameTxt
 id pb_yearTxt
+id perfil_edit_img
 id perfil_icon_img
-id perfil_photo_img
 id player_nameTxt
 id profile_teamImg
 id pruebaCV

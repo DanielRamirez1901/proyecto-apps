@@ -15,6 +15,7 @@ import com.example.interfaces_pr.adapter.NotificationAdapter
 import com.example.interfaces_pr.fragments.*
 import com.example.interfaces_pr.R.id
 import com.example.interfaces_pr.databinding.ActivityMainBinding
+import com.example.interfaces_pr.databinding.PerfilfragmentBinding
 import com.example.interfaces_pr.model.User
 import com.google.gson.Gson
 

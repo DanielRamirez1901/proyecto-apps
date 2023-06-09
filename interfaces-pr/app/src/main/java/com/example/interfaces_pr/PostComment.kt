@@ -1,9 +1,13 @@
 package com.example.interfaces_pr
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
+import android.widget.Button
 import com.example.interfaces_pr.databinding.ActivityCourseBinding
 import com.example.interfaces_pr.databinding.ActivityPostCommentBinding
 import com.example.interfaces_pr.model.CoursePublicationGeneral
@@ -18,6 +22,7 @@ class PostComment : AppCompatActivity() {
 
     private lateinit var courseName:String
     private lateinit var courseType:String
+    private val REQUEST_GALLERY = 1
 
     private val binding by lazy{
         ActivityPostCommentBinding.inflate(layoutInflater)
@@ -45,6 +50,25 @@ class PostComment : AppCompatActivity() {
 
         }
 
+        binding.galleryBtn.setOnClickListener{
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(intent, REQUEST_GALLERY)
+
+        }
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_GALLERY && resultCode == RESULT_OK && data != null) {
+            // Obtiene la Uri de la imagen seleccionada
+            val imageUri: Uri? = data.data
+            if (imageUri != null) {
+                // Decodifica la Uri en un Bitmap
+                val bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri))
+                // se muestra la imagen seleccionada
+                binding.publicationImg.setImageBitmap(bitmap)
+            }
+        }
     }
 
 
